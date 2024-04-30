@@ -55,16 +55,21 @@ jobs:
         run: docker exec -i mydb sh -c 'exec mariadb -uroot -ppassword aspen' < aspen.sql
       - name: Path to build dir
         run: realpath build
+      - name: Create the version directory if it does not exist
+        run: mkdir build/${{ steps.extracted_variables.outputs.ASPEN_DEFAULT_BRANCH }} || true
+      - name: List the directories
+        run: ls -alh
       - name: Execute schemaspy
-        run: docker run -u $(id -u ${USER}):$(id -g ${USER}) --network aspen-net -v  $(realpath build):/output schemaspy/schemaspy:latest -t mariadb -db aspen -host mydb -port 3306 -u root -p password -s aspen 
+        run: docker run -u $(id -u ${USER}):$(id -g ${USER}) --network aspen-net -v  $(realpath .)/build/${{ steps.extracted_variables.outputs.ASPEN_DEFAULT_BRANCH }}:/output schemaspy/schemaspy:latest -t mariadb -db aspen -host mydb -port 3306 -u root -p password -s aspen 
 
       - name: Commit files
         run: |
           cd build
+          ls -alh
           git config --local user.email "kyle@bywatersolutions.com"
           git config --local user.name "Kyle M Hall"
-          git add .
-          git commit -m "Add changes" -a
+          git add ${{ steps.extracted_variables.outputs.ASPEN_DEFAULT_BRANCH }}
+          git commit -m "Add changes for ${{ steps.extracted_variables.outputs.ASPEN_DEFAULT_BRANCH }}" -a
           cd ..
 
       - name: Push changes
