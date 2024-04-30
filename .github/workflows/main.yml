@@ -40,6 +40,14 @@ jobs:
           ref: gh-pages
           persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
           fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
+
+      - uses: actions/checkout@v2
+        with:
+          path: main
+          ref: main
+          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
+          fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
+
       - name: list contents of build dir
         run: ls -alh build
 
@@ -61,14 +69,20 @@ jobs:
         run: ls -alh
       - name: Execute schemaspy
         run: docker run -u $(id -u ${USER}):$(id -g ${USER}) --network aspen-net -v  $(realpath .)/build/${{ steps.extracted_variables.outputs.ASPEN_DEFAULT_BRANCH }}:/output schemaspy/schemaspy:latest -t mariadb -db aspen -host mydb -port 3306 -u root -p password -s aspen 
-
+      - name: Install Template Toolkit
+        run: sudo apt install -y libtemplate-perl
       - name: Commit files
         run: |
+          pwd
           cd build
-          ls -alh
           git config --local user.email "kyle@bywatersolutions.com"
           git config --local user.name "Kyle M Hall"
           git add ${{ steps.extracted_variables.outputs.ASPEN_DEFAULT_BRANCH }}
+          DIRS=$(ls -d */)
+          echo "DIRS: $DIRS"
+          tpage --define DIRS="$DIRS" ../main/index.tt
+          tpage --define DIRS="$DIRS" ../main/index.tt > index.html
+          git add index.html
           git commit -m "Add changes for ${{ steps.extracted_variables.outputs.ASPEN_DEFAULT_BRANCH }}" -a
           cd ..
 
