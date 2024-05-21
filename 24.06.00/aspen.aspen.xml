@@ -6667,7 +6667,7 @@
             <column ascending="true" name="permissionId"/>
          </index>
       </table>
-      <table catalog="aspen" name="roles" numRows="20" remarks="A role identifying what the user can do." type="TABLE">
+      <table catalog="aspen" name="roles" numRows="18" remarks="A role identifying what the user can do." type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="roleId" nullable="false" remarks="" size="10" type="INT" typeCode="4">
             <child catalog="aspen" column="roleId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="role_permissions"/>
             <child catalog="aspen" column="roleId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="user_roles"/>
