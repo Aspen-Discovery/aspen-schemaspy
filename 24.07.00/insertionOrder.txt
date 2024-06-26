@@ -345,6 +345,7 @@ sierra_api_export_log
 sierra_export_field_mapping
 slow_ajax_request
 slow_page
+smtp_settings
 springshare_libcal_events
 springshare_libcal_settings
 square_settings

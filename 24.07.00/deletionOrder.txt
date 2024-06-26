@@ -74,6 +74,7 @@ sso_mapping
 square_settings
 springshare_libcal_settings
 springshare_libcal_events
+smtp_settings
 slow_page
 slow_ajax_request
 sierra_export_field_mapping

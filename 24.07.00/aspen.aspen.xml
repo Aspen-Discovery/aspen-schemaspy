@@ -7158,6 +7158,24 @@
             <column ascending="true" name="action"/>
          </index>
       </table>
+      <table catalog="aspen" name="smtp_settings" numRows="0" remarks="" type="TABLE">
+         <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="name" nullable="false" remarks="" size="80" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="'localhost'" digits="0" id="2" name="host" nullable="false" remarks="" size="80" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="25" digits="0" id="3" name="port" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="ssl_mode" nullable="false" remarks="" size="8" type="enum('disabled', 'ssl', 'tls')" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="5" name="from_address" nullable="true" remarks="" size="80" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="6" name="from_name" nullable="true" remarks="" size="80" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="7" name="user_name" nullable="true" remarks="" size="80" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="8" name="password" nullable="true" remarks="" size="80" type="VARCHAR" typeCode="12"/>
+         <primaryKey column="id" sequenceNumberInPK="1"/>
+         <index name="smtp_settings_s_pk" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+         <index name="PRIMARY" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+      </table>
       <table catalog="aspen" name="springshare_libcal_events" numRows="0" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="settingsId" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
