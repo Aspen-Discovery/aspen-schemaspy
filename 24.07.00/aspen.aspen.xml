@@ -256,6 +256,7 @@
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="9" name="privacyPolicyContactAddress" nullable="true" remarks="" size="2147483647" type="LONGTEXT" typeCode="-1"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="10" name="privacyPolicyContactPhone" nullable="true" remarks="" size="25" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="11" name="privacyPolicyContactEmail" nullable="true" remarks="" size="250" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="12" name="autoPickUserHomeLocation" nullable="false" remarks="" size="3" type="TINYINT" typeCode="-6"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="aspen_lida_branded_settings_s_pk" unique="true">
             <column ascending="true" name="id"/>
@@ -685,6 +686,46 @@
             <column ascending="true" name="instance"/>
             <column ascending="true" name="year"/>
             <column ascending="true" name="month"/>
+         </index>
+         <index name="PRIMARY" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+      </table>
+      <table catalog="aspen" name="assabet_events" numRows="0" remarks="" type="TABLE">
+         <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="settingsId" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="externalId" nullable="false" remarks="" size="150" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="title" nullable="false" remarks="" size="255" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="4" name="rawChecksum" nullable="true" remarks="" size="19" type="BIGINT" typeCode="-5"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="5" name="rawResponse" nullable="true" remarks="" size="16777215" type="MEDIUMTEXT" typeCode="-1"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="6" name="deleted" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
+         <primaryKey column="id" sequenceNumberInPK="1"/>
+         <index name="assabet_events_s_pk" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+         <index name="PRIMARY" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+         <index name="settingsId" unique="true">
+            <column ascending="true" name="settingsId"/>
+            <column ascending="true" name="externalId"/>
+         </index>
+      </table>
+      <table catalog="aspen" name="assabet_settings" numRows="0" remarks="" type="TABLE">
+         <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="name" nullable="false" remarks="" size="100" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="baseUrl" nullable="false" remarks="" size="255" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="3" name="eventsInLists" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="4" name="bypassAspenEventPages" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="5" name="registrationModalBody" nullable="true" remarks="" size="16777215" type="MEDIUMTEXT" typeCode="-1"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="6" name="registrationModalBodyApp" nullable="true" remarks="" size="500" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="365" digits="0" id="7" name="numberOfDaysToIndex" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <primaryKey column="id" sequenceNumberInPK="1"/>
+         <index name="assabet_settings_s_pk" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+         <index name="name" unique="true">
+            <column ascending="true" name="name"/>
          </index>
          <index name="PRIMARY" unique="true">
             <column ascending="true" name="id"/>
@@ -1654,7 +1695,7 @@
             <column ascending="true" name="id"/>
          </index>
       </table>
-      <table catalog="aspen" name="db_update" numRows="1725" remarks="" type="TABLE">
+      <table catalog="aspen" name="db_update" numRows="1756" remarks="" type="TABLE">
          <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="update_key" nullable="false" remarks="" size="100" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="current_timestamp()" digits="0" id="1" name="date_run" nullable="false" remarks="" size="19" type="TIMESTAMP" typeCode="93"/>
          <primaryKey column="update_key" sequenceNumberInPK="1"/>
@@ -2010,6 +2051,7 @@
          <column autoUpdated="false" defaultValue="''" digits="0" id="3" name="edsSearchProfile" nullable="true" remarks="" size="50" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="''" digits="0" id="4" name="edsApiUsername" nullable="true" remarks="" size="50" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="''" digits="0" id="5" name="edsApiPassword" nullable="true" remarks="" size="50" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="6" name="fullTextLimiter" nullable="false" remarks="" size="3" type="TINYINT" typeCode="-6"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="ebsco_eds_settings_s_pk" unique="true">
             <column ascending="true" name="id"/>
@@ -2406,6 +2448,14 @@
          <column autoUpdated="false" defaultValue="'bib'" digits="0" id="7" name="holdType" nullable="true" remarks="" size="6" type="enum('bib', 'item', 'either', 'none')" typeCode="12"/>
          <column autoUpdated="false" defaultValue="0" digits="0" id="8" name="inLibraryUseOnly" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
          <column autoUpdated="false" defaultValue="0" digits="0" id="9" name="pickupAt" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="10" name="appliesToBibLevel" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="11" name="appliesToItemShelvingLocation" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="12" name="appliesToItemSublocation" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="13" name="appliesToItemCollection" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="14" name="appliesToItemType" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="15" name="appliesToItemFormat" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="16" name="appliesToMatType" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="17" name="appliesToFallbackFormat" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="format_map_values_s_pk" unique="true">
             <column ascending="true" name="id"/>
@@ -2519,6 +2569,7 @@
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="3" name="alternateAuthor" nullable="true" remarks="" size="50" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="4" name="addedBy" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="5" name="dateAdded" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="6" name="alternateGroupingCategory" nullable="true" remarks="" size="5" type="VARCHAR" typeCode="12"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="grouped_work_alternate_titles_s_pk" unique="true">
             <column ascending="true" name="id"/>
@@ -2528,6 +2579,23 @@
             <column ascending="true" name="alternateAuthor"/>
          </index>
          <index name="permanent_id" unique="false">
+            <column ascending="true" name="permanent_id"/>
+         </index>
+         <index name="PRIMARY" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+      </table>
+      <table catalog="aspen" name="grouped_work_debug_info" numRows="0" remarks="" type="TABLE">
+         <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="permanent_id" nullable="false" remarks="" size="40" type="CHAR" typeCode="1"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="2" name="debugInfo" nullable="true" remarks="" size="65535" type="TEXT" typeCode="-1"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="3" name="debugTime" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="4" name="processed" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
+         <primaryKey column="id" sequenceNumberInPK="1"/>
+         <index name="grouped_work_debug_info_s_pk" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+         <index name="permanent_id" unique="true">
             <column ascending="true" name="permanent_id"/>
          </index>
          <index name="PRIMARY" unique="true">
@@ -2610,6 +2678,7 @@
          <column autoUpdated="false" defaultValue="25" digits="0" id="46" name="maxPopularityBoost" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="25" digits="0" id="47" name="maxFormatBoost" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="25" digits="0" id="48" name="maxHoldingsBoost" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="49" name="showItemNotes" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="grouped_work_display_settings_s_pk" unique="true">
             <column ascending="true" name="id"/>
@@ -3470,118 +3539,116 @@
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="name" nullable="false" remarks="" size="50" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="marcPath" nullable="false" remarks="" size="100" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="'MARC8'" digits="0" id="3" name="marcEncoding" nullable="false" remarks="" size="9" type="enum('MARC8', 'UTF8', 'UNIMARC', 'ISO8859_1', 'BESTGUESS')" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="individualMarcPath" nullable="false" remarks="" size="100" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="'MarcRecordGrouper'" digits="0" id="5" name="groupingClass" nullable="false" remarks="" size="100" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="indexingClass" nullable="false" remarks="" size="50" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="'MarcRecord'" digits="0" id="7" name="recordDriver" nullable="false" remarks="" size="100" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="'Record'" digits="0" id="8" name="recordUrlComponent" nullable="false" remarks="" size="25" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="'bib'" digits="0" id="9" name="formatSource" nullable="false" remarks="" size="9" type="enum('bib', 'item', 'specified')" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="10" name="recordNumberTag" nullable="false" remarks="" size="3" type="CHAR" typeCode="1"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="11" name="recordNumberPrefix" nullable="false" remarks="" size="10" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="12" name="itemTag" nullable="false" remarks="" size="3" type="CHAR" typeCode="1"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="13" name="itemRecordNumber" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
-         <column autoUpdated="false" defaultValue="1" digits="0" id="14" name="useItemBasedCallNumbers" nullable="false" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="15" name="callNumberPrestamp" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="16" name="callNumber" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="17" name="callNumberCutter" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="18" name="callNumberPoststamp" nullable="true" remarks="" size="1" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="19" name="location" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="20" name="locationsToSuppress" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="21" name="subLocation" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="22" name="shelvingLocation" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="23" name="volume" nullable="true" remarks="" size="1" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="24" name="itemUrl" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="25" name="barcode" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="26" name="status" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="27" name="statusesToSuppress" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="28" name="totalCheckouts" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="29" name="lastYearCheckouts" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="30" name="yearToDateCheckouts" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="31" name="totalRenewals" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="32" name="iType" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="33" name="dueDate" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="34" name="dateCreated" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="35" name="dateCreatedFormat" nullable="true" remarks="" size="20" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="36" name="iCode2" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
-         <column autoUpdated="false" defaultValue="1" digits="0" id="37" name="useICode2Suppression" nullable="false" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="38" name="format" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="39" name="eContentDescriptor" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="40" name="orderTag" nullable="true" remarks="" size="3" type="CHAR" typeCode="1"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="41" name="orderStatus" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="42" name="orderLocation" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="43" name="orderCopies" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="44" name="orderCode3" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="45" name="collection" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="46" name="catalogDriver" nullable="true" remarks="" size="50" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="47" name="nonHoldableITypes" nullable="true" remarks="" size="600" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="48" name="nonHoldableStatuses" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="49" name="nonHoldableLocations" nullable="true" remarks="" size="512" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="50" name="lastCheckinFormat" nullable="true" remarks="" size="20" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="51" name="lastCheckinDate" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="52" name="orderLocationSingle" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="53" name="specifiedFormat" nullable="true" remarks="" size="50" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="54" name="specifiedFormatCategory" nullable="true" remarks="" size="50" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="55" name="specifiedFormatBoost" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="'.*\\.ma?rc'" digits="0" id="56" name="filenamesToInclude" nullable="true" remarks="" size="250" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="''" digits="0" id="57" name="collectionsToSuppress" nullable="true" remarks="" size="100" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="4" digits="0" id="58" name="numCharsToCreateFolderFrom" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="1" digits="0" id="59" name="createFolderFromLeadingCharacters" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="'yyMMdd'" digits="0" id="60" name="dueDateFormat" nullable="true" remarks="" size="20" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="1" digits="0" id="61" name="doAutomaticEcontentSuppression" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="62" name="iTypesToSuppress" nullable="true" remarks="" size="100" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="63" name="iCode2sToSuppress" nullable="true" remarks="" size="100" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="64" name="bCode3sToSuppress" nullable="true" remarks="" size="100" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="65" name="sierraRecordFixedFieldsTag" nullable="true" remarks="" size="3" type="CHAR" typeCode="1"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="66" name="bCode3" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
-         <column autoUpdated="false" defaultValue="'a'" digits="0" id="67" name="recordNumberField" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
-         <column autoUpdated="false" defaultValue="'a'" digits="0" id="68" name="recordNumberSubfield" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="69" name="runFullUpdate" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="70" name="lastUpdateOfChangedRecords" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="71" name="lastUpdateOfAllRecords" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="72" name="lastUpdateFromMarcExport" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="'English'" digits="0" id="73" name="treatUnknownLanguageAs" nullable="true" remarks="" size="50" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="'English'" digits="0" id="74" name="treatUndeterminedLanguageAs" nullable="true" remarks="" size="50" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="1" digits="0" id="75" name="checkRecordForLargePrint" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="76" name="determineAudienceBy" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="77" name="audienceSubfield" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
-         <column autoUpdated="false" defaultValue="1" digits="0" id="78" name="includeLocationNameInDetailedLocation" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="79" name="lastVolumeExportTimestamp" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="80" name="lastUpdateOfAuthorities" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="81" name="regroupAllRecords" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="82" name="fullMarcExportRecordIdThreshold" nullable="true" remarks="" size="19" type="BIGINT" typeCode="-5"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="83" name="lastChangeProcessed" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="''" digits="0" id="84" name="noteSubfield" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
-         <column autoUpdated="false" defaultValue="'General'" digits="0" id="85" name="treatUnknownAudienceAs" nullable="true" remarks="" size="10" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="'overdrive.com|contentreserve.com|hoopla|yourcloudlibrary|axis360.baker-taylor.com'" digits="0" id="86" name="suppressRecordsWithUrlsMatching" nullable="true" remarks="" size="512" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="87" name="determineLiteraryFormBy" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
-         <column autoUpdated="false" defaultValue="''" digits="0" id="88" name="literaryFormSubfield" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
-         <column autoUpdated="false" defaultValue="1" digits="0" id="89" name="hideUnknownLiteraryForm" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
-         <column autoUpdated="false" defaultValue="1" digits="0" id="90" name="hideNotCodedLiteraryForm" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="91" name="fallbackFormatField" nullable="true" remarks="" size="5" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="1" digits="0" id="92" name="treatLibraryUseOnlyGroupedStatusesAsAvailable" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
-         <column autoUpdated="false" defaultValue="''" digits="0" id="93" name="customMarcFieldsToIndexAsKeyword" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="94" name="processRecordLinking" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="1" digits="0" id="95" name="evergreenOrgUnitSchema" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="96" name="index856Links" nullable="false" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="1" digits="0" id="97" name="includePersonalAndCorporateNamesInTopics" nullable="false" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="'o|1'" digits="0" id="98" name="orderRecordsStatusesToInclude" nullable="true" remarks="" size="25" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="99" name="hideOrderRecordsForBibsWithPhysicalItems" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="1" digits="0" id="100" name="orderRecordsToSuppressByDate" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="101" name="checkSierraMatTypeForFormat" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
-         <column autoUpdated="false" defaultValue="''" digits="0" id="102" name="customFacet1SourceField" nullable="true" remarks="" size="50" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="103" name="customFacet1ValuesToInclude" nullable="true" remarks="" size="65535" type="TEXT" typeCode="-1"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="104" name="customFacet1ValuesToExclude" nullable="true" remarks="" size="65535" type="TEXT" typeCode="-1"/>
-         <column autoUpdated="false" defaultValue="''" digits="0" id="105" name="customFacet2SourceField" nullable="true" remarks="" size="50" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="106" name="customFacet2ValuesToInclude" nullable="true" remarks="" size="65535" type="TEXT" typeCode="-1"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="107" name="customFacet2ValuesToExclude" nullable="true" remarks="" size="65535" type="TEXT" typeCode="-1"/>
-         <column autoUpdated="false" defaultValue="''" digits="0" id="108" name="customFacet3SourceField" nullable="true" remarks="" size="50" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="109" name="customFacet3ValuesToInclude" nullable="true" remarks="" size="65535" type="TEXT" typeCode="-1"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="110" name="customFacet3ValuesToExclude" nullable="true" remarks="" size="65535" type="TEXT" typeCode="-1"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="111" name="callNumberPrestamp2" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="112" name="itemUrlDescription" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
-         <column autoUpdated="false" defaultValue="2" digits="0" id="113" name="numRetriesForBibLookups" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="114" name="numMillisecondsToPauseAfterBibLookups" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="10" digits="0" id="115" name="numExtractionThreads" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
+         <column autoUpdated="false" defaultValue="'MarcRecordGrouper'" digits="0" id="4" name="groupingClass" nullable="false" remarks="" size="100" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="indexingClass" nullable="false" remarks="" size="50" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="'MarcRecord'" digits="0" id="6" name="recordDriver" nullable="false" remarks="" size="100" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="'Record'" digits="0" id="7" name="recordUrlComponent" nullable="false" remarks="" size="25" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="'bib'" digits="0" id="8" name="formatSource" nullable="false" remarks="" size="9" type="enum('bib', 'item', 'specified')" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="9" name="recordNumberTag" nullable="false" remarks="" size="3" type="CHAR" typeCode="1"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="10" name="recordNumberPrefix" nullable="false" remarks="" size="10" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="11" name="itemTag" nullable="false" remarks="" size="3" type="CHAR" typeCode="1"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="12" name="itemRecordNumber" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="13" name="useItemBasedCallNumbers" nullable="false" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="14" name="callNumberPrestamp" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="15" name="callNumber" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="16" name="callNumberCutter" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="17" name="callNumberPoststamp" nullable="true" remarks="" size="1" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="18" name="location" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="19" name="locationsToSuppress" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="20" name="subLocation" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="21" name="shelvingLocation" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="22" name="volume" nullable="true" remarks="" size="1" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="23" name="itemUrl" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="24" name="barcode" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="25" name="status" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="26" name="statusesToSuppress" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="27" name="totalCheckouts" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="28" name="lastYearCheckouts" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="29" name="yearToDateCheckouts" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="30" name="totalRenewals" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="31" name="iType" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="32" name="dueDate" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="33" name="dateCreated" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="34" name="dateCreatedFormat" nullable="true" remarks="" size="20" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="35" name="iCode2" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="36" name="useICode2Suppression" nullable="false" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="37" name="format" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="38" name="eContentDescriptor" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="39" name="orderTag" nullable="true" remarks="" size="3" type="CHAR" typeCode="1"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="40" name="orderStatus" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="41" name="orderLocation" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="42" name="orderCopies" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="43" name="orderCode3" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="44" name="collection" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="45" name="catalogDriver" nullable="true" remarks="" size="50" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="46" name="nonHoldableITypes" nullable="true" remarks="" size="600" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="47" name="nonHoldableStatuses" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="48" name="nonHoldableLocations" nullable="true" remarks="" size="512" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="49" name="lastCheckinFormat" nullable="true" remarks="" size="20" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="50" name="lastCheckinDate" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="51" name="orderLocationSingle" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="52" name="specifiedFormat" nullable="true" remarks="" size="50" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="53" name="specifiedFormatCategory" nullable="true" remarks="" size="50" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="54" name="specifiedFormatBoost" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="'.*\\.ma?rc'" digits="0" id="55" name="filenamesToInclude" nullable="true" remarks="" size="250" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="''" digits="0" id="56" name="collectionsToSuppress" nullable="true" remarks="" size="100" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="'yyMMdd'" digits="0" id="57" name="dueDateFormat" nullable="true" remarks="" size="20" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="58" name="doAutomaticEcontentSuppression" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="59" name="iTypesToSuppress" nullable="true" remarks="" size="100" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="60" name="iCode2sToSuppress" nullable="true" remarks="" size="100" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="61" name="bCode3sToSuppress" nullable="true" remarks="" size="100" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="62" name="sierraRecordFixedFieldsTag" nullable="true" remarks="" size="3" type="CHAR" typeCode="1"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="63" name="bCode3" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
+         <column autoUpdated="false" defaultValue="'a'" digits="0" id="64" name="recordNumberField" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
+         <column autoUpdated="false" defaultValue="'a'" digits="0" id="65" name="recordNumberSubfield" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="66" name="runFullUpdate" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="67" name="lastUpdateOfChangedRecords" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="68" name="lastUpdateOfAllRecords" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="69" name="lastUpdateFromMarcExport" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="'English'" digits="0" id="70" name="treatUnknownLanguageAs" nullable="true" remarks="" size="50" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="'English'" digits="0" id="71" name="treatUndeterminedLanguageAs" nullable="true" remarks="" size="50" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="72" name="checkRecordForLargePrint" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="73" name="determineAudienceBy" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="74" name="audienceSubfield" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="75" name="includeLocationNameInDetailedLocation" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="76" name="lastVolumeExportTimestamp" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="77" name="lastUpdateOfAuthorities" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="78" name="regroupAllRecords" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="79" name="fullMarcExportRecordIdThreshold" nullable="true" remarks="" size="19" type="BIGINT" typeCode="-5"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="80" name="lastChangeProcessed" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="''" digits="0" id="81" name="noteSubfield" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
+         <column autoUpdated="false" defaultValue="'General'" digits="0" id="82" name="treatUnknownAudienceAs" nullable="true" remarks="" size="10" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="'overdrive.com|contentreserve.com|hoopla|yourcloudlibrary|axis360.baker-taylor.com'" digits="0" id="83" name="suppressRecordsWithUrlsMatching" nullable="true" remarks="" size="512" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="84" name="determineLiteraryFormBy" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
+         <column autoUpdated="false" defaultValue="''" digits="0" id="85" name="literaryFormSubfield" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="86" name="hideUnknownLiteraryForm" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="87" name="hideNotCodedLiteraryForm" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="88" name="fallbackFormatField" nullable="true" remarks="" size="5" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="89" name="treatLibraryUseOnlyGroupedStatusesAsAvailable" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
+         <column autoUpdated="false" defaultValue="''" digits="0" id="90" name="customMarcFieldsToIndexAsKeyword" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="91" name="processRecordLinking" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="92" name="evergreenOrgUnitSchema" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="93" name="index856Links" nullable="false" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="94" name="includePersonalAndCorporateNamesInTopics" nullable="false" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="'o|1'" digits="0" id="95" name="orderRecordsStatusesToInclude" nullable="true" remarks="" size="25" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="96" name="hideOrderRecordsForBibsWithPhysicalItems" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="97" name="orderRecordsToSuppressByDate" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="98" name="checkSierraMatTypeForFormat" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
+         <column autoUpdated="false" defaultValue="''" digits="0" id="99" name="customFacet1SourceField" nullable="true" remarks="" size="50" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="100" name="customFacet1ValuesToInclude" nullable="true" remarks="" size="65535" type="TEXT" typeCode="-1"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="101" name="customFacet1ValuesToExclude" nullable="true" remarks="" size="65535" type="TEXT" typeCode="-1"/>
+         <column autoUpdated="false" defaultValue="''" digits="0" id="102" name="customFacet2SourceField" nullable="true" remarks="" size="50" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="103" name="customFacet2ValuesToInclude" nullable="true" remarks="" size="65535" type="TEXT" typeCode="-1"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="104" name="customFacet2ValuesToExclude" nullable="true" remarks="" size="65535" type="TEXT" typeCode="-1"/>
+         <column autoUpdated="false" defaultValue="''" digits="0" id="105" name="customFacet3SourceField" nullable="true" remarks="" size="50" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="106" name="customFacet3ValuesToInclude" nullable="true" remarks="" size="65535" type="TEXT" typeCode="-1"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="107" name="customFacet3ValuesToExclude" nullable="true" remarks="" size="65535" type="TEXT" typeCode="-1"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="108" name="callNumberPrestamp2" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="109" name="itemUrlDescription" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
+         <column autoUpdated="false" defaultValue="2" digits="0" id="110" name="numRetriesForBibLookups" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="111" name="numMillisecondsToPauseAfterBibLookups" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="10" digits="0" id="112" name="numExtractionThreads" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
+         <column autoUpdated="false" defaultValue="''" digits="0" id="113" name="orderRecordStatusToTreatAsUnderConsideration" nullable="true" remarks="" size="10" type="VARCHAR" typeCode="12"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="indexing_profiles_s_pk" unique="true">
             <column ascending="true" name="id"/>
@@ -3686,6 +3753,7 @@
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="name" nullable="false" remarks="" size="50" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="2" name="snippet" nullable="true" remarks="" size="16777215" type="MEDIUMTEXT" typeCode="-1"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="3" name="containsAnalyticsCookies" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="javascript_snippets_s_pk" unique="true">
             <column ascending="true" name="id"/>
@@ -4021,62 +4089,64 @@
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="234" name="ssoLibraryIdFallback" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="235" name="ssoCategoryIdAttr" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="236" name="ssoCategoryIdFallback" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="237" name="selfRegRequirePhone" nullable="false" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="1" digits="0" id="238" name="selfRegRequireEmail" nullable="false" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="-1" digits="0" id="239" name="ssoSettingId" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
-         <column autoUpdated="false" defaultValue="1" digits="0" id="240" name="showUserCirculationModules" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="1" digits="0" id="241" name="showUserPreferences" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="1" digits="0" id="242" name="showUserContactInformation" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="243" name="ssoEntityId" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="244" name="showVolumesWithLocalCopiesFirst" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
-         <column autoUpdated="false" defaultValue="1" digits="0" id="245" name="enableListDescriptions" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="''" digits="0" id="246" name="allowableListNames" nullable="true" remarks="" size="500" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="-1" digits="0" id="247" name="invoiceCloudSettingId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="'SYSTEM'" digits="0" id="248" name="holdRange" nullable="true" remarks="" size="20" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="249" name="optInToReadingHistoryUpdatesILS" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="1" digits="0" id="250" name="optOutOfReadingHistoryUpdatesILS" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="1" digits="0" id="251" name="setUsePreferredNameInIlsOnUpdate" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="-1" digits="0" id="252" name="accountProfileId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="-1" digits="0" id="253" name="lidaGeneralSettingId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="254" name="materialsRequestSendStaffEmailOnNew" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="255" name="materialsRequestSendStaffEmailOnAssign" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="256" name="materialsRequestNewEmail" nullable="true" remarks="" size="125" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="-1" digits="0" id="257" name="novelistSettingId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="-1" digits="0" id="258" name="deluxeCertifiedPaymentsSettingId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="-1" digits="0" id="259" name="paypalPayflowSettingId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="260" name="enableThirdPartyRegistration" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
-         <column autoUpdated="false" defaultValue="-1" digits="0" id="261" name="thirdPartyRegistrationLocation" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="-1" digits="0" id="262" name="thirdPartyPTypeAddressValidated" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="-1" digits="0" id="263" name="thirdPartyPTypeAddressNotValidated" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="-1" digits="0" id="264" name="squareSettingId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="-1" digits="0" id="265" name="twilioSettingId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="'0'" digits="0" id="266" name="eCommerceFee" nullable="true" remarks="" size="11" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="267" name="eCommerceTerms" nullable="true" remarks="" size="16777215" type="MEDIUMTEXT" typeCode="-1"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="268" name="cookieStorageConsent" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="269" name="cookiePolicyHTML" nullable="true" remarks="" size="65535" type="TEXT" typeCode="-1"/>
-         <column autoUpdated="false" defaultValue="1" digits="0" id="270" name="openArchivesFacetSettingId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="1" digits="0" id="271" name="websiteIndexingFacetSettingId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="272" name="enableForgotBarcode" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="273" name="allowChangingPickupLocationForAvailableHolds" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="1" digits="0" id="274" name="allowCancellingAvailableHolds" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="275" name="alwaysDisplayRenewalCount" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="-1" digits="0" id="276" name="selfRegistrationFormId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="2" digits="0" id="277" name="ILLSystem" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="-1" digits="0" id="278" name="palaceProjectScopeId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="1" digits="0" id="279" name="languageAndDisplayInHeader" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="280" name="enableCardRenewal" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="1" digits="0" id="281" name="showCardRenewalWhenExpirationIsClose" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="282" name="cardRenewalUrl" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="1" digits="0" id="283" name="allowCancellingInTransitHolds" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="-1" digits="0" id="284" name="stripeSettingId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="-1" digits="0" id="285" name="summonSettingsId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="286" name="summonApiId" nullable="true" remarks="" size="50" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="287" name="summonApiPassword" nullable="true" remarks="" size="50" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="288" name="showPaymentHistory" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="289" name="deletePaymentHistoryOlderThan" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="1" digits="0" id="290" name="showHoldPosition" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="291" name="minSelfRegAge" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="''" digits="0" id="292" name="institutionCode" nullable="true" remarks="" size="100" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="-1" digits="0" id="237" name="ssoSettingId" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="238" name="showUserCirculationModules" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="239" name="showUserPreferences" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="240" name="showUserContactInformation" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="241" name="ssoEntityId" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="242" name="showVolumesWithLocalCopiesFirst" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="243" name="enableListDescriptions" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="''" digits="0" id="244" name="allowableListNames" nullable="true" remarks="" size="500" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="-1" digits="0" id="245" name="invoiceCloudSettingId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="'SYSTEM'" digits="0" id="246" name="holdRange" nullable="true" remarks="" size="20" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="247" name="optInToReadingHistoryUpdatesILS" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="248" name="optOutOfReadingHistoryUpdatesILS" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="249" name="setUsePreferredNameInIlsOnUpdate" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="-1" digits="0" id="250" name="accountProfileId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="-1" digits="0" id="251" name="lidaGeneralSettingId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="252" name="materialsRequestSendStaffEmailOnNew" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="253" name="materialsRequestSendStaffEmailOnAssign" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="254" name="materialsRequestNewEmail" nullable="true" remarks="" size="125" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="-1" digits="0" id="255" name="novelistSettingId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="-1" digits="0" id="256" name="deluxeCertifiedPaymentsSettingId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="-1" digits="0" id="257" name="paypalPayflowSettingId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="-1" digits="0" id="258" name="thirdPartyRegistrationLocation" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="-1" digits="0" id="259" name="thirdPartyPTypeAddressValidated" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="-1" digits="0" id="260" name="thirdPartyPTypeAddressNotValidated" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="-1" digits="0" id="261" name="squareSettingId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="-1" digits="0" id="262" name="twilioSettingId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="'0'" digits="0" id="263" name="eCommerceFee" nullable="true" remarks="" size="11" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="264" name="eCommerceTerms" nullable="true" remarks="" size="16777215" type="MEDIUMTEXT" typeCode="-1"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="265" name="cookieStorageConsent" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="266" name="cookiePolicyHTML" nullable="true" remarks="" size="65535" type="TEXT" typeCode="-1"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="267" name="openArchivesFacetSettingId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="268" name="websiteIndexingFacetSettingId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="269" name="enableForgotBarcode" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="270" name="allowChangingPickupLocationForAvailableHolds" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="271" name="allowCancellingAvailableHolds" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="272" name="alwaysDisplayRenewalCount" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="-1" digits="0" id="273" name="selfRegistrationFormId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="2" digits="0" id="274" name="ILLSystem" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="-1" digits="0" id="275" name="palaceProjectScopeId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="276" name="languageAndDisplayInHeader" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="277" name="enableCardRenewal" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="278" name="showCardRenewalWhenExpirationIsClose" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="279" name="cardRenewalUrl" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="280" name="allowCancellingInTransitHolds" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="-1" digits="0" id="281" name="stripeSettingId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="-1" digits="0" id="282" name="summonSettingsId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="283" name="summonApiId" nullable="true" remarks="" size="50" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="284" name="summonApiPassword" nullable="true" remarks="" size="50" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="285" name="showPaymentHistory" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="286" name="deletePaymentHistoryOlderThan" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="287" name="showHoldPosition" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="288" name="minSelfRegAge" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="''" digits="0" id="289" name="institutionCode" nullable="true" remarks="" size="100" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="290" name="showAvailableCoversInSummon" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="291" name="allowMasqueradeWithUsername" nullable="false" remarks="" size="3" type="TINYINT" typeCode="-6"/>
+         <column autoUpdated="false" defaultValue="'w'" digits="0" id="292" name="usernameField" nullable="false" remarks="" size="1" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="293" name="allowPatronWorkPhoneNumberUpdates" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="-1" digits="0" id="294" name="ncrSettingId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
          <primaryKey column="libraryId" sequenceNumberInPK="1"/>
          <index name="library_s_pk" unique="true">
             <column ascending="true" name="libraryId"/>
@@ -5184,6 +5254,24 @@
             <column ascending="true" name="id"/>
          </index>
       </table>
+      <table catalog="aspen" name="ncr_payments_settings" numRows="0" remarks="" type="TABLE">
+         <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="name" nullable="false" remarks="" size="50" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="clientKey" nullable="false" remarks="" size="500" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="webKey" nullable="false" remarks="" size="500" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="4" name="paymentTypeId" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="5" name="lastTransactionNumber" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <primaryKey column="id" sequenceNumberInPK="1"/>
+         <index name="ncr_payments_settings_s_pk" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+         <index name="name" unique="true">
+            <column ascending="true" name="name"/>
+         </index>
+         <index name="PRIMARY" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+      </table>
       <table catalog="aspen" name="non_holdable_locations" numRows="0" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="locationId" nullable="false" remarks="A unique id for the non holdable location" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="millenniumCode" nullable="false" remarks="The internal 5 letter code within Millennium" size="5" type="VARCHAR" typeCode="12"/>
@@ -6060,7 +6148,7 @@
             <column ascending="true" name="id"/>
          </index>
       </table>
-      <table catalog="aspen" name="permissions" numRows="200" remarks="" type="TABLE">
+      <table catalog="aspen" name="permissions" numRows="203" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="name" nullable="false" remarks="" size="75" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="sectionName" nullable="false" remarks="" size="75" type="VARCHAR" typeCode="12"/>
@@ -6646,7 +6734,7 @@
             <column ascending="true" name="id"/>
          </index>
       </table>
-      <table catalog="aspen" name="role_permissions" numRows="272" remarks="" type="TABLE">
+      <table catalog="aspen" name="role_permissions" numRows="275" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="roleId" nullable="false" remarks="" size="10" type="INT" typeCode="4">
             <parent catalog="aspen" column="roleId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="roles"/>
@@ -7024,35 +7112,34 @@
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="marcPath" nullable="false" remarks="" size="100" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="'.*\\.ma?rc'" digits="0" id="3" name="filenamesToInclude" nullable="true" remarks="" size="250" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="'MARC8'" digits="0" id="4" name="marcEncoding" nullable="false" remarks="" size="9" type="enum('MARC8', 'UTF8', 'UNIMARC', 'ISO8859_1', 'BESTGUESS')" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="individualMarcPath" nullable="false" remarks="" size="100" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="4" digits="0" id="6" name="numCharsToCreateFolderFrom" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="7" name="createFolderFromLeadingCharacters" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="'SideLoadedRecordGrouper'" digits="0" id="8" name="groupingClass" nullable="false" remarks="" size="100" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="'SideLoadedEContentProcessor'" digits="0" id="9" name="indexingClass" nullable="false" remarks="" size="50" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="'SideLoadedRecord'" digits="0" id="10" name="recordDriver" nullable="false" remarks="" size="100" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="'DefineThis'" digits="0" id="11" name="recordUrlComponent" nullable="false" remarks="" size="25" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="'001'" digits="0" id="12" name="recordNumberTag" nullable="false" remarks="" size="3" type="CHAR" typeCode="1"/>
-         <column autoUpdated="false" defaultValue="'a'" digits="0" id="13" name="recordNumberSubfield" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
-         <column autoUpdated="false" defaultValue="''" digits="0" id="14" name="recordNumberPrefix" nullable="false" remarks="" size="10" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="''" digits="0" id="15" name="itemTag" nullable="false" remarks="" size="3" type="CHAR" typeCode="1"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="16" name="itemRecordNumber" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="17" name="location" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="18" name="locationsToSuppress" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="19" name="itemUrl" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="20" name="format" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
-         <column autoUpdated="false" defaultValue="'bib'" digits="0" id="21" name="formatSource" nullable="false" remarks="" size="9" type="enum('bib', 'item', 'specified')" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="22" name="specifiedFormat" nullable="true" remarks="" size="50" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="23" name="specifiedFormatCategory" nullable="true" remarks="" size="50" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="24" name="specifiedFormatBoost" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="25" name="runFullUpdate" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="26" name="lastUpdateOfChangedRecords" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="27" name="lastUpdateOfAllRecords" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="'English'" digits="0" id="28" name="treatUnknownLanguageAs" nullable="true" remarks="" size="50" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="'English'" digits="0" id="29" name="treatUndeterminedLanguageAs" nullable="true" remarks="" size="50" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="30" name="deletedRecordsIds" nullable="true" remarks="" size="2147483647" type="LONGTEXT" typeCode="-1"/>
-         <column autoUpdated="false" defaultValue="'Access Online'" digits="0" id="31" name="accessButtonLabel" nullable="true" remarks="" size="50" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="1" digits="0" id="32" name="showStatus" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="1" digits="0" id="33" name="includePersonalAndCorporateNamesInTopics" nullable="false" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="'SideLoadedRecordGrouper'" digits="0" id="5" name="groupingClass" nullable="false" remarks="" size="100" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="'SideLoadedEContentProcessor'" digits="0" id="6" name="indexingClass" nullable="false" remarks="" size="50" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="'SideLoadedRecord'" digits="0" id="7" name="recordDriver" nullable="false" remarks="" size="100" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="'DefineThis'" digits="0" id="8" name="recordUrlComponent" nullable="false" remarks="" size="25" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="'001'" digits="0" id="9" name="recordNumberTag" nullable="false" remarks="" size="3" type="CHAR" typeCode="1"/>
+         <column autoUpdated="false" defaultValue="'a'" digits="0" id="10" name="recordNumberSubfield" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
+         <column autoUpdated="false" defaultValue="''" digits="0" id="11" name="recordNumberPrefix" nullable="false" remarks="" size="10" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="''" digits="0" id="12" name="itemTag" nullable="false" remarks="" size="3" type="CHAR" typeCode="1"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="13" name="itemRecordNumber" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="14" name="location" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="15" name="locationsToSuppress" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="16" name="itemUrl" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="17" name="format" nullable="true" remarks="" size="1" type="CHAR" typeCode="1"/>
+         <column autoUpdated="false" defaultValue="'bib'" digits="0" id="18" name="formatSource" nullable="false" remarks="" size="9" type="enum('bib', 'item', 'specified')" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="19" name="specifiedFormat" nullable="true" remarks="" size="50" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="20" name="specifiedFormatCategory" nullable="true" remarks="" size="50" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="21" name="specifiedFormatBoost" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="22" name="runFullUpdate" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="23" name="lastUpdateOfChangedRecords" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="24" name="lastUpdateOfAllRecords" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="'English'" digits="0" id="25" name="treatUnknownLanguageAs" nullable="true" remarks="" size="50" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="'English'" digits="0" id="26" name="treatUndeterminedLanguageAs" nullable="true" remarks="" size="50" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="27" name="deletedRecordsIds" nullable="true" remarks="" size="2147483647" type="LONGTEXT" typeCode="-1"/>
+         <column autoUpdated="false" defaultValue="'Access Online'" digits="0" id="28" name="accessButtonLabel" nullable="true" remarks="" size="50" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="29" name="showStatus" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="30" name="includePersonalAndCorporateNamesInTopics" nullable="false" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="31" name="convertFormatToEContent" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="32" name="useLinkTextForButtonLabel" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="sideloads_s_pk" unique="true">
             <column ascending="true" name="id"/>
@@ -7579,6 +7666,7 @@
          <column autoUpdated="false" defaultValue="'ByWater Solutions'" digits="0" id="28" name="supportingCompany" nullable="true" remarks="" size="72" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="1" digits="0" id="29" name="monitorAntivirus" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
          <column autoUpdated="false" defaultValue="0" digits="0" id="30" name="enableBrandedApp" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="31" name="enableNovelistSeriesIntegration" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="system_variables_s_pk" unique="true">
             <column ascending="true" name="id"/>
@@ -7871,6 +7959,7 @@
          <column autoUpdated="false" defaultValue="''" digits="0" id="261" name="listsImage" nullable="true" remarks="" size="100" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="''" digits="0" id="262" name="libraryWebsiteImage" nullable="true" remarks="" size="100" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="''" digits="0" id="263" name="historyArchivesImage" nullable="true" remarks="" size="100" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="264" name="accessibleBrowseCategories" nullable="false" remarks="" size="3" type="TINYINT" typeCode="-6"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="themes_s_pk" unique="true">
             <column ascending="true" name="id"/>
@@ -8257,6 +8346,30 @@
             <column ascending="true" name="id"/>
          </index>
       </table>
+      <table catalog="aspen" name="usage_by_user_agent" numRows="0" remarks="" type="TABLE">
+         <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="userAgentId" nullable="false" remarks="" size="10" type="INT" typeCode="4">
+            <parent catalog="aspen" column="id" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="user"/>
+         </column>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="2" name="instance" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="year" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="month" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="5" name="numRequests" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="6" name="numBlockedRequests" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
+         <primaryKey column="id" sequenceNumberInPK="1"/>
+         <index name="usage_by_user_agent_s_pk" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+         <index name="PRIMARY" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+         <index name="userAgentId" unique="false">
+            <column ascending="true" name="userAgentId"/>
+            <column ascending="true" name="year"/>
+            <column ascending="true" name="instance"/>
+            <column ascending="true" name="month"/>
+         </index>
+      </table>
       <table catalog="aspen" name="usage_tracking" numRows="0" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="usageId" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="ipId" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
@@ -8295,6 +8408,7 @@
             <child catalog="aspen" column="userId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="redwood_user_contribution"/>
             <child catalog="aspen" column="userId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="system_message_dismissal"/>
             <child catalog="aspen" column="userId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="two_factor_auth_codes"/>
+            <child catalog="aspen" column="userAgentId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="usage_by_user_agent"/>
             <child catalog="aspen" column="userId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="user_account_summary"/>
             <child catalog="aspen" column="userId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="user_axis360_usage"/>
             <child catalog="aspen" column="userId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="user_checkout"/>
@@ -8343,7 +8457,7 @@
          <column autoUpdated="false" defaultValue="0" digits="0" id="15" name="disableCoverArt" nullable="false" remarks="" size="3" type="TINYINT" typeCode="-6"/>
          <column autoUpdated="false" defaultValue="0" digits="0" id="16" name="disableRecommendations" nullable="false" remarks="" size="3" type="TINYINT" typeCode="-6"/>
          <column autoUpdated="false" defaultValue="''" digits="0" id="17" name="phone" nullable="false" remarks="" size="256" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="''" digits="0" id="18" name="patronType" nullable="false" remarks="" size="30" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="''" digits="0" id="18" name="patronType" nullable="false" remarks="" size="50" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="''" digits="0" id="19" name="overdriveEmail" nullable="false" remarks="" size="256" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="1" digits="0" id="20" name="promptForOverdriveEmail" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="21" name="preferredLibraryInterface" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
@@ -8433,6 +8547,22 @@
          <index name="source" unique="true">
             <column ascending="true" name="source"/>
             <column ascending="true" name="userId"/>
+         </index>
+      </table>
+      <table catalog="aspen" name="user_agent" numRows="0" remarks="" type="TABLE">
+         <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="1" name="userAgent" nullable="true" remarks="" size="65535" type="TEXT" typeCode="-1"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="2" name="isBot" nullable="false" remarks="" size="3" type="TINYINT" typeCode="-6"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="3" name="blockAccess" nullable="false" remarks="" size="3" type="TINYINT" typeCode="-6"/>
+         <primaryKey column="id" sequenceNumberInPK="1"/>
+         <index name="user_agent_s_pk" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+         <index name="PRIMARY" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+         <index name="userAgent" unique="true">
+            <column ascending="true" name="userAgent"/>
          </index>
       </table>
       <table catalog="aspen" name="user_axis360_usage" numRows="0" remarks="" type="TABLE">

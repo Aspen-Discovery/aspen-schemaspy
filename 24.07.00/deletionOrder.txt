@@ -40,6 +40,7 @@ user_list_entry
 user_list
 user_link_blocks
 user_link
+user_agent
 usage_tracking
 usage_by_ip_address
 two_factor_auth_settings
@@ -151,6 +152,7 @@ novelist_settings
 novelist_data
 nongrouped_records
 non_holdable_locations
+ncr_payments_settings
 modules
 millennium_cache
 merged_grouped_works
@@ -215,6 +217,7 @@ grouped_work_facet_groups
 grouped_work_facet
 grouped_work_display_settings
 grouped_work_display_info
+grouped_work_debug_info
 grouped_work_alternate_titles
 grouped_work
 greenhouse_settings
@@ -290,6 +293,8 @@ author_enrichment
 author_authority_alternative
 author_authority
 author_authorities
+assabet_settings
+assabet_events
 aspen_usage
 aspen_sites
 aspen_site_wait_time
@@ -351,6 +356,7 @@ user_cloud_library_usage
 user_checkout
 user_axis360_usage
 user_account_summary
+usage_by_user_agent
 two_factor_auth_codes
 system_message_library
 system_message_dismissal

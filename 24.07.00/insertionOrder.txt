@@ -69,6 +69,7 @@ staff_members
 system_message_dismissal
 system_message_library
 two_factor_auth_codes
+usage_by_user_agent
 user_account_summary
 user_axis360_usage
 user_checkout
@@ -130,6 +131,8 @@ aspen_site_stats
 aspen_site_wait_time
 aspen_sites
 aspen_usage
+assabet_events
+assabet_settings
 author_authorities
 author_authority
 author_authority_alternative
@@ -205,6 +208,7 @@ google_api_settings
 greenhouse_settings
 grouped_work
 grouped_work_alternate_titles
+grouped_work_debug_info
 grouped_work_display_info
 grouped_work_display_settings
 grouped_work_facet
@@ -269,6 +273,7 @@ location_website_indexing
 merged_grouped_works
 millennium_cache
 modules
+ncr_payments_settings
 non_holdable_locations
 nongrouped_records
 novelist_data
@@ -380,6 +385,7 @@ twilio_settings
 two_factor_auth_settings
 usage_by_ip_address
 usage_tracking
+user_agent
 user_link
 user_link_blocks
 user_list
