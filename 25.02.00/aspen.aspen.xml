@@ -8659,7 +8659,7 @@
          <index name="PRIMARY" unique="true">
             <column ascending="true" name="id"/>
          </index>
-         <index name="userAgentId" unique="false">
+         <index name="userAgentId" unique="true">
             <column ascending="true" name="userAgentId"/>
             <column ascending="true" name="year"/>
             <column ascending="true" name="instance"/>
