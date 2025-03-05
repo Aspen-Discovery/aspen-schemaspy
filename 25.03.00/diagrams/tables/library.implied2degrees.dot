@@ -9,6 +9,8 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
   "donations_earmark":"elipses":w -> "donations":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "donations_value":"elipses":w -> "donations":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "event_library_map_values":"libraryId":w -> "library":"libraryId.type":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "event_type_library":"eventTypeId":w -> "event":"elipses":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "event_type_library":"libraryId":w -> "library":"libraryId.type":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "greenhouse_cache":"libraryId":w -> "library":"libraryId.type":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "holiday":"libraryId":w -> "library":"libraryId.type":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "hoopla_settings":"libraryId":w -> "library":"libraryId.type":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
@@ -19,10 +21,14 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
   "library_cloud_library_scope":"scopeId":w -> "scope":"elipses":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_combined_results_section":"libraryId":w -> "library":"libraryId.type":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_email_template":"libraryId":w -> "library":"libraryId.type":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "library_events_setting":"eventsFacetSettingsId":w -> "event":"elipses":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_events_setting":"libraryId":w -> "library":"libraryId.type":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_ill_item_type":"libraryId":w -> "library":"libraryId.type":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_links":"libraryId":w -> "library":"libraryId.type":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_open_archives_collection":"libraryId":w -> "library":"libraryId.type":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "library_overdrive_scope":"libraryId":w -> "library":"libraryId.type":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "library_overdrive_scope":"scopeId":w -> "scope":"elipses":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "library_overdrive_settings":"libraryId":w -> "library":"libraryId.type":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_records_to_include":"libraryId":w -> "library":"libraryId.type":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_search_source":"libraryId":w -> "library":"libraryId.type":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_sideload_scopes":"libraryId":w -> "library":"libraryId.type":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
@@ -30,11 +36,13 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
   "library_themes":"libraryId":w -> "library":"libraryId.type":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_web_builder_basic_page":"libraryId":w -> "library":"libraryId.type":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_web_builder_custom_form":"libraryId":w -> "library":"libraryId.type":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "library_web_builder_custom_web_resource_page":"libraryId":w -> "library":"libraryId.type":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_web_builder_grapes_page":"libraryId":w -> "library":"libraryId.type":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_web_builder_portal_page":"libraryId":w -> "library":"libraryId.type":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_web_builder_quick_poll":"libraryId":w -> "library":"libraryId.type":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_web_builder_resource":"libraryId":w -> "library":"libraryId.type":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_website_indexing":"libraryId":w -> "library":"libraryId.type":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "library_year_in_review":"libraryId":w -> "library":"libraryId.type":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "location":"libraryId":w -> "library":"libraryId.type":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "materials_request":"libraryId":w -> "library":"libraryId.type":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "materials_request_fields_to_display":"libraryId":w -> "library":"libraryId.type":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
@@ -151,6 +159,17 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
     target="_top"
     tooltip="donations_value"
   ];
+  "event" [
+   label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="34" HEIGHT="16"><B>event</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">9 &gt;</TD></TR>
+    </TABLE>>
+    URL="event.html"
+    target="_top"
+    tooltip="event"
+  ];
   "event_library_map_values" [
    label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
@@ -164,6 +183,19 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
     URL="event_library_map_values.html"
     target="_top"
     tooltip="event_library_map_values"
+  ];
+  "event_type_library" [
+   label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="110" HEIGHT="16"><B>event_type_library</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="110" HEIGHT="16">id</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="eventTypeId" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="110" HEIGHT="16">eventTypeId</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="libraryId" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="110" HEIGHT="16">libraryId</TD></TR></TABLE></TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 2</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+    </TABLE>>
+    URL="event_type_library.html"
+    target="_top"
+    tooltip="event_type_library"
   ];
   "greenhouse_cache" [
    label=<
@@ -300,7 +332,7 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
       <TR><TD PORT="additionalCss" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">additionalCss</TD></TR></TABLE></TD><TD PORT="additionalCss.type" ALIGN="LEFT">longtext[2147483647]</TD></TR>
       <TR><TD PORT="allowPinReset" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">allowPinReset</TD></TR></TABLE></TD><TD PORT="allowPinReset.type" ALIGN="LEFT">tinyint[3]</TD></TR>
       <TR><TD PORT="maxRequestsPerYear" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">maxRequestsPerYear</TD></TR></TABLE></TD><TD PORT="maxRequestsPerYear.type" ALIGN="LEFT">int[10]</TD></TR>
-      <TR><TD PORT="maxOpenRequests" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">maxOpenRequests</TD></TR></TABLE></TD><TD PORT="maxOpenRequests.type" ALIGN="LEFT">int[10]</TD></TR>
+      <TR><TD PORT="maxActiveRequests" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">maxActiveRequests</TD></TR></TABLE></TD><TD PORT="maxActiveRequests.type" ALIGN="LEFT">int[10]</TD></TR>
       <TR><TD PORT="twitterLink" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">twitterLink</TD></TR></TABLE></TD><TD PORT="twitterLink.type" ALIGN="LEFT">varchar[255]</TD></TR>
       <TR><TD PORT="pinterestLink" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">pinterestLink</TD></TR></TABLE></TD><TD PORT="pinterestLink.type" ALIGN="LEFT">varchar[255]</TD></TR>
       <TR><TD PORT="youtubeLink" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">youtubeLink</TD></TR></TABLE></TD><TD PORT="youtubeLink.type" ALIGN="LEFT">varchar[255]</TD></TR>
@@ -337,7 +369,7 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
       <TR><TD PORT="showOtherSubjects" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">showOtherSubjects</TD></TR></TABLE></TD><TD PORT="showOtherSubjects.type" ALIGN="LEFT">tinyint[3]</TD></TR>
       <TR><TD PORT="maxFinesToAllowAccountUpdates" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">maxFinesToAllowAccountUpdates</TD></TR></TABLE></TD><TD PORT="maxFinesToAllowAccountUpdates.type" ALIGN="LEFT">float[12]</TD></TR>
       <TR><TD PORT="showRefreshAccountButton" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">showRefreshAccountButton</TD></TR></TABLE></TD><TD PORT="showRefreshAccountButton.type" ALIGN="LEFT">tinyint[3]</TD></TR>
-      <TR><TD PORT="patronNameDisplayStyle" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">patronNameDisplayStyle</TD></TR></TABLE></TD><TD PORT="patronNameDisplayStyle.type" ALIGN="LEFT">enum[21]</TD></TR>
+      <TR><TD PORT="patronNameDisplayStyle" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">patronNameDisplayStyle</TD></TR></TABLE></TD><TD PORT="patronNameDisplayStyle.type" ALIGN="LEFT">enum[35]</TD></TR>
       <TR><TD PORT="preventExpiredCardLogin" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">preventExpiredCardLogin</TD></TR></TABLE></TD><TD PORT="preventExpiredCardLogin.type" ALIGN="LEFT">tinyint[3]</TD></TR>
       <TR><TD PORT="casHost" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">casHost</TD></TR></TABLE></TD><TD PORT="casHost.type" ALIGN="LEFT">varchar[50]</TD></TR>
       <TR><TD PORT="casPort" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">casPort</TD></TR></TABLE></TD><TD PORT="casPort.type" ALIGN="LEFT">smallint[5]</TD></TR>
@@ -384,8 +416,8 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
       <TR><TD PORT="selfRegistrationPasswordNotes" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">selfRegistrationPasswordNotes</TD></TR></TABLE></TD><TD PORT="selfRegistrationPasswordNotes.type" ALIGN="LEFT">varchar[255]</TD></TR>
       <TR><TD PORT="showAlternateLibraryCard" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">showAlternateLibraryCard</TD></TR></TABLE></TD><TD PORT="showAlternateLibraryCard.type" ALIGN="LEFT">tinyint[3]</TD></TR>
       <TR><TD PORT="showAlternateLibraryCardPassword" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">showAlternateLibraryCardPassword</TD></TR></TABLE></TD><TD PORT="showAlternateLibraryCardPassword.type" ALIGN="LEFT">tinyint[3]</TD></TR>
-      <TR><TD PORT="alternateLibraryCardLabel" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">alternateLibraryCardLabel</TD></TR></TABLE></TD><TD PORT="alternateLibraryCardLabel.type" ALIGN="LEFT">varchar[50]</TD></TR>
-      <TR><TD PORT="alternateLibraryCardPasswordLabel" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">alternateLibraryCardPasswordLabel</TD></TR></TABLE></TD><TD PORT="alternateLibraryCardPasswordLabel.type" ALIGN="LEFT">varchar[50]</TD></TR>
+      <TR><TD PORT="alternateLibraryCardLabel" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">alternateLibraryCardLabel</TD></TR></TABLE></TD><TD PORT="alternateLibraryCardLabel.type" ALIGN="LEFT">varchar[100]</TD></TR>
+      <TR><TD PORT="alternateLibraryCardPasswordLabel" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">alternateLibraryCardPasswordLabel</TD></TR></TABLE></TD><TD PORT="alternateLibraryCardPasswordLabel.type" ALIGN="LEFT">varchar[100]</TD></TR>
       <TR><TD PORT="libraryCardBarcodeStyle" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">libraryCardBarcodeStyle</TD></TR></TABLE></TD><TD PORT="libraryCardBarcodeStyle.type" ALIGN="LEFT">varchar[20]</TD></TR>
       <TR><TD PORT="alternateLibraryCardStyle" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">alternateLibraryCardStyle</TD></TR></TABLE></TD><TD PORT="alternateLibraryCardStyle.type" ALIGN="LEFT">varchar[20]</TD></TR>
       <TR><TD PORT="allowUsernameUpdates" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">allowUsernameUpdates</TD></TR></TABLE></TD><TD PORT="allowUsernameUpdates.type" ALIGN="LEFT">tinyint[3]</TD></TR>
@@ -453,30 +485,10 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
       <TR><TD PORT="lidaNotificationSettingId" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">lidaNotificationSettingId</TD></TR></TABLE></TD><TD PORT="lidaNotificationSettingId.type" ALIGN="LEFT">int[10]</TD></TR>
       <TR><TD PORT="lidaQuickSearchId" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">lidaQuickSearchId</TD></TR></TABLE></TD><TD PORT="lidaQuickSearchId.type" ALIGN="LEFT">int[10]</TD></TR>
       <TR><TD PORT="aciSpeedpaySettingId" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">aciSpeedpaySettingId</TD></TR></TABLE></TD><TD PORT="aciSpeedpaySettingId.type" ALIGN="LEFT">int[10]</TD></TR>
-      <TR><TD PORT="ssoName" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">ssoName</TD></TR></TABLE></TD><TD PORT="ssoName.type" ALIGN="LEFT">varchar[255]</TD></TR>
-      <TR><TD PORT="ssoXmlUrl" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">ssoXmlUrl</TD></TR></TABLE></TD><TD PORT="ssoXmlUrl.type" ALIGN="LEFT">varchar[255]</TD></TR>
-      <TR><TD PORT="ssoUniqueAttribute" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">ssoUniqueAttribute</TD></TR></TABLE></TD><TD PORT="ssoUniqueAttribute.type" ALIGN="LEFT">varchar[255]</TD></TR>
-      <TR><TD PORT="ssoMetadataFilename" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">ssoMetadataFilename</TD></TR></TABLE></TD><TD PORT="ssoMetadataFilename.type" ALIGN="LEFT">varchar[255]</TD></TR>
-      <TR><TD PORT="ssoIdAttr" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">ssoIdAttr</TD></TR></TABLE></TD><TD PORT="ssoIdAttr.type" ALIGN="LEFT">varchar[255]</TD></TR>
-      <TR><TD PORT="ssoUsernameAttr" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">ssoUsernameAttr</TD></TR></TABLE></TD><TD PORT="ssoUsernameAttr.type" ALIGN="LEFT">varchar[255]</TD></TR>
-      <TR><TD PORT="ssoFirstnameAttr" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">ssoFirstnameAttr</TD></TR></TABLE></TD><TD PORT="ssoFirstnameAttr.type" ALIGN="LEFT">varchar[255]</TD></TR>
-      <TR><TD PORT="ssoLastnameAttr" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">ssoLastnameAttr</TD></TR></TABLE></TD><TD PORT="ssoLastnameAttr.type" ALIGN="LEFT">varchar[255]</TD></TR>
-      <TR><TD PORT="ssoEmailAttr" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">ssoEmailAttr</TD></TR></TABLE></TD><TD PORT="ssoEmailAttr.type" ALIGN="LEFT">varchar[255]</TD></TR>
-      <TR><TD PORT="ssoDisplayNameAttr" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">ssoDisplayNameAttr</TD></TR></TABLE></TD><TD PORT="ssoDisplayNameAttr.type" ALIGN="LEFT">varchar[255]</TD></TR>
-      <TR><TD PORT="ssoPhoneAttr" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">ssoPhoneAttr</TD></TR></TABLE></TD><TD PORT="ssoPhoneAttr.type" ALIGN="LEFT">varchar[255]</TD></TR>
-      <TR><TD PORT="ssoPatronTypeAttr" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">ssoPatronTypeAttr</TD></TR></TABLE></TD><TD PORT="ssoPatronTypeAttr.type" ALIGN="LEFT">varchar[255]</TD></TR>
-      <TR><TD PORT="ssoPatronTypeFallback" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">ssoPatronTypeFallback</TD></TR></TABLE></TD><TD PORT="ssoPatronTypeFallback.type" ALIGN="LEFT">varchar[255]</TD></TR>
-      <TR><TD PORT="ssoAddressAttr" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">ssoAddressAttr</TD></TR></TABLE></TD><TD PORT="ssoAddressAttr.type" ALIGN="LEFT">varchar[255]</TD></TR>
-      <TR><TD PORT="ssoCityAttr" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">ssoCityAttr</TD></TR></TABLE></TD><TD PORT="ssoCityAttr.type" ALIGN="LEFT">varchar[255]</TD></TR>
-      <TR><TD PORT="ssoLibraryIdAttr" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">ssoLibraryIdAttr</TD></TR></TABLE></TD><TD PORT="ssoLibraryIdAttr.type" ALIGN="LEFT">varchar[255]</TD></TR>
-      <TR><TD PORT="ssoLibraryIdFallback" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">ssoLibraryIdFallback</TD></TR></TABLE></TD><TD PORT="ssoLibraryIdFallback.type" ALIGN="LEFT">varchar[255]</TD></TR>
-      <TR><TD PORT="ssoCategoryIdAttr" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">ssoCategoryIdAttr</TD></TR></TABLE></TD><TD PORT="ssoCategoryIdAttr.type" ALIGN="LEFT">varchar[255]</TD></TR>
-      <TR><TD PORT="ssoCategoryIdFallback" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">ssoCategoryIdFallback</TD></TR></TABLE></TD><TD PORT="ssoCategoryIdFallback.type" ALIGN="LEFT">varchar[255]</TD></TR>
       <TR><TD PORT="ssoSettingId" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">ssoSettingId</TD></TR></TABLE></TD><TD PORT="ssoSettingId.type" ALIGN="LEFT">tinyint[3]</TD></TR>
       <TR><TD PORT="showUserCirculationModules" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">showUserCirculationModules</TD></TR></TABLE></TD><TD PORT="showUserCirculationModules.type" ALIGN="LEFT">tinyint[3]</TD></TR>
       <TR><TD PORT="showUserPreferences" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">showUserPreferences</TD></TR></TABLE></TD><TD PORT="showUserPreferences.type" ALIGN="LEFT">tinyint[3]</TD></TR>
       <TR><TD PORT="showUserContactInformation" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">showUserContactInformation</TD></TR></TABLE></TD><TD PORT="showUserContactInformation.type" ALIGN="LEFT">tinyint[3]</TD></TR>
-      <TR><TD PORT="ssoEntityId" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">ssoEntityId</TD></TR></TABLE></TD><TD PORT="ssoEntityId.type" ALIGN="LEFT">varchar[255]</TD></TR>
       <TR><TD PORT="showVolumesWithLocalCopiesFirst" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">showVolumesWithLocalCopiesFirst</TD></TR></TABLE></TD><TD PORT="showVolumesWithLocalCopiesFirst.type" ALIGN="LEFT">tinyint[3]</TD></TR>
       <TR><TD PORT="enableListDescriptions" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">enableListDescriptions</TD></TR></TABLE></TD><TD PORT="enableListDescriptions.type" ALIGN="LEFT">tinyint[3]</TD></TR>
       <TR><TD PORT="allowableListNames" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">allowableListNames</TD></TR></TABLE></TD><TD PORT="allowableListNames.type" ALIGN="LEFT">varchar[500]</TD></TR>
@@ -544,7 +556,30 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
       <TR><TD PORT="displayExploreMoreBarInEbscoHost" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">displayExploreMoreBarInEbscoHost</TD></TR></TABLE></TD><TD PORT="displayExploreMoreBarInEbscoHost.type" ALIGN="LEFT">tinyint[3]</TD></TR>
       <TR><TD PORT="snapPaySettingId" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">snapPaySettingId</TD></TR></TABLE></TD><TD PORT="snapPaySettingId.type" ALIGN="LEFT">int[10]</TD></TR>
       <TR><TD PORT="enableCostSavings" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">enableCostSavings</TD></TR></TABLE></TD><TD PORT="enableCostSavings.type" ALIGN="LEFT">tinyint[3]</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">1 row</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">43 &gt;</TD></TR>
+      <TR><TD PORT="repeatInCloudSource" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">repeatInCloudSource</TD></TR></TABLE></TD><TD PORT="repeatInCloudSource.type" ALIGN="LEFT">tinyint[3]</TD></TR>
+      <TR><TD PORT="cloudSourceBaseUrl" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">cloudSourceBaseUrl</TD></TR></TABLE></TD><TD PORT="cloudSourceBaseUrl.type" ALIGN="LEFT">tinytext[255]</TD></TR>
+      <TR><TD PORT="repeatInShareIt" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">repeatInShareIt</TD></TR></TABLE></TD><TD PORT="repeatInShareIt.type" ALIGN="LEFT">tinyint[3]</TD></TR>
+      <TR><TD PORT="shareItCid" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">shareItCid</TD></TR></TABLE></TD><TD PORT="shareItCid.type" ALIGN="LEFT">tinytext[255]</TD></TR>
+      <TR><TD PORT="shareItLid" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">shareItLid</TD></TR></TABLE></TD><TD PORT="shareItLid.type" ALIGN="LEFT">tinytext[255]</TD></TR>
+      <TR><TD PORT="shareItUsername" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">shareItUsername</TD></TR></TABLE></TD><TD PORT="shareItUsername.type" ALIGN="LEFT">tinytext[255]</TD></TR>
+      <TR><TD PORT="shareItPassword" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">shareItPassword</TD></TR></TABLE></TD><TD PORT="shareItPassword.type" ALIGN="LEFT">tinytext[255]</TD></TR>
+      <TR><TD PORT="paymentBranchSource" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">paymentBranchSource</TD></TR></TABLE></TD><TD PORT="paymentBranchSource.type" ALIGN="LEFT">enum[18]</TD></TR>
+      <TR><TD PORT="specifiedPaymentBranchCode" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">specifiedPaymentBranchCode</TD></TR></TABLE></TD><TD PORT="specifiedPaymentBranchCode.type" ALIGN="LEFT">varchar[6]</TD></TR>
+      <TR><TD PORT="localIllRequestType" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">localIllRequestType</TD></TR></TABLE></TD><TD PORT="localIllRequestType.type" ALIGN="LEFT">tinyint[3]</TD></TR>
+      <TR><TD PORT="yearlyRequestLimitType" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">yearlyRequestLimitType</TD></TR></TABLE></TD><TD PORT="yearlyRequestLimitType.type" ALIGN="LEFT">tinyint[3]</TD></TR>
+      <TR><TD PORT="enableAddToReadingHistory" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">enableAddToReadingHistory</TD></TR></TABLE></TD><TD PORT="enableAddToReadingHistory.type" ALIGN="LEFT">tinyint[3]</TD></TR>
+      <TR><TD PORT="allowRenewingOutOfHoldGroupCheckouts" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">allowRenewingOutOfHoldGroupCheckouts</TD></TR></TABLE></TD><TD PORT="allowRenewingOutOfHoldGroupCheckouts.type" ALIGN="LEFT">tinyint[3]</TD></TR>
+      <TR><TD PORT="maximumLocalIllRequests" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">maximumLocalIllRequests</TD></TR></TABLE></TD><TD PORT="maximumLocalIllRequests.type" ALIGN="LEFT">int[10]</TD></TR>
+      <TR><TD PORT="libKeySettingId" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">libKeySettingId</TD></TR></TABLE></TD><TD PORT="libKeySettingId.type" ALIGN="LEFT">int[10]</TD></TR>
+      <TR><TD PORT="syndeticsSettingId" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">syndeticsSettingId</TD></TR></TABLE></TD><TD PORT="syndeticsSettingId.type" ALIGN="LEFT">int[10]</TD></TR>
+      <TR><TD PORT="requestCalendarStartDate" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">requestCalendarStartDate</TD></TR></TABLE></TD><TD PORT="requestCalendarStartDate.type" ALIGN="LEFT">char[5]</TD></TR>
+      <TR><TD PORT="checkRequestsForExistingTitles" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">checkRequestsForExistingTitles</TD></TR></TABLE></TD><TD PORT="checkRequestsForExistingTitles.type" ALIGN="LEFT">tinyint[3]</TD></TR>
+      <TR><TD PORT="ilsConsentEnabled" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">ilsConsentEnabled</TD></TR></TABLE></TD><TD PORT="ilsConsentEnabled.type" ALIGN="LEFT">tinyint[3]</TD></TR>
+      <TR><TD PORT="useSeriesSearchIndex" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">useSeriesSearchIndex</TD></TR></TABLE></TD><TD PORT="useSeriesSearchIndex.type" ALIGN="LEFT">tinyint[3]</TD></TR>
+      <TR><TD PORT="webResourcesSettingId" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">webResourcesSettingId</TD></TR></TABLE></TD><TD PORT="webResourcesSettingId.type" ALIGN="LEFT">int[10]</TD></TR>
+      <TR><TD PORT="allowFilteringOfLinkedAccountsInHolds" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">allowFilteringOfLinkedAccountsInHolds</TD></TR></TABLE></TD><TD PORT="allowFilteringOfLinkedAccountsInHolds.type" ALIGN="LEFT">tinyint[3]</TD></TR>
+      <TR><TD PORT="allowSelectingHoldsToDisplay" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">allowSelectingHoldsToDisplay</TD></TR></TABLE></TD><TD PORT="allowSelectingHoldsToDisplay.type" ALIGN="LEFT">tinyint[3]</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">1 row</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">48 &gt;</TD></TR>
     </TABLE>>
     URL="library.html"
     target="_top"
@@ -597,8 +632,8 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
       <TR><TD PORT="settingSource" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="132" HEIGHT="16">settingSource</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="settingId" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="132" HEIGHT="16">settingId</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="libraryId" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="132" HEIGHT="16">libraryId</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+      <TR><TD PORT="eventsFacetSettingsId" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="132" HEIGHT="16">eventsFacetSettingsId</TD></TR></TABLE></TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 2</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
     </TABLE>>
     URL="library_events_setting.html"
     target="_top"
@@ -642,6 +677,34 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
     URL="library_open_archives_collection.html"
     target="_top"
     tooltip="library_open_archives_collection"
+  ];
+  "library_overdrive_scope" [
+   label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="141" HEIGHT="16"><B>library_overdrive_scope</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="196" HEIGHT="16">id</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="scopeId" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="196" HEIGHT="16">scopeId</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="libraryId" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="196" HEIGHT="16">libraryId</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 2</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+    </TABLE>>
+    URL="library_overdrive_scope.html"
+    target="_top"
+    tooltip="library_overdrive_scope"
+  ];
+  "library_overdrive_settings" [
+   label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="154" HEIGHT="16"><B>library_overdrive_settings</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="196" HEIGHT="16">id</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="settingId" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="196" HEIGHT="16">settingId</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="libraryId" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="196" HEIGHT="16">libraryId</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+    </TABLE>>
+    URL="library_overdrive_settings.html"
+    target="_top"
+    tooltip="library_overdrive_settings"
   ];
   "library_records_to_include" [
    label=<
@@ -723,6 +786,19 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
     target="_top"
     tooltip="library_web_builder_custom_form"
   ];
+  "library_web_builder_custom_web_resource_page" [
+   label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="288" HEIGHT="16"><B>library_web_builder_custom_web_resource_page</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="288" HEIGHT="16">id</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="libraryId" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="288" HEIGHT="16">libraryId</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="customResourcePageId" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="288" HEIGHT="16">customResourcePageId</TD></TR></TABLE></TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+    </TABLE>>
+    URL="library_web_builder_custom_web__954891da.html"
+    target="_top"
+    tooltip="library_web_builder_custom_web_resource_page"
+  ];
   "library_web_builder_grapes_page" [
    label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
@@ -789,6 +865,19 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
     target="_top"
     tooltip="library_website_indexing"
   ];
+  "library_year_in_review" [
+   label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="133" HEIGHT="16"><B>library_year_in_review</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="133" HEIGHT="16">id</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="yearInReviewId" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="133" HEIGHT="16">yearInReviewId</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="libraryId" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="133" HEIGHT="16">libraryId</TD></TR></TABLE></TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+    </TABLE>>
+    URL="library_year_in_review.html"
+    target="_top"
+    tooltip="library_year_in_review"
+  ];
   "location" [
    label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
@@ -810,16 +899,16 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
    label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="108" HEIGHT="16"><B>materials_request</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">id</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="libraryId" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">libraryId</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="format" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">format</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="status" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">status</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="dateCreated" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">dateCreated</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="createdBy" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">createdBy</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="dateUpdated" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">dateUpdated</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="emailSent" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">emailSent</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="holdsCreated" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">holdsCreated</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="subFormat" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">subFormat</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="id" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">id</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="libraryId" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">libraryId</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="format" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">format</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="status" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">status</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="dateCreated" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">dateCreated</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="createdBy" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">createdBy</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="dateUpdated" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">dateUpdated</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="emailSent" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">emailSent</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="holdsCreated" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">holdsCreated</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="subFormat" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">subFormat</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
     </TABLE>>
@@ -943,7 +1032,7 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="34" HEIGHT="16"><B>scope</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">3 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">5 &gt;</TD></TR>
     </TABLE>>
     URL="scope.html"
     target="_top"
@@ -991,7 +1080,7 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="26" HEIGHT="16"><B>user</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">2 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">46 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">2 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">47 &gt;</TD></TR>
     </TABLE>>
     URL="user.html"
     target="_top"

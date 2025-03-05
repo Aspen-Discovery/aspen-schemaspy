@@ -313,7 +313,7 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td><span id="subLocationCodeId">subLocationCodeId</span></td>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="subLocationCodeId">subLocationCodeId</span></td>
                                     <td>INT</td>
                                     <td>10</td>
                                     <td title='nullable'>√</td>
@@ -325,6 +325,11 @@
                                     </td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="grouped_work_record_items.subLocationCodeId&#39;s name implies that it&#39;s a child of sublocation.id, but it doesn&#39;t reference that column."><a href='sublocation.html'>sublocation</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td></td>
@@ -560,6 +565,8 @@
                                 <h5>Close relationships within degrees of separation</h5>
                                 <ul class="nav nav-tabs pull-left ui-sortable-handle">
                                     <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#oneimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">One implied</a></li>
+                                    <li class=""><a href="#twoimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two implied</a></li>
                                 </ul>
                                 <div class="tab-content no-padding">
                                     <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
@@ -567,6 +574,22 @@
 <area shape="rect" id="node1" href="grouped_work_record_items.html" target="_top" title="grouped_work_record_items" alt="" coords="5,5,377,720">
 </map>
                                         <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/grouped_work_record_items.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="grouped_work_record_items.html" target="_top" title="grouped_work_record_items" alt="" coords="328,5,700,720">
+<area shape="rect" id="node2" href="sublocation.html" target="_top" title="sublocation" alt="" coords="5,360,284,477">
+</map>
+                                        <a name='diagram'><img id="oneimpliedDegreeImg" src="../diagrams/tables/grouped_work_record_items.implied1degrees.png" usemap="#oneDegreeRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="event.html" target="_top" title="event" alt="" coords="447,5,581,93">
+<area shape="rect" id="node2" href="sublocation.html" target="_top" title="sublocation" alt="" coords="5,465,284,583">
+<area shape="rect" id="node3" href="grouped_work_record_items.html" target="_top" title="grouped_work_record_items" alt="" coords="328,111,700,825">
+<area shape="rect" id="node4" href="sublocation_ptype.html" target="_top" title="sublocation_ptype" alt="" coords="401,843,627,931">
+</map>
+                                        <a name='diagram'><img id="twoimpliedDegreeImg" src="../diagrams/tables/grouped_work_record_items.implied2degrees.png" usemap="#twoDegreesRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
                                     </div>
                                 </div>
                             </div>

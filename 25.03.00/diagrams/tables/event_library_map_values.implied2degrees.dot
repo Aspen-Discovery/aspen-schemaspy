@@ -5,6 +5,7 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
   "browse_category":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "collection_spotlights":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "event_library_map_values":"libraryId":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "event_type_library":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "greenhouse_cache":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "holiday":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "hoopla_settings":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
@@ -18,17 +19,21 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
   "library_ill_item_type":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_links":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_open_archives_collection":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "library_overdrive_scope":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "library_overdrive_settings":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_records_to_include":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_search_source":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_sideload_scopes":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_themes":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_web_builder_basic_page":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_web_builder_custom_form":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "library_web_builder_custom_web_resource_page":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_web_builder_grapes_page":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_web_builder_portal_page":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_web_builder_quick_poll":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_web_builder_resource":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_website_indexing":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "library_year_in_review":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "location":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "materials_request":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "materials_request_fields_to_display":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
@@ -114,6 +119,17 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
     target="_top"
     tooltip="event_library_map_values"
   ];
+  "event_type_library" [
+   label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="110" HEIGHT="16"><B>event_type_library</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 2</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+    </TABLE>>
+    URL="event_type_library.html"
+    target="_top"
+    tooltip="event_type_library"
+  ];
   "greenhouse_cache" [
    label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
@@ -177,7 +193,7 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
       <TR><TD PORT="subdomain" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">subdomain</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="donationSettingId" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">donationSettingId</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">1 row</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">43 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">1 row</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">48 &gt;</TD></TR>
     </TABLE>>
     URL="library.html"
     target="_top"
@@ -221,7 +237,7 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="131" HEIGHT="16"><B>library_events_setting</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 2</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
     </TABLE>>
     URL="library_events_setting.html"
     target="_top"
@@ -259,6 +275,28 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
     URL="library_open_archives_collection.html"
     target="_top"
     tooltip="library_open_archives_collection"
+  ];
+  "library_overdrive_scope" [
+   label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="141" HEIGHT="16"><B>library_overdrive_scope</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 2</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+    </TABLE>>
+    URL="library_overdrive_scope.html"
+    target="_top"
+    tooltip="library_overdrive_scope"
+  ];
+  "library_overdrive_settings" [
+   label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="154" HEIGHT="16"><B>library_overdrive_settings</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+    </TABLE>>
+    URL="library_overdrive_settings.html"
+    target="_top"
+    tooltip="library_overdrive_settings"
   ];
   "library_records_to_include" [
    label=<
@@ -326,6 +364,17 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
     target="_top"
     tooltip="library_web_builder_custom_form"
   ];
+  "library_web_builder_custom_web_resource_page" [
+   label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="288" HEIGHT="16"><B>library_web_builder_custom_web_resource_page</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+    </TABLE>>
+    URL="library_web_builder_custom_web__954891da.html"
+    target="_top"
+    tooltip="library_web_builder_custom_web_resource_page"
+  ];
   "library_web_builder_grapes_page" [
    label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
@@ -380,6 +429,17 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
     URL="library_website_indexing.html"
     target="_top"
     tooltip="library_website_indexing"
+  ];
+  "library_year_in_review" [
+   label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="133" HEIGHT="16"><B>library_year_in_review</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+    </TABLE>>
+    URL="library_year_in_review.html"
+    target="_top"
+    tooltip="library_year_in_review"
   ];
   "location" [
    label=<

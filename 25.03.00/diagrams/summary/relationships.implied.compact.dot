@@ -33,6 +33,17 @@ digraph "compactImpliedRelationshipsDiagram" {
     target="_top"
     tooltip="redwood_user_contribution"
   ];
+  "event_field_set_field" [
+   label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="120" HEIGHT="16"><B>event_field_set_field</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+    </TABLE>>
+    URL="tables/event_field_set_field.html"
+    target="_top"
+    tooltip="event_field_set_field"
+  ];
   "accelerated_reading_isbn" [
    label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
@@ -165,6 +176,17 @@ digraph "compactImpliedRelationshipsDiagram" {
     target="_top"
     tooltip="user_events_registrations"
   ];
+  "event_type" [
+   label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="65" HEIGHT="16"><B>event_type</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+    </TABLE>>
+    URL="tables/event_type.html"
+    target="_top"
+    tooltip="event_type"
+  ];
   "web_builder_custom_from_submission" [
    label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
@@ -263,6 +285,17 @@ digraph "compactImpliedRelationshipsDiagram" {
     URL="tables/user_axis360_usage.html"
     target="_top"
     tooltip="user_axis360_usage"
+  ];
+  "library_year_in_review" [
+   label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="133" HEIGHT="16"><B>library_year_in_review</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+    </TABLE>>
+    URL="tables/library_year_in_review.html"
+    target="_top"
+    tooltip="library_year_in_review"
   ];
   "marriage" [
    label=<
@@ -440,6 +473,17 @@ digraph "compactImpliedRelationshipsDiagram" {
     target="_top"
     tooltip="javascript_snippet_library"
   ];
+  "event" [
+   label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="34" HEIGHT="16"><B>event</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+    </TABLE>>
+    URL="tables/event.html"
+    target="_top"
+    tooltip="event"
+  ];
   "sideloads" [
    label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
@@ -572,6 +616,28 @@ digraph "compactImpliedRelationshipsDiagram" {
     target="_top"
     tooltip="staff_members"
   ];
+  "sublocation" [
+   label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="70" HEIGHT="16"><B>sublocation</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+    </TABLE>>
+    URL="tables/sublocation.html"
+    target="_top"
+    tooltip="sublocation"
+  ];
+  "event_event_field" [
+   label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="104" HEIGHT="16"><B>event_event_field</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+    </TABLE>>
+    URL="tables/event_event_field.html"
+    target="_top"
+    tooltip="event_event_field"
+  ];
   "user_work_review" [
    label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
@@ -637,6 +703,17 @@ digraph "compactImpliedRelationshipsDiagram" {
     URL="tables/library_website_indexing.html"
     target="_top"
     tooltip="library_website_indexing"
+  ];
+  "event_instance" [
+   label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="90" HEIGHT="16"><B>event_instance</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+    </TABLE>>
+    URL="tables/event_instance.html"
+    target="_top"
+    tooltip="event_instance"
   ];
   "library_ill_item_type" [
    label=<
@@ -726,6 +803,17 @@ digraph "compactImpliedRelationshipsDiagram" {
     target="_top"
     tooltip="library_web_builder_grapes_page"
   ];
+  "user_year_in_review" [
+   label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="119" HEIGHT="16"><B>user_year_in_review</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+    </TABLE>>
+    URL="tables/user_year_in_review.html"
+    target="_top"
+    tooltip="user_year_in_review"
+  ];
   "user_sideload_usage" [
    label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
@@ -736,6 +824,17 @@ digraph "compactImpliedRelationshipsDiagram" {
     URL="tables/user_sideload_usage.html"
     target="_top"
     tooltip="user_sideload_usage"
+  ];
+  "library_web_builder_custom_web_resource_page" [
+   label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="288" HEIGHT="16"><B>library_web_builder_custom_web_resource_page</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+    </TABLE>>
+    URL="tables/library_web_builder_custom_web__954891da.html"
+    target="_top"
+    tooltip="library_web_builder_custom_web_resource_page"
   ];
   "user_ebscohost_usage" [
    label=<
@@ -835,6 +934,17 @@ digraph "compactImpliedRelationshipsDiagram" {
     URL="tables/materials_request_status.html"
     target="_top"
     tooltip="materials_request_status"
+  ];
+  "location_overdrive_scope" [
+   label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16"><B>location_overdrive_scope</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+    </TABLE>>
+    URL="tables/location_overdrive_scope.html"
+    target="_top"
+    tooltip="location_overdrive_scope"
   ];
   "hoopla_settings" [
    label=<
@@ -979,6 +1089,17 @@ digraph "compactImpliedRelationshipsDiagram" {
     target="_top"
     tooltip="user_overdrive_usage"
   ];
+  "library_overdrive_scope" [
+   label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="141" HEIGHT="16"><B>library_overdrive_scope</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+    </TABLE>>
+    URL="tables/library_overdrive_scope.html"
+    target="_top"
+    tooltip="library_overdrive_scope"
+  ];
   "person" [
    label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
@@ -990,6 +1111,17 @@ digraph "compactImpliedRelationshipsDiagram" {
     target="_top"
     tooltip="person"
   ];
+  "library_overdrive_settings" [
+   label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="154" HEIGHT="16"><B>library_overdrive_settings</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+    </TABLE>>
+    URL="tables/library_overdrive_settings.html"
+    target="_top"
+    tooltip="library_overdrive_settings"
+  ];
   "location_sideload_scopes" [
    label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
@@ -1000,6 +1132,17 @@ digraph "compactImpliedRelationshipsDiagram" {
     URL="tables/location_sideload_scopes.html"
     target="_top"
     tooltip="location_sideload_scopes"
+  ];
+  "event_type_library" [
+   label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="110" HEIGHT="16"><B>event_type_library</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+    </TABLE>>
+    URL="tables/event_type_library.html"
+    target="_top"
+    tooltip="event_type_library"
   ];
   "user_notification_tokens" [
    label=<
@@ -1017,11 +1160,22 @@ digraph "compactImpliedRelationshipsDiagram" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="101" HEIGHT="16"><B>role_permissions</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">283 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">298 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
     </TABLE>>
     URL="tables/role_permissions.html"
     target="_top"
     tooltip="role_permissions"
+  ];
+  "sublocation_ptype" [
+   label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="109" HEIGHT="16"><B>sublocation_ptype</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+    </TABLE>>
+    URL="tables/sublocation_ptype.html"
+    target="_top"
+    tooltip="sublocation_ptype"
   ];
   "browse_category" [
    label=<
@@ -1056,6 +1210,28 @@ digraph "compactImpliedRelationshipsDiagram" {
     target="_top"
     tooltip="library_combined_results_section"
   ];
+  "grouped_work_record_items" [
+   label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="168" HEIGHT="16"><B>grouped_work_record_items</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+    </TABLE>>
+    URL="tables/grouped_work_record_items.html"
+    target="_top"
+    tooltip="grouped_work_record_items"
+  ];
+  "series_member" [
+   label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="90" HEIGHT="16"><B>series_member</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+    </TABLE>>
+    URL="tables/series_member.html"
+    target="_top"
+    tooltip="series_member"
+  ];
   "materials_request_formats" [
    label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
@@ -1066,6 +1242,17 @@ digraph "compactImpliedRelationshipsDiagram" {
     URL="tables/materials_request_formats.html"
     target="_top"
     tooltip="materials_request_formats"
+  ];
+  "event_type_location" [
+   label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="119" HEIGHT="16"><B>event_type_location</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+    </TABLE>>
+    URL="tables/event_type_location.html"
+    target="_top"
+    tooltip="event_type_location"
   ];
   "library_email_template" [
    label=<
@@ -1132,6 +1319,17 @@ digraph "compactImpliedRelationshipsDiagram" {
     URL="tables/user_rbdigital_usage.html"
     target="_top"
     tooltip="user_rbdigital_usage"
+  ];
+  "series" [
+   label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="35" HEIGHT="16"><B>series</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+    </TABLE>>
+    URL="tables/series.html"
+    target="_top"
+    tooltip="series"
   ];
   "user" [
    label=<
@@ -1228,9 +1426,20 @@ digraph "compactImpliedRelationshipsDiagram" {
   "donations_value":"donationSettingId":w -> "donations":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "ebsco_research_starter_dismissals":"userId":w -> "user":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "ebscohost_database":"searchSettingId":w -> "search":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "event":"sublocationId":w -> "sublocation":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "event_event_field":"eventFieldId":w -> "event":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "event_event_field":"eventId":w -> "event":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "event_field_set_field":"eventFieldId":w -> "event":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "event_field_set_field":"eventFieldSetId":w -> "event":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "event_instance":"eventId":w -> "event":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "event_library_map_values":"libraryId":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "event_type":"eventFieldSetId":w -> "event":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "event_type_library":"eventTypeId":w -> "event":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "event_type_library":"libraryId":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "event_type_location":"eventTypeId":w -> "event":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "greenhouse_cache":"libraryId":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "grouped_work_record_item_url":"scopeId":w -> "scope":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "grouped_work_record_items":"subLocationCodeId":w -> "sublocation":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "hold_request_confirmation":"userId":w -> "user":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "holiday":"libraryId":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "hoopla_settings":"libraryId":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
@@ -1241,10 +1450,14 @@ digraph "compactImpliedRelationshipsDiagram" {
   "library_cloud_library_scope":"scopeId":w -> "scope":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_combined_results_section":"libraryId":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_email_template":"libraryId":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "library_events_setting":"eventsFacetSettingsId":w -> "event":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_events_setting":"libraryId":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_ill_item_type":"libraryId":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_links":"libraryId":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_open_archives_collection":"libraryId":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "library_overdrive_scope":"libraryId":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "library_overdrive_scope":"scopeId":w -> "scope":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "library_overdrive_settings":"libraryId":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_records_to_include":"libraryId":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_search_source":"libraryId":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_sideload_scopes":"libraryId":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
@@ -1252,13 +1465,16 @@ digraph "compactImpliedRelationshipsDiagram" {
   "library_themes":"libraryId":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_web_builder_basic_page":"libraryId":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_web_builder_custom_form":"libraryId":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "library_web_builder_custom_web_resource_page":"libraryId":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_web_builder_grapes_page":"libraryId":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_web_builder_portal_page":"libraryId":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_web_builder_quick_poll":"libraryId":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_web_builder_resource":"libraryId":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_website_indexing":"libraryId":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "library_year_in_review":"libraryId":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "location":"libraryId":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "location_cloud_library_scope":"scopeId":w -> "scope":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "location_overdrive_scope":"scopeId":w -> "scope":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "location_sideload_scopes":"sideLoadScopeId":w -> "sideloads":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "marriage":"personId":w -> "person":"personId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "materials_request":"libraryId":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
@@ -1276,7 +1492,9 @@ digraph "compactImpliedRelationshipsDiagram" {
   "placard_library":"libraryId":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "redwood_user_contribution":"userId":w -> "user":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "role_permissions":"roleId":w -> "roles":"roleId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "series_member":"seriesId":w -> "series":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "staff_members":"libraryId":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "sublocation_ptype":"sublocationId":w -> "sublocation":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "system_message_dismissal":"userId":w -> "user":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "system_message_library":"libraryId":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "two_factor_auth_codes":"userId":w -> "user":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
@@ -1312,6 +1530,7 @@ digraph "compactImpliedRelationshipsDiagram" {
   "user_vdx_request":"userId":w -> "user":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "user_website_usage":"userId":w -> "user":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "user_work_review":"userId":w -> "user":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "user_year_in_review":"userId":w -> "user":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "web_builder_custom_from_submission":"libraryId":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "web_builder_custom_from_submission":"userId":w -> "user":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "web_builder_quick_poll_submission":"libraryId":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];

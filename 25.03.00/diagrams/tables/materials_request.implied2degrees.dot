@@ -5,6 +5,7 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
   "browse_category":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "collection_spotlights":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "event_library_map_values":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "event_type_library":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "greenhouse_cache":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "holiday":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "hoopla_settings":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
@@ -18,17 +19,21 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
   "library_ill_item_type":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_links":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_open_archives_collection":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "library_overdrive_scope":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "library_overdrive_settings":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_records_to_include":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_search_source":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_sideload_scopes":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_themes":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_web_builder_basic_page":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_web_builder_custom_form":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "library_web_builder_custom_web_resource_page":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_web_builder_grapes_page":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_web_builder_portal_page":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_web_builder_quick_poll":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_web_builder_resource":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_website_indexing":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "library_year_in_review":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "location":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "materials_request":"libraryId":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "materials_request_fields_to_display":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
@@ -110,6 +115,17 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
     target="_top"
     tooltip="event_library_map_values"
   ];
+  "event_type_library" [
+   label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="110" HEIGHT="16"><B>event_type_library</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 2</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+    </TABLE>>
+    URL="event_type_library.html"
+    target="_top"
+    tooltip="event_type_library"
+  ];
   "greenhouse_cache" [
    label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
@@ -173,7 +189,7 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
       <TR><TD PORT="subdomain" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">subdomain</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="donationSettingId" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">donationSettingId</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">1 row</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">43 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">1 row</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">48 &gt;</TD></TR>
     </TABLE>>
     URL="library.html"
     target="_top"
@@ -217,7 +233,7 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="131" HEIGHT="16"><B>library_events_setting</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 2</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
     </TABLE>>
     URL="library_events_setting.html"
     target="_top"
@@ -255,6 +271,28 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
     URL="library_open_archives_collection.html"
     target="_top"
     tooltip="library_open_archives_collection"
+  ];
+  "library_overdrive_scope" [
+   label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="141" HEIGHT="16"><B>library_overdrive_scope</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 2</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+    </TABLE>>
+    URL="library_overdrive_scope.html"
+    target="_top"
+    tooltip="library_overdrive_scope"
+  ];
+  "library_overdrive_settings" [
+   label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="154" HEIGHT="16"><B>library_overdrive_settings</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+    </TABLE>>
+    URL="library_overdrive_settings.html"
+    target="_top"
+    tooltip="library_overdrive_settings"
   ];
   "library_records_to_include" [
    label=<
@@ -322,6 +360,17 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
     target="_top"
     tooltip="library_web_builder_custom_form"
   ];
+  "library_web_builder_custom_web_resource_page" [
+   label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="288" HEIGHT="16"><B>library_web_builder_custom_web_resource_page</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+    </TABLE>>
+    URL="library_web_builder_custom_web__954891da.html"
+    target="_top"
+    tooltip="library_web_builder_custom_web_resource_page"
+  ];
   "library_web_builder_grapes_page" [
    label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
@@ -377,6 +426,17 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
     target="_top"
     tooltip="library_website_indexing"
   ];
+  "library_year_in_review" [
+   label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="133" HEIGHT="16"><B>library_year_in_review</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+    </TABLE>>
+    URL="library_year_in_review.html"
+    target="_top"
+    tooltip="library_year_in_review"
+  ];
   "location" [
    label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
@@ -392,49 +452,52 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
    label=<
     <TABLE BORDER="2" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="4"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="108" HEIGHT="16"><B>materials_request</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="id" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">id</TD></TR></TABLE></TD><TD PORT="id.type" ALIGN="LEFT">int[10]</TD></TR>
-      <TR><TD PORT="libraryId" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">libraryId</TD></TR></TABLE></TD><TD PORT="libraryId.type" ALIGN="LEFT">int unsigned[10]</TD></TR>
-      <TR><TD PORT="title" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">title</TD></TR></TABLE></TD><TD PORT="title.type" ALIGN="LEFT">varchar[255]</TD></TR>
-      <TR><TD PORT="author" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">author</TD></TR></TABLE></TD><TD PORT="author.type" ALIGN="LEFT">varchar[255]</TD></TR>
-      <TR><TD PORT="format" COLSPAN="2" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">format</TD></TR></TABLE></TD><TD PORT="format.type" ALIGN="LEFT">varchar[25]</TD></TR>
-      <TR><TD PORT="formatId" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">formatId</TD></TR></TABLE></TD><TD PORT="formatId.type" ALIGN="LEFT">int unsigned[10]</TD></TR>
-      <TR><TD PORT="ageLevel" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">ageLevel</TD></TR></TABLE></TD><TD PORT="ageLevel.type" ALIGN="LEFT">varchar[25]</TD></TR>
-      <TR><TD PORT="isbn" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">isbn</TD></TR></TABLE></TD><TD PORT="isbn.type" ALIGN="LEFT">varchar[15]</TD></TR>
-      <TR><TD PORT="oclcNumber" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">oclcNumber</TD></TR></TABLE></TD><TD PORT="oclcNumber.type" ALIGN="LEFT">varchar[30]</TD></TR>
-      <TR><TD PORT="publisher" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">publisher</TD></TR></TABLE></TD><TD PORT="publisher.type" ALIGN="LEFT">varchar[255]</TD></TR>
-      <TR><TD PORT="publicationYear" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">publicationYear</TD></TR></TABLE></TD><TD PORT="publicationYear.type" ALIGN="LEFT">varchar[4]</TD></TR>
-      <TR><TD PORT="articleInfo" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">articleInfo</TD></TR></TABLE></TD><TD PORT="articleInfo.type" ALIGN="LEFT">varchar[255]</TD></TR>
-      <TR><TD PORT="abridged" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">abridged</TD></TR></TABLE></TD><TD PORT="abridged.type" ALIGN="LEFT">tinyint[3]</TD></TR>
-      <TR><TD PORT="about" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">about</TD></TR></TABLE></TD><TD PORT="about.type" ALIGN="LEFT">mediumtext[16777215]</TD></TR>
-      <TR><TD PORT="comments" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">comments</TD></TR></TABLE></TD><TD PORT="comments.type" ALIGN="LEFT">mediumtext[16777215]</TD></TR>
-      <TR><TD PORT="status" COLSPAN="2" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">status</TD></TR></TABLE></TD><TD PORT="status.type" ALIGN="LEFT">int[10]</TD></TR>
-      <TR><TD PORT="dateCreated" COLSPAN="2" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">dateCreated</TD></TR></TABLE></TD><TD PORT="dateCreated.type" ALIGN="LEFT">int[10]</TD></TR>
-      <TR><TD PORT="createdBy" COLSPAN="2" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">createdBy</TD></TR></TABLE></TD><TD PORT="createdBy.type" ALIGN="LEFT">int[10]</TD></TR>
-      <TR><TD PORT="dateUpdated" COLSPAN="2" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">dateUpdated</TD></TR></TABLE></TD><TD PORT="dateUpdated.type" ALIGN="LEFT">int[10]</TD></TR>
-      <TR><TD PORT="emailSent" COLSPAN="2" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">emailSent</TD></TR></TABLE></TD><TD PORT="emailSent.type" ALIGN="LEFT">tinyint[3]</TD></TR>
-      <TR><TD PORT="holdsCreated" COLSPAN="2" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">holdsCreated</TD></TR></TABLE></TD><TD PORT="holdsCreated.type" ALIGN="LEFT">tinyint[3]</TD></TR>
-      <TR><TD PORT="email" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">email</TD></TR></TABLE></TD><TD PORT="email.type" ALIGN="LEFT">varchar[80]</TD></TR>
-      <TR><TD PORT="phone" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">phone</TD></TR></TABLE></TD><TD PORT="phone.type" ALIGN="LEFT">varchar[15]</TD></TR>
-      <TR><TD PORT="season" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">season</TD></TR></TABLE></TD><TD PORT="season.type" ALIGN="LEFT">varchar[80]</TD></TR>
-      <TR><TD PORT="magazineTitle" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">magazineTitle</TD></TR></TABLE></TD><TD PORT="magazineTitle.type" ALIGN="LEFT">varchar[255]</TD></TR>
-      <TR><TD PORT="upc" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">upc</TD></TR></TABLE></TD><TD PORT="upc.type" ALIGN="LEFT">varchar[15]</TD></TR>
-      <TR><TD PORT="issn" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">issn</TD></TR></TABLE></TD><TD PORT="issn.type" ALIGN="LEFT">varchar[8]</TD></TR>
-      <TR><TD PORT="bookType" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">bookType</TD></TR></TABLE></TD><TD PORT="bookType.type" ALIGN="LEFT">varchar[20]</TD></TR>
-      <TR><TD PORT="subFormat" COLSPAN="2" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">subFormat</TD></TR></TABLE></TD><TD PORT="subFormat.type" ALIGN="LEFT">varchar[20]</TD></TR>
-      <TR><TD PORT="magazineDate" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">magazineDate</TD></TR></TABLE></TD><TD PORT="magazineDate.type" ALIGN="LEFT">varchar[20]</TD></TR>
-      <TR><TD PORT="magazineVolume" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">magazineVolume</TD></TR></TABLE></TD><TD PORT="magazineVolume.type" ALIGN="LEFT">varchar[20]</TD></TR>
-      <TR><TD PORT="magazinePageNumbers" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">magazinePageNumbers</TD></TR></TABLE></TD><TD PORT="magazinePageNumbers.type" ALIGN="LEFT">varchar[20]</TD></TR>
-      <TR><TD PORT="placeHoldWhenAvailable" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">placeHoldWhenAvailable</TD></TR></TABLE></TD><TD PORT="placeHoldWhenAvailable.type" ALIGN="LEFT">tinyint[3]</TD></TR>
-      <TR><TD PORT="holdPickupLocation" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">holdPickupLocation</TD></TR></TABLE></TD><TD PORT="holdPickupLocation.type" ALIGN="LEFT">varchar[10]</TD></TR>
-      <TR><TD PORT="bookmobileStop" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">bookmobileStop</TD></TR></TABLE></TD><TD PORT="bookmobileStop.type" ALIGN="LEFT">varchar[50]</TD></TR>
-      <TR><TD PORT="illItem" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">illItem</TD></TR></TABLE></TD><TD PORT="illItem.type" ALIGN="LEFT">tinyint[3]</TD></TR>
-      <TR><TD PORT="magazineNumber" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">magazineNumber</TD></TR></TABLE></TD><TD PORT="magazineNumber.type" ALIGN="LEFT">varchar[80]</TD></TR>
-      <TR><TD PORT="assignedTo" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">assignedTo</TD></TR></TABLE></TD><TD PORT="assignedTo.type" ALIGN="LEFT">int[10]</TD></TR>
-      <TR><TD PORT="staffComments" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">staffComments</TD></TR></TABLE></TD><TD PORT="staffComments.type" ALIGN="LEFT">mediumtext[16777215]</TD></TR>
-      <TR><TD PORT="createdEmailSent" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">createdEmailSent</TD></TR></TABLE></TD><TD PORT="createdEmailSent.type" ALIGN="LEFT">tinyint[3]</TD></TR>
-      <TR><TD PORT="readyForHolds" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">readyForHolds</TD></TR></TABLE></TD><TD PORT="readyForHolds.type" ALIGN="LEFT">tinyint[3]</TD></TR>
-      <TR><TD PORT="selectedHoldCandidateId" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">selectedHoldCandidateId</TD></TR></TABLE></TD><TD PORT="selectedHoldCandidateId.type" ALIGN="LEFT">int[10]</TD></TR>
-      <TR><TD PORT="holdFailureMessage" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="150" HEIGHT="16">holdFailureMessage</TD></TR></TABLE></TD><TD PORT="holdFailureMessage.type" ALIGN="LEFT">text[65535]</TD></TR>
+      <TR><TD PORT="id" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">id</TD></TR></TABLE></TD><TD PORT="id.type" ALIGN="LEFT">int[10]</TD></TR>
+      <TR><TD PORT="libraryId" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">libraryId</TD></TR></TABLE></TD><TD PORT="libraryId.type" ALIGN="LEFT">int unsigned[10]</TD></TR>
+      <TR><TD PORT="title" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">title</TD></TR></TABLE></TD><TD PORT="title.type" ALIGN="LEFT">varchar[255]</TD></TR>
+      <TR><TD PORT="author" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">author</TD></TR></TABLE></TD><TD PORT="author.type" ALIGN="LEFT">varchar[255]</TD></TR>
+      <TR><TD PORT="format" COLSPAN="2" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">format</TD></TR></TABLE></TD><TD PORT="format.type" ALIGN="LEFT">varchar[25]</TD></TR>
+      <TR><TD PORT="formatId" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">formatId</TD></TR></TABLE></TD><TD PORT="formatId.type" ALIGN="LEFT">int unsigned[10]</TD></TR>
+      <TR><TD PORT="ageLevel" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">ageLevel</TD></TR></TABLE></TD><TD PORT="ageLevel.type" ALIGN="LEFT">varchar[25]</TD></TR>
+      <TR><TD PORT="isbn" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">isbn</TD></TR></TABLE></TD><TD PORT="isbn.type" ALIGN="LEFT">varchar[15]</TD></TR>
+      <TR><TD PORT="oclcNumber" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">oclcNumber</TD></TR></TABLE></TD><TD PORT="oclcNumber.type" ALIGN="LEFT">varchar[30]</TD></TR>
+      <TR><TD PORT="publisher" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">publisher</TD></TR></TABLE></TD><TD PORT="publisher.type" ALIGN="LEFT">varchar[255]</TD></TR>
+      <TR><TD PORT="publicationYear" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">publicationYear</TD></TR></TABLE></TD><TD PORT="publicationYear.type" ALIGN="LEFT">varchar[4]</TD></TR>
+      <TR><TD PORT="articleInfo" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">articleInfo</TD></TR></TABLE></TD><TD PORT="articleInfo.type" ALIGN="LEFT">varchar[255]</TD></TR>
+      <TR><TD PORT="abridged" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">abridged</TD></TR></TABLE></TD><TD PORT="abridged.type" ALIGN="LEFT">tinyint[3]</TD></TR>
+      <TR><TD PORT="about" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">about</TD></TR></TABLE></TD><TD PORT="about.type" ALIGN="LEFT">mediumtext[16777215]</TD></TR>
+      <TR><TD PORT="comments" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">comments</TD></TR></TABLE></TD><TD PORT="comments.type" ALIGN="LEFT">mediumtext[16777215]</TD></TR>
+      <TR><TD PORT="status" COLSPAN="2" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">status</TD></TR></TABLE></TD><TD PORT="status.type" ALIGN="LEFT">int[10]</TD></TR>
+      <TR><TD PORT="dateCreated" COLSPAN="2" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">dateCreated</TD></TR></TABLE></TD><TD PORT="dateCreated.type" ALIGN="LEFT">int[10]</TD></TR>
+      <TR><TD PORT="createdBy" COLSPAN="2" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">createdBy</TD></TR></TABLE></TD><TD PORT="createdBy.type" ALIGN="LEFT">int[10]</TD></TR>
+      <TR><TD PORT="dateUpdated" COLSPAN="2" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">dateUpdated</TD></TR></TABLE></TD><TD PORT="dateUpdated.type" ALIGN="LEFT">int[10]</TD></TR>
+      <TR><TD PORT="emailSent" COLSPAN="2" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">emailSent</TD></TR></TABLE></TD><TD PORT="emailSent.type" ALIGN="LEFT">tinyint[3]</TD></TR>
+      <TR><TD PORT="holdsCreated" COLSPAN="2" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">holdsCreated</TD></TR></TABLE></TD><TD PORT="holdsCreated.type" ALIGN="LEFT">tinyint[3]</TD></TR>
+      <TR><TD PORT="email" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">email</TD></TR></TABLE></TD><TD PORT="email.type" ALIGN="LEFT">varchar[80]</TD></TR>
+      <TR><TD PORT="phone" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">phone</TD></TR></TABLE></TD><TD PORT="phone.type" ALIGN="LEFT">varchar[15]</TD></TR>
+      <TR><TD PORT="season" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">season</TD></TR></TABLE></TD><TD PORT="season.type" ALIGN="LEFT">varchar[80]</TD></TR>
+      <TR><TD PORT="magazineTitle" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">magazineTitle</TD></TR></TABLE></TD><TD PORT="magazineTitle.type" ALIGN="LEFT">varchar[255]</TD></TR>
+      <TR><TD PORT="upc" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">upc</TD></TR></TABLE></TD><TD PORT="upc.type" ALIGN="LEFT">varchar[15]</TD></TR>
+      <TR><TD PORT="issn" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">issn</TD></TR></TABLE></TD><TD PORT="issn.type" ALIGN="LEFT">varchar[8]</TD></TR>
+      <TR><TD PORT="bookType" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">bookType</TD></TR></TABLE></TD><TD PORT="bookType.type" ALIGN="LEFT">varchar[20]</TD></TR>
+      <TR><TD PORT="subFormat" COLSPAN="2" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">subFormat</TD></TR></TABLE></TD><TD PORT="subFormat.type" ALIGN="LEFT">varchar[20]</TD></TR>
+      <TR><TD PORT="magazineDate" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">magazineDate</TD></TR></TABLE></TD><TD PORT="magazineDate.type" ALIGN="LEFT">varchar[20]</TD></TR>
+      <TR><TD PORT="magazineVolume" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">magazineVolume</TD></TR></TABLE></TD><TD PORT="magazineVolume.type" ALIGN="LEFT">varchar[20]</TD></TR>
+      <TR><TD PORT="magazinePageNumbers" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">magazinePageNumbers</TD></TR></TABLE></TD><TD PORT="magazinePageNumbers.type" ALIGN="LEFT">varchar[20]</TD></TR>
+      <TR><TD PORT="placeHoldWhenAvailable" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">placeHoldWhenAvailable</TD></TR></TABLE></TD><TD PORT="placeHoldWhenAvailable.type" ALIGN="LEFT">tinyint[3]</TD></TR>
+      <TR><TD PORT="holdPickupLocation" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">holdPickupLocation</TD></TR></TABLE></TD><TD PORT="holdPickupLocation.type" ALIGN="LEFT">varchar[10]</TD></TR>
+      <TR><TD PORT="bookmobileStop" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">bookmobileStop</TD></TR></TABLE></TD><TD PORT="bookmobileStop.type" ALIGN="LEFT">varchar[50]</TD></TR>
+      <TR><TD PORT="illItem" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">illItem</TD></TR></TABLE></TD><TD PORT="illItem.type" ALIGN="LEFT">tinyint[3]</TD></TR>
+      <TR><TD PORT="magazineNumber" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">magazineNumber</TD></TR></TABLE></TD><TD PORT="magazineNumber.type" ALIGN="LEFT">varchar[80]</TD></TR>
+      <TR><TD PORT="assignedTo" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">assignedTo</TD></TR></TABLE></TD><TD PORT="assignedTo.type" ALIGN="LEFT">int[10]</TD></TR>
+      <TR><TD PORT="staffComments" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">staffComments</TD></TR></TABLE></TD><TD PORT="staffComments.type" ALIGN="LEFT">mediumtext[16777215]</TD></TR>
+      <TR><TD PORT="createdEmailSent" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">createdEmailSent</TD></TR></TABLE></TD><TD PORT="createdEmailSent.type" ALIGN="LEFT">tinyint[3]</TD></TR>
+      <TR><TD PORT="readyForHolds" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">readyForHolds</TD></TR></TABLE></TD><TD PORT="readyForHolds.type" ALIGN="LEFT">tinyint[3]</TD></TR>
+      <TR><TD PORT="selectedHoldCandidateId" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">selectedHoldCandidateId</TD></TR></TABLE></TD><TD PORT="selectedHoldCandidateId.type" ALIGN="LEFT">int[10]</TD></TR>
+      <TR><TD PORT="holdFailureMessage" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">holdFailureMessage</TD></TR></TABLE></TD><TD PORT="holdFailureMessage.type" ALIGN="LEFT">text[65535]</TD></TR>
+      <TR><TD PORT="hasExistingRecord" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">hasExistingRecord</TD></TR></TABLE></TD><TD PORT="hasExistingRecord.type" ALIGN="LEFT">tinyint[3]</TD></TR>
+      <TR><TD PORT="lastCheckForExistingRecord" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">lastCheckForExistingRecord</TD></TR></TABLE></TD><TD PORT="lastCheckForExistingRecord.type" ALIGN="LEFT">int[10]</TD></TR>
+      <TR><TD PORT="existingRecordUrl" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="166" HEIGHT="16">existingRecordUrl</TD></TR></TABLE></TD><TD PORT="existingRecordUrl.type" ALIGN="LEFT">tinytext[255]</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 &gt;</TD></TR>
     </TABLE>>
     URL="materials_request.html"
