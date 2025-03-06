@@ -301,6 +301,12 @@ cloud_library_record_usage
 cloud_library_export_log
 cloud_library_availability
 claim_authorship_requests
+ce_reward
+ce_milestone
+ce_campaign_patron_type_access
+ce_campaign_milestones
+ce_campaign_data
+ce_campaign
 calendar_display_settings
 cached_values
 browse_category_subcategories
@@ -459,6 +465,12 @@ development_task_qa_link
 development_task_developer_link
 component_ticket_link
 collection_spotlights
+ce_user_completed_milestones
+ce_user_campaign_data
+ce_user_campaign
+ce_campaign_milestone_users_progress
+ce_campaign_milestone_progress_entries
+ce_campaign_library_access
 browse_category_group_users
 browse_category_dismissal
 aspen_lida_quick_searches

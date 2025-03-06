@@ -17,6 +17,12 @@ aspen_lida_notifications_library
 aspen_lida_quick_searches
 browse_category_dismissal
 browse_category_group_users
+ce_campaign_library_access
+ce_campaign_milestone_progress_entries
+ce_campaign_milestone_users_progress
+ce_user_campaign
+ce_user_campaign_data
+ce_user_completed_milestones
 collection_spotlights
 component_ticket_link
 development_task_developer_link
@@ -175,6 +181,12 @@ browse_category_group_entry
 browse_category_subcategories
 cached_values
 calendar_display_settings
+ce_campaign
+ce_campaign_data
+ce_campaign_milestones
+ce_campaign_patron_type_access
+ce_milestone
+ce_reward
 claim_authorship_requests
 cloud_library_availability
 cloud_library_export_log
