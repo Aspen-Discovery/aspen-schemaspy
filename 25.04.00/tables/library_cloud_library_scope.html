@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>library_cloud_library_scope - aspen.aspen</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>aspen</b></a><span class="navbar-brand" style="padding-left: 0">.aspen</span>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>library_cloud_library_scope</h1><p><span id="recordNumber">0</span> rows</p><br />
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="standard_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="id">id</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title='Automatically updated by the database'>√</td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="scopeId">scopeId</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="library_cloud_library_scope.scopeId&#39;s name implies that it&#39;s a child of scope.id, but it doesn&#39;t reference that column."><a href='scope.html'>scope</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="libraryId">libraryId</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="library_cloud_library_scope.libraryId&#39;s name implies that it&#39;s a child of library.libraryId, but it doesn&#39;t reference that column."><a href='library.html'>library</a><span class='relatedKey'>.libraryId</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-sitemap"></i>
+                            <h3 id="Indexes" class="box-title">Indexes</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="indexes_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead>
+                                <tr>
+                                    <th>Constraint Name</th>
+                                    <th>Type</th>
+                                    <th>Sort</th>
+                                    <th>Column(s)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> library_cloud_library_scope_s_pk</td>
+                                    <td>Primary key</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>id</td>
+                                </tr>
+                                <tr>
+                                    <td class='uniqueKey' title='Unique Key'><i class='icon ion-key iconkey'></i> libraryId</td>
+                                    <td>Must be unique</td>
+                                    <td><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
+                                    <td>libraryId + scopeId</td>
+                                </tr>
+                                <tr>
+                                    <td class='uniqueKey' title='Unique Key'><i class='icon ion-key iconkey'></i> PRIMARY</td>
+                                    <td>Must be unique</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>id</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#oneimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">One implied</a></li>
+                                    <li class=""><a href="#twoimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two implied</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="library_cloud_library_scope.html" target="_top" title="library_cloud_library_scope" alt="" coords="5,5,328,163">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/library_cloud_library_scope.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="library_cloud_library_scope.html" target="_top" title="library_cloud_library_scope" alt="" coords="523,59,845,216">
+<area shape="rect" id="node2" href="library.html" target="_top" title="library" alt="" coords="5,204,479,380">
+<area shape="rect" id="node3" href="scope.html" target="_top" title="scope" alt="" coords="153,5,331,187">
+</map>
+                                        <a name='diagram'><img id="oneimpliedDegreeImg" src="../diagrams/tables/library_cloud_library_scope.implied1degrees.png" usemap="#oneDegreeRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
+<area shape="rect" id="node1" href="aspen_lida_notifications_library.html" target="_top" title="aspen_lida_notifications_library" alt="" coords="793,2181,1124,2269">
+<area shape="rect" id="node2" href="library.html" target="_top" title="library" alt="" coords="209,2916,683,3092">
+<area shape="rect" id="node16" href="donations.html" target="_top" title="donations" alt="" coords="5,2977,165,3065">
+<area shape="rect" id="node3" href="aspen_lida_quick_searches.html" target="_top" title="aspen_lida_quick_searches" alt="" coords="813,2287,1104,2375">
+<area shape="rect" id="node4" href="browse_category.html" target="_top" title="browse_category" alt="" coords="852,2392,1065,2480">
+<area shape="rect" id="node5" href="ce_campaign_library_access.html" target="_top" title="ce_campaign_library_access" alt="" coords="809,2497,1108,2585">
+<area shape="rect" id="node6" href="collection_spotlights.html" target="_top" title="collection_spotlights" alt="" coords="837,2603,1080,2691">
+<area shape="rect" id="node7" href="event_library_map_values.html" target="_top" title="event_library_map_values" alt="" coords="816,2708,1101,2796">
+<area shape="rect" id="node8" href="event_type_library.html" target="_top" title="event_type_library" alt="" coords="845,2813,1072,2901">
+<area shape="rect" id="node9" href="greenhouse_cache.html" target="_top" title="greenhouse_cache" alt="" coords="845,2919,1072,3007">
+<area shape="rect" id="node10" href="grouped_work_record_item_url.html" target="_top" title="grouped_work_record_item_url" alt="" coords="796,5,1121,93">
+<area shape="rect" id="node11" href="scope.html" target="_top" title="scope" alt="" coords="357,213,535,395">
+<area shape="rect" id="node12" href="holiday.html" target="_top" title="holiday" alt="" coords="889,3024,1028,3112">
+<area shape="rect" id="node13" href="hoopla_settings.html" target="_top" title="hoopla_settings" alt="" coords="857,3129,1061,3217">
+<area shape="rect" id="node14" href="host_information.html" target="_top" title="host_information" alt="" coords="850,3235,1067,3323">
+<area shape="rect" id="node15" href="javascript_snippet_library.html" target="_top" title="javascript_snippet_library" alt="" coords="817,3340,1101,3428">
+<area shape="rect" id="node17" href="library_cloud_library_scope.html" target="_top" title="library_cloud_library_scope" alt="" coords="797,321,1120,479">
+<area shape="rect" id="node18" href="library_combined_results_section.html" target="_top" title="library_combined_results_section" alt="" coords="787,3445,1131,3533">
+<area shape="rect" id="node19" href="library_email_template.html" target="_top" title="library_email_template" alt="" coords="827,3551,1091,3639">
+<area shape="rect" id="node20" href="library_events_setting.html" target="_top" title="library_events_setting" alt="" coords="831,3656,1086,3744">
+<area shape="rect" id="node21" href="library_ill_item_type.html" target="_top" title="library_ill_item_type" alt="" coords="839,3761,1079,3849">
+<area shape="rect" id="node22" href="library_links.html" target="_top" title="library_links" alt="" coords="870,3867,1047,3955">
+<area shape="rect" id="node23" href="library_open_archives_collection.html" target="_top" title="library_open_archives_collection" alt="" coords="790,3972,1127,4060">
+<area shape="rect" id="node24" href="library_overdrive_scope.html" target="_top" title="library_overdrive_scope" alt="" coords="825,496,1093,584">
+<area shape="rect" id="node25" href="library_overdrive_settings.html" target="_top" title="library_overdrive_settings" alt="" coords="816,4077,1101,4165">
+<area shape="rect" id="node26" href="library_records_to_include.html" target="_top" title="library_records_to_include" alt="" coords="815,4183,1103,4271">
+<area shape="rect" id="node27" href="library_search_source.html" target="_top" title="library_search_source" alt="" coords="833,4288,1085,4376">
+<area shape="rect" id="node28" href="library_sideload_scopes.html" target="_top" title="library_sideload_scopes" alt="" coords="825,4393,1092,4481">
+<area shape="rect" id="node29" href="library_themes.html" target="_top" title="library_themes" alt="" coords="859,4499,1058,4587">
+<area shape="rect" id="node30" href="library_web_builder_basic_page.html" target="_top" title="library_web_builder_basic_page" alt="" coords="795,4604,1123,4692">
+<area shape="rect" id="node31" href="library_web_builder_custom_form.html" target="_top" title="library_web_builder_custom_form" alt="" coords="785,4709,1133,4797">
+<area shape="rect" id="node32" href="library_web_builder_custom_web__954891da.html" target="_top" title="library_web_builder_custom_web_resource_page" alt="" coords="727,4815,1191,4903">
+<area shape="rect" id="node33" href="library_web_builder_grapes_page.html" target="_top" title="library_web_builder_grapes_page" alt="" coords="788,4920,1129,5008">
+<area shape="rect" id="node34" href="library_web_builder_portal_page.html" target="_top" title="library_web_builder_portal_page" alt="" coords="791,5025,1127,5113">
+<area shape="rect" id="node35" href="library_web_builder_quick_poll.html" target="_top" title="library_web_builder_quick_poll" alt="" coords="797,5131,1120,5219">
+<area shape="rect" id="node36" href="library_web_builder_resource.html" target="_top" title="library_web_builder_resource" alt="" coords="802,5236,1115,5324">
+<area shape="rect" id="node37" href="library_website_indexing.html" target="_top" title="library_website_indexing" alt="" coords="820,5341,1097,5429">
+<area shape="rect" id="node38" href="library_year_in_review.html" target="_top" title="library_year_in_review" alt="" coords="830,5447,1087,5535">
+<area shape="rect" id="node39" href="location.html" target="_top" title="location" alt="" coords="887,601,1031,689">
+<area shape="rect" id="node40" href="location_cloud_library_scope.html" target="_top" title="location_cloud_library_scope" alt="" coords="805,111,1112,199">
+<area shape="rect" id="node41" href="location_overdrive_scope.html" target="_top" title="location_overdrive_scope" alt="" coords="819,216,1099,304">
+<area shape="rect" id="node42" href="materials_request.html" target="_top" title="materials_request" alt="" coords="847,707,1071,795">
+<area shape="rect" id="node43" href="materials_request_fields_to_display.html" target="_top" title="materials_request_fields_to_display" alt="" coords="778,812,1139,900">
+<area shape="rect" id="node44" href="materials_request_form_fields.html" target="_top" title="materials_request_form_fields" alt="" coords="799,917,1119,1005">
+<area shape="rect" id="node45" href="materials_request_format_mapping.html" target="_top" title="materials_request_format_mapping" alt="" coords="777,1023,1140,1111">
+<area shape="rect" id="node46" href="materials_request_formats.html" target="_top" title="materials_request_formats" alt="" coords="811,1128,1106,1216">
+<area shape="rect" id="node47" href="materials_request_status.html" target="_top" title="materials_request_status" alt="" coords="819,1233,1099,1321">
+<area shape="rect" id="node48" href="materials_request_usage.html" target="_top" title="materials_request_usage" alt="" coords="820,1339,1097,1427">
+<area shape="rect" id="node49" href="overdrive_api_product_availability.html" target="_top" title="overdrive_api_product_availability" alt="" coords="783,1444,1135,1532">
+<area shape="rect" id="node50" href="placard_library.html" target="_top" title="placard_library" alt="" coords="859,1549,1058,1637">
+<area shape="rect" id="node51" href="staff_members.html" target="_top" title="staff_members" alt="" coords="859,1655,1058,1743">
+<area shape="rect" id="node52" href="system_message_library.html" target="_top" title="system_message_library" alt="" coords="823,1760,1095,1848">
+<area shape="rect" id="node53" href="web_builder_custom_from_submission.html" target="_top" title="web_builder_custom_from_submission" alt="" coords="766,1865,1151,1953">
+<area shape="rect" id="node54" href="web_builder_quick_poll_submission.html" target="_top" title="web_builder_quick_poll_submission" alt="" coords="779,1971,1139,2059">
+<area shape="rect" id="node55" href="web_builder_resource_access_library.html" target="_top" title="web_builder_resource_access_library" alt="" coords="773,2076,1144,2164">
+</map>
+                                        <a name='diagram'><img id="twoimpliedDegreeImg" src="../diagrams/tables/library_cloud_library_scope.implied2degrees.png" usemap="#twoDegreesRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.2.4</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>

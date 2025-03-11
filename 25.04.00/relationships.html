@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>aspen.aspen</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="bower/html5shiv/html5shiv.min.js"></script>
+        <script src="bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="index.html" class="navbar-brand"><b>aspen</b></a><span class="navbar-brand" style="padding-left: 0">.aspen</span>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>All Relationships</h1>
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 class="box-title">Diagrams</h3>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom">
+                                <!-- Tabs within a box -->
+                                <h5>By default only columns that are primary keys, foreign keys or indexes are shown.</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#compactimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">Compact Implied</a></li>
+                                    <li class=""><a href="#largeimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">Large Implied</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="compactimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <div class="alert alert-warning alert-dismissible">
+                                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                            <h4><i class="icon fa fa-info-circle"></i> Implied Relationships</h4>
+                                            <p>No 'real' Foreign Key relationships were detected in the schema.<br />
+                                                Displayed relationships are implied by a column's name/type/size matching another table's primary key.</p>
+                                        </div>
+                                        <map id="compactImpliedRelationshipsDiagram" name="compactImpliedRelationshipsDiagram">
+<area shape="rect" id="node1" href="tables/development_task_qa_link.html" target="_top" title="development_task_qa_link" alt="" coords="658,4640,947,4728">
+<area shape="rect" id="node128" href="tables/user.html" target="_top" title="user" alt="" coords="317,3535,432,3623">
+<area shape="rect" id="node2" href="tables/user_hoopla_usage.html" target="_top" title="user_hoopla_usage" alt="" coords="688,4745,917,4833">
+<area shape="rect" id="node3" href="tables/redwood_user_contribution.html" target="_top" title="redwood_user_contribution" alt="" coords="653,4851,952,4939">
+<area shape="rect" id="node4" href="tables/event_field_set_field.html" target="_top" title="event_field_set_field" alt="" coords="683,11697,923,11785">
+<area shape="rect" id="node44" href="tables/event.html" target="_top" title="event" alt="" coords="312,11381,437,11469">
+<area shape="rect" id="node5" href="tables/accelerated_reading_isbn.html" target="_top" title="accelerated_reading_isbn" alt="" coords="663,637,943,725">
+<area shape="rect" id="node36" href="tables/accelerated_reading_titles.html" target="_top" title="accelerated_reading_titles" alt="" coords="231,712,519,800">
+<area shape="rect" id="node6" href="tables/materials_request_form_fields.html" target="_top" title="materials_request_form_fields" alt="" coords="643,10328,963,10416">
+<area shape="rect" id="node9" href="tables/library.html" target="_top" title="library" alt="" coords="309,8591,441,8679">
+<area shape="rect" id="node7" href="tables/search.html" target="_top" title="search" alt="" coords="309,576,441,664">
+<area shape="rect" id="node8" href="tables/user_ebsco_eds_usage.html" target="_top" title="user_ebsco_eds_usage" alt="" coords="675,4956,930,5044">
+<area shape="rect" id="node40" href="tables/donations.html" target="_top" title="donations" alt="" coords="12,8644,172,8732">
+<area shape="rect" id="node10" href="tables/location.html" target="_top" title="location" alt="" coords="731,10433,875,10521">
+<area shape="rect" id="node11" href="tables/ebsco_research_starter_dismissals.html" target="_top" title="ebsco_research_starter_dismissals" alt="" coords="627,5061,979,5149">
+<area shape="rect" id="node12" href="tables/browse_category_dismissal.html" target="_top" title="browse_category_dismissal" alt="" coords="655,5167,950,5255">
+<area shape="rect" id="node13" href="tables/web_builder_resource_access_library.html" target="_top" title="web_builder_resource_access_library" alt="" coords="617,10539,988,10627">
+<area shape="rect" id="node14" href="tables/donations_dedicate_type.html" target="_top" title="donations_dedicate_type" alt="" coords="236,8696,513,8784">
+<area shape="rect" id="node15" href="tables/ticket.html" target="_top" title="ticket" alt="" coords="312,375,437,463">
+<area shape="rect" id="node16" href="tables/user_events_registrations.html" target="_top" title="user_events_registrations" alt="" coords="661,5272,945,5360">
+<area shape="rect" id="node17" href="tables/event_type.html" target="_top" title="event_type" alt="" coords="719,10960,886,11048">
+<area shape="rect" id="node18" href="tables/web_builder_custom_from_submission.html" target="_top" title="web_builder_custom_from_submission" alt="" coords="610,6115,995,6203">
+<area shape="rect" id="node19" href="tables/user_events_usage.html" target="_top" title="user_events_usage" alt="" coords="689,5377,917,5465">
+<area shape="rect" id="node20" href="tables/user_hold.html" target="_top" title="user_hold" alt="" coords="725,5483,881,5571">
+<area shape="rect" id="node21" href="tables/user_website_usage.html" target="_top" title="user_website_usage" alt="" coords="684,5588,921,5676">
+<area shape="rect" id="node22" href="tables/development_task_developer_link.html" target="_top" title="development_task_developer_link" alt="" coords="628,5693,977,5781">
+<area shape="rect" id="node23" href="tables/accelerated_reading_subject_to_title.html" target="_top" title="accelerated_reading_subject_to_title" alt="" coords="619,743,987,831">
+<area shape="rect" id="node24" href="tables/user_events_entry.html" target="_top" title="user_events_entry" alt="" coords="691,5799,915,5887">
+<area shape="rect" id="node25" href="tables/aspen_lida_notifications_library.html" target="_top" title="aspen_lida_notifications_library" alt="" coords="637,10644,968,10732">
+<area shape="rect" id="node26" href="tables/user_axis360_usage.html" target="_top" title="user_axis360_usage" alt="" coords="686,848,919,936">
+<area shape="rect" id="node27" href="tables/library_year_in_review.html" target="_top" title="library_year_in_review" alt="" coords="674,6431,931,6519">
+<area shape="rect" id="node28" href="tables/marriage.html" target="_top" title="marriage" alt="" coords="727,111,879,199">
+<area shape="rect" id="node107" href="tables/person.html" target="_top" title="person" alt="" coords="307,185,442,273">
+<area shape="rect" id="node29" href="tables/user_reading_history_work.html" target="_top" title="user_reading_history_work" alt="" coords="657,953,949,1041">
+<area shape="rect" id="node30" href="tables/library_open_archives_collection.html" target="_top" title="library_open_archives_collection" alt="" coords="634,6536,971,6624">
+<area shape="rect" id="node31" href="tables/user_cloud_library_usage.html" target="_top" title="user_cloud_library_usage" alt="" coords="664,1059,941,1147">
+<area shape="rect" id="node32" href="tables/materials_request_format_mapping.html" target="_top" title="materials_request_format_mapping" alt="" coords="621,6641,984,6729">
+<area shape="rect" id="node33" href="tables/placard_dismissal.html" target="_top" title="placard_dismissal" alt="" coords="693,1164,913,1252">
+<area shape="rect" id="node34" href="tables/user_palace_project_usage.html" target="_top" title="user_palace_project_usage" alt="" coords="658,1269,947,1357">
+<area shape="rect" id="node35" href="tables/user_ils_messages.html" target="_top" title="user_ils_messages" alt="" coords="691,1375,914,1463">
+<area shape="rect" id="node37" href="tables/system_message_dismissal.html" target="_top" title="system_message_dismissal" alt="" coords="656,1480,949,1568">
+<area shape="rect" id="node38" href="tables/collection_spotlights.html" target="_top" title="collection_spotlights" alt="" coords="681,6747,924,6835">
+<area shape="rect" id="node39" href="tables/overdrive_account_cache.html" target="_top" title="overdrive_account_cache" alt="" coords="663,1585,942,1673">
+<area shape="rect" id="node41" href="tables/materials_request.html" target="_top" title="materials_request" alt="" coords="691,6852,915,6940">
+<area shape="rect" id="node42" href="tables/donations_value.html" target="_top" title="donations_value" alt="" coords="270,8801,479,8889">
+<area shape="rect" id="node43" href="tables/javascript_snippet_library.html" target="_top" title="javascript_snippet_library" alt="" coords="661,6957,945,7045">
+<area shape="rect" id="node57" href="tables/sublocation.html" target="_top" title="sublocation" alt="" coords="5,11276,179,11364">
+<area shape="rect" id="node45" href="tables/sideloads.html" target="_top" title="sideloads" alt="" coords="297,11645,452,11733">
+<area shape="rect" id="node46" href="tables/user_notifications.html" target="_top" title="user_notifications" alt="" coords="691,1691,914,1779">
+<area shape="rect" id="node47" href="tables/materials_request_fields_to_display.html" target="_top" title="materials_request_fields_to_display" alt="" coords="622,7063,983,7151">
+<area shape="rect" id="node48" href="tables/library_events_setting.html" target="_top" title="library_events_setting" alt="" coords="675,10855,930,10943">
+<area shape="rect" id="node49" href="tables/overdrive_api_product_availability.html" target="_top" title="overdrive_api_product_availability" alt="" coords="627,7168,979,7256">
+<area shape="rect" id="node50" href="tables/ebscohost_database.html" target="_top" title="ebscohost_database" alt="" coords="683,532,923,620">
+<area shape="rect" id="node51" href="tables/user_not_interested.html" target="_top" title="user_not_interested" alt="" coords="683,1796,922,1884">
+<area shape="rect" id="node52" href="tables/user_vdx_request.html" target="_top" title="user_vdx_request" alt="" coords="694,1901,911,1989">
+<area shape="rect" id="node53" href="tables/library_web_builder_quick_poll.html" target="_top" title="library_web_builder_quick_poll" alt="" coords="641,7273,964,7361">
+<area shape="rect" id="node54" href="tables/development_task_ticket_link.html" target="_top" title="development_task_ticket_link" alt="" coords="645,321,961,409">
+<area shape="rect" id="node55" href="tables/two_factor_auth_codes.html" target="_top" title="two_factor_auth_codes" alt="" coords="672,2007,933,2095">
+<area shape="rect" id="node56" href="tables/staff_members.html" target="_top" title="staff_members" alt="" coords="703,7379,902,7467">
+<area shape="rect" id="node58" href="tables/event_event_field.html" target="_top" title="event_event_field" alt="" coords="693,11381,912,11469">
+<area shape="rect" id="node59" href="tables/user_work_review.html" target="_top" title="user_work_review" alt="" coords="691,2112,914,2200">
+<area shape="rect" id="node60" href="tables/component_ticket_link.html" target="_top" title="component_ticket_link" alt="" coords="673,427,933,515">
+<area shape="rect" id="node61" href="tables/grouped_work_record_item_url.html" target="_top" title="grouped_work_record_item_url" alt="" coords="640,11908,965,11996">
+<area shape="rect" id="node85" href="tables/scope.html" target="_top" title="scope" alt="" coords="312,11908,437,11996">
+<area shape="rect" id="node62" href="tables/obituary.html" target="_top" title="obituary" alt="" coords="729,216,877,304">
+<area shape="rect" id="node63" href="tables/library_cloud_library_scope.html" target="_top" title="library_cloud_library_scope" alt="" coords="655,11171,950,11259">
+<area shape="rect" id="node64" href="tables/library_website_indexing.html" target="_top" title="library_website_indexing" alt="" coords="664,7484,941,7572">
+<area shape="rect" id="node65" href="tables/event_instance.html" target="_top" title="event_instance" alt="" coords="703,11487,903,11575">
+<area shape="rect" id="node66" href="tables/library_ill_item_type.html" target="_top" title="library_ill_item_type" alt="" coords="683,7589,923,7677">
+<area shape="rect" id="node67" href="tables/library_records_to_include.html" target="_top" title="library_records_to_include" alt="" coords="659,7695,947,7783">
+<area shape="rect" id="node68" href="tables/roles.html" target="_top" title="roles" alt="" coords="315,6009,434,6097">
+<area shape="rect" id="node69" href="tables/usage_by_user_agent.html" target="_top" title="usage_by_user_agent" alt="" coords="680,2217,925,2305">
+<area shape="rect" id="node70" href="tables/system_message_library.html" target="_top" title="system_message_library" alt="" coords="667,7800,939,7888">
+<area shape="rect" id="node71" href="tables/ce_user_campaign_data.html" target="_top" title="ce_user_campaign_data" alt="" coords="669,2323,936,2411">
+<area shape="rect" id="node72" href="tables/library_web_builder_resource.html" target="_top" title="library_web_builder_resource" alt="" coords="646,7905,959,7993">
+<area shape="rect" id="node73" href="tables/ce_campaign_milestone_progress_entries.html" target="_top" title="ce_campaign_milestone_progress_entries" alt="" coords="599,2428,1006,2516">
+<area shape="rect" id="node74" href="tables/browse_category_group_users.html" target="_top" title="browse_category_group_users" alt="" coords="644,2533,961,2621">
+<area shape="rect" id="node75" href="tables/library_web_builder_grapes_page.html" target="_top" title="library_web_builder_grapes_page" alt="" coords="632,8011,973,8099">
+<area shape="rect" id="node76" href="tables/user_year_in_review.html" target="_top" title="user_year_in_review" alt="" coords="683,2639,922,2727">
+<area shape="rect" id="node77" href="tables/user_sideload_usage.html" target="_top" title="user_sideload_usage" alt="" coords="682,2744,923,2832">
+<area shape="rect" id="node78" href="tables/library_web_builder_custom_web__954891da.html" target="_top" title="library_web_builder_custom_web_resource_page" alt="" coords="571,8116,1035,8204">
+<area shape="rect" id="node79" href="tables/ce_user_campaign.html" target="_top" title="ce_user_campaign" alt="" coords="691,2849,914,2937">
+<area shape="rect" id="node80" href="tables/user_ebscohost_usage.html" target="_top" title="user_ebscohost_usage" alt="" coords="675,2955,930,3043">
+<area shape="rect" id="node81" href="tables/library_search_source.html" target="_top" title="library_search_source" alt="" coords="677,8221,929,8309">
+<area shape="rect" id="node82" href="tables/donations_earmark.html" target="_top" title="donations_earmark" alt="" coords="257,5904,492,5992">
+<area shape="rect" id="node83" href="tables/user_messages.html" target="_top" title="user_messages" alt="" coords="703,3060,902,3148">
+<area shape="rect" id="node84" href="tables/placard_library.html" target="_top" title="placard_library" alt="" coords="703,8327,902,8415">
+<area shape="rect" id="node86" href="tables/user_administration_locations.html" target="_top" title="user_administration_locations" alt="" coords="643,3165,963,3253">
+<area shape="rect" id="node87" href="tables/user_payments.html" target="_top" title="user_payments" alt="" coords="703,3271,903,3359">
+<area shape="rect" id="node88" href="tables/ce_campaign_library_access.html" target="_top" title="ce_campaign_library_access" alt="" coords="653,8432,952,8520">
+<area shape="rect" id="node89" href="tables/materials_request_status.html" target="_top" title="materials_request_status" alt="" coords="663,8537,943,8625">
+<area shape="rect" id="node90" href="tables/location_overdrive_scope.html" target="_top" title="location_overdrive_scope" alt="" coords="663,12013,943,12101">
+<area shape="rect" id="node91" href="tables/hoopla_settings.html" target="_top" title="hoopla_settings" alt="" coords="701,8643,905,8731">
+<area shape="rect" id="node92" href="tables/library_sideload_scopes.html" target="_top" title="library_sideload_scopes" alt="" coords="669,11065,936,11153">
+<area shape="rect" id="node93" href="tables/host_information.html" target="_top" title="host_information" alt="" coords="694,8748,911,8836">
+<area shape="rect" id="node94" href="tables/event_library_map_values.html" target="_top" title="event_library_map_values" alt="" coords="660,8853,945,8941">
+<area shape="rect" id="node95" href="tables/library_web_builder_custom_form.html" target="_top" title="library_web_builder_custom_form" alt="" coords="629,8959,977,9047">
+<area shape="rect" id="node96" href="tables/location_cloud_library_scope.html" target="_top" title="location_cloud_library_scope" alt="" coords="649,12119,956,12207">
+<area shape="rect" id="node97" href="tables/user_ils_usage.html" target="_top" title="user_ils_usage" alt="" coords="707,3376,899,3464">
+<area shape="rect" id="node98" href="tables/ce_campaign_milestone_users_progress.html" target="_top" title="ce_campaign_milestone_users_progress" alt="" coords="606,3481,999,3569">
+<area shape="rect" id="node99" href="tables/ce_user_completed_milestones.html" target="_top" title="ce_user_completed_milestones" alt="" coords="641,3587,965,3675">
+<area shape="rect" id="node100" href="tables/hold_request_confirmation.html" target="_top" title="hold_request_confirmation" alt="" coords="655,3692,950,3780">
+<area shape="rect" id="node101" href="tables/materials_request_usage.html" target="_top" title="materials_request_usage" alt="" coords="664,9064,941,9152">
+<area shape="rect" id="node102" href="tables/greenhouse_cache.html" target="_top" title="greenhouse_cache" alt="" coords="689,9169,916,9257">
+<area shape="rect" id="node103" href="tables/user_open_archives_usage.html" target="_top" title="user_open_archives_usage" alt="" coords="659,3797,947,3885">
+<area shape="rect" id="node104" href="tables/library_themes.html" target="_top" title="library_themes" alt="" coords="703,9275,902,9363">
+<area shape="rect" id="node105" href="tables/user_overdrive_usage.html" target="_top" title="user_overdrive_usage" alt="" coords="677,3903,928,3991">
+<area shape="rect" id="node106" href="tables/library_overdrive_scope.html" target="_top" title="library_overdrive_scope" alt="" coords="669,11276,937,11364">
+<area shape="rect" id="node108" href="tables/library_overdrive_settings.html" target="_top" title="library_overdrive_settings" alt="" coords="660,9380,945,9468">
+<area shape="rect" id="node109" href="tables/location_sideload_scopes.html" target="_top" title="location_sideload_scopes" alt="" coords="663,11803,942,11891">
+<area shape="rect" id="node110" href="tables/event_type_library.html" target="_top" title="event_type_library" alt="" coords="689,10749,916,10837">
+<area shape="rect" id="node111" href="tables/user_notification_tokens.html" target="_top" title="user_notification_tokens" alt="" coords="665,4008,941,4096">
+<area shape="rect" id="node112" href="tables/role_permissions.html" target="_top" title="role_permissions" alt="" coords="695,6009,910,6097">
+<area shape="rect" id="node113" href="tables/sublocation_ptype.html" target="_top" title="sublocation_ptype" alt="" coords="262,11171,487,11259">
+<area shape="rect" id="node114" href="tables/browse_category.html" target="_top" title="browse_category" alt="" coords="696,6220,909,6308">
+<area shape="rect" id="node115" href="tables/aspen_lida_quick_searches.html" target="_top" title="aspen_lida_quick_searches" alt="" coords="657,9485,948,9573">
+<area shape="rect" id="node116" href="tables/library_combined_results_section.html" target="_top" title="library_combined_results_section" alt="" coords="631,9591,975,9679">
+<area shape="rect" id="node117" href="tables/grouped_work_record_items.html" target="_top" title="grouped_work_record_items" alt="" coords="223,11276,527,11364">
+<area shape="rect" id="node118" href="tables/series_member.html" target="_top" title="series_member" alt="" coords="703,5,903,93">
+<area shape="rect" id="node127" href="tables/series.html" target="_top" title="series" alt="" coords="311,49,438,137">
+<area shape="rect" id="node119" href="tables/materials_request_formats.html" target="_top" title="materials_request_formats" alt="" coords="655,9696,950,9784">
+<area shape="rect" id="node120" href="tables/event_type_location.html" target="_top" title="event_type_location" alt="" coords="683,11592,922,11680">
+<area shape="rect" id="node121" href="tables/library_email_template.html" target="_top" title="library_email_template" alt="" coords="671,9801,935,9889">
+<area shape="rect" id="node122" href="tables/user_checkout.html" target="_top" title="user_checkout" alt="" coords="705,4113,900,4201">
+<area shape="rect" id="node123" href="tables/user_summon_usage.html" target="_top" title="user_summon_usage" alt="" coords="681,4219,925,4307">
+<area shape="rect" id="node124" href="tables/library_web_builder_portal_page.html" target="_top" title="library_web_builder_portal_page" alt="" coords="635,9907,971,9995">
+<area shape="rect" id="node125" href="tables/holiday.html" target="_top" title="holiday" alt="" coords="733,10012,872,10100">
+<area shape="rect" id="node126" href="tables/user_rbdigital_usage.html" target="_top" title="user_rbdigital_usage" alt="" coords="681,4324,924,4412">
+<area shape="rect" id="node129" href="tables/user_roles.html" target="_top" title="user_roles" alt="" coords="723,5904,883,5992">
+<area shape="rect" id="node130" href="tables/web_builder_quick_poll_submission.html" target="_top" title="web_builder_quick_poll_submission" alt="" coords="623,6325,983,6413">
+<area shape="rect" id="node131" href="tables/library_links.html" target="_top" title="library_links" alt="" coords="714,10117,891,10205">
+<area shape="rect" id="node132" href="tables/library_web_builder_basic_page.html" target="_top" title="library_web_builder_basic_page" alt="" coords="639,10223,967,10311">
+<area shape="rect" id="node133" href="tables/user_account_summary.html" target="_top" title="user_account_summary" alt="" coords="669,4429,937,4517">
+<area shape="rect" id="node134" href="tables/pin_reset_token.html" target="_top" title="pin_reset_token" alt="" coords="700,4535,905,4623">
+</map>
+                                        <a name='diagram'><img id="compactimpliedDegreeImg" src="diagrams/summary/relationships.implied.compact.png" usemap="#compactImpliedRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="largeimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <div class="alert alert-warning alert-dismissible">
+                                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                            <h4><i class="icon fa fa-info-circle"></i> Implied Relationships</h4>
+                                            <p>No 'real' Foreign Key relationships were detected in the schema.<br />
+                                                Displayed relationships are implied by a column's name/type/size matching another table's primary key.</p>
+                                        </div>
+                                        <map id="largeImpliedRelationshipsDiagram" name="largeImpliedRelationshipsDiagram">
+<area shape="rect" id="node1" href="tables/development_task_qa_link.html" target="_top" title="development_task_qa_link" alt="" coords="658,4640,947,4728">
+<area shape="rect" id="node128" href="tables/user.html" target="_top" title="user" alt="" coords="317,3535,432,3623">
+<area shape="rect" id="node2" href="tables/user_hoopla_usage.html" target="_top" title="user_hoopla_usage" alt="" coords="688,4745,917,4833">
+<area shape="rect" id="node3" href="tables/redwood_user_contribution.html" target="_top" title="redwood_user_contribution" alt="" coords="653,4851,952,4939">
+<area shape="rect" id="node4" href="tables/event_field_set_field.html" target="_top" title="event_field_set_field" alt="" coords="683,11697,923,11785">
+<area shape="rect" id="node44" href="tables/event.html" target="_top" title="event" alt="" coords="312,11381,437,11469">
+<area shape="rect" id="node5" href="tables/accelerated_reading_isbn.html" target="_top" title="accelerated_reading_isbn" alt="" coords="663,637,943,725">
+<area shape="rect" id="node36" href="tables/accelerated_reading_titles.html" target="_top" title="accelerated_reading_titles" alt="" coords="231,712,519,800">
+<area shape="rect" id="node6" href="tables/materials_request_form_fields.html" target="_top" title="materials_request_form_fields" alt="" coords="643,10328,963,10416">
+<area shape="rect" id="node9" href="tables/library.html" target="_top" title="library" alt="" coords="309,8591,441,8679">
+<area shape="rect" id="node7" href="tables/search.html" target="_top" title="search" alt="" coords="309,576,441,664">
+<area shape="rect" id="node8" href="tables/user_ebsco_eds_usage.html" target="_top" title="user_ebsco_eds_usage" alt="" coords="675,4956,930,5044">
+<area shape="rect" id="node40" href="tables/donations.html" target="_top" title="donations" alt="" coords="12,8644,172,8732">
+<area shape="rect" id="node10" href="tables/location.html" target="_top" title="location" alt="" coords="731,10433,875,10521">
+<area shape="rect" id="node11" href="tables/ebsco_research_starter_dismissals.html" target="_top" title="ebsco_research_starter_dismissals" alt="" coords="627,5061,979,5149">
+<area shape="rect" id="node12" href="tables/browse_category_dismissal.html" target="_top" title="browse_category_dismissal" alt="" coords="655,5167,950,5255">
+<area shape="rect" id="node13" href="tables/web_builder_resource_access_library.html" target="_top" title="web_builder_resource_access_library" alt="" coords="617,10539,988,10627">
+<area shape="rect" id="node14" href="tables/donations_dedicate_type.html" target="_top" title="donations_dedicate_type" alt="" coords="236,8696,513,8784">
+<area shape="rect" id="node15" href="tables/ticket.html" target="_top" title="ticket" alt="" coords="312,375,437,463">
+<area shape="rect" id="node16" href="tables/user_events_registrations.html" target="_top" title="user_events_registrations" alt="" coords="661,5272,945,5360">
+<area shape="rect" id="node17" href="tables/event_type.html" target="_top" title="event_type" alt="" coords="719,10960,886,11048">
+<area shape="rect" id="node18" href="tables/web_builder_custom_from_submission.html" target="_top" title="web_builder_custom_from_submission" alt="" coords="610,6115,995,6203">
+<area shape="rect" id="node19" href="tables/user_events_usage.html" target="_top" title="user_events_usage" alt="" coords="689,5377,917,5465">
+<area shape="rect" id="node20" href="tables/user_hold.html" target="_top" title="user_hold" alt="" coords="725,5483,881,5571">
+<area shape="rect" id="node21" href="tables/user_website_usage.html" target="_top" title="user_website_usage" alt="" coords="684,5588,921,5676">
+<area shape="rect" id="node22" href="tables/development_task_developer_link.html" target="_top" title="development_task_developer_link" alt="" coords="628,5693,977,5781">
+<area shape="rect" id="node23" href="tables/accelerated_reading_subject_to_title.html" target="_top" title="accelerated_reading_subject_to_title" alt="" coords="619,743,987,831">
+<area shape="rect" id="node24" href="tables/user_events_entry.html" target="_top" title="user_events_entry" alt="" coords="691,5799,915,5887">
+<area shape="rect" id="node25" href="tables/aspen_lida_notifications_library.html" target="_top" title="aspen_lida_notifications_library" alt="" coords="637,10644,968,10732">
+<area shape="rect" id="node26" href="tables/user_axis360_usage.html" target="_top" title="user_axis360_usage" alt="" coords="686,848,919,936">
+<area shape="rect" id="node27" href="tables/library_year_in_review.html" target="_top" title="library_year_in_review" alt="" coords="674,6431,931,6519">
+<area shape="rect" id="node28" href="tables/marriage.html" target="_top" title="marriage" alt="" coords="727,111,879,199">
+<area shape="rect" id="node107" href="tables/person.html" target="_top" title="person" alt="" coords="307,185,442,273">
+<area shape="rect" id="node29" href="tables/user_reading_history_work.html" target="_top" title="user_reading_history_work" alt="" coords="657,953,949,1041">
+<area shape="rect" id="node30" href="tables/library_open_archives_collection.html" target="_top" title="library_open_archives_collection" alt="" coords="634,6536,971,6624">
+<area shape="rect" id="node31" href="tables/user_cloud_library_usage.html" target="_top" title="user_cloud_library_usage" alt="" coords="664,1059,941,1147">
+<area shape="rect" id="node32" href="tables/materials_request_format_mapping.html" target="_top" title="materials_request_format_mapping" alt="" coords="621,6641,984,6729">
+<area shape="rect" id="node33" href="tables/placard_dismissal.html" target="_top" title="placard_dismissal" alt="" coords="693,1164,913,1252">
+<area shape="rect" id="node34" href="tables/user_palace_project_usage.html" target="_top" title="user_palace_project_usage" alt="" coords="658,1269,947,1357">
+<area shape="rect" id="node35" href="tables/user_ils_messages.html" target="_top" title="user_ils_messages" alt="" coords="691,1375,914,1463">
+<area shape="rect" id="node37" href="tables/system_message_dismissal.html" target="_top" title="system_message_dismissal" alt="" coords="656,1480,949,1568">
+<area shape="rect" id="node38" href="tables/collection_spotlights.html" target="_top" title="collection_spotlights" alt="" coords="681,6747,924,6835">
+<area shape="rect" id="node39" href="tables/overdrive_account_cache.html" target="_top" title="overdrive_account_cache" alt="" coords="663,1585,942,1673">
+<area shape="rect" id="node41" href="tables/materials_request.html" target="_top" title="materials_request" alt="" coords="691,6852,915,6940">
+<area shape="rect" id="node42" href="tables/donations_value.html" target="_top" title="donations_value" alt="" coords="270,8801,479,8889">
+<area shape="rect" id="node43" href="tables/javascript_snippet_library.html" target="_top" title="javascript_snippet_library" alt="" coords="661,6957,945,7045">
+<area shape="rect" id="node57" href="tables/sublocation.html" target="_top" title="sublocation" alt="" coords="5,11276,179,11364">
+<area shape="rect" id="node45" href="tables/sideloads.html" target="_top" title="sideloads" alt="" coords="297,11645,452,11733">
+<area shape="rect" id="node46" href="tables/user_notifications.html" target="_top" title="user_notifications" alt="" coords="691,1691,914,1779">
+<area shape="rect" id="node47" href="tables/materials_request_fields_to_display.html" target="_top" title="materials_request_fields_to_display" alt="" coords="622,7063,983,7151">
+<area shape="rect" id="node48" href="tables/library_events_setting.html" target="_top" title="library_events_setting" alt="" coords="675,10855,930,10943">
+<area shape="rect" id="node49" href="tables/overdrive_api_product_availability.html" target="_top" title="overdrive_api_product_availability" alt="" coords="627,7168,979,7256">
+<area shape="rect" id="node50" href="tables/ebscohost_database.html" target="_top" title="ebscohost_database" alt="" coords="683,532,923,620">
+<area shape="rect" id="node51" href="tables/user_not_interested.html" target="_top" title="user_not_interested" alt="" coords="683,1796,922,1884">
+<area shape="rect" id="node52" href="tables/user_vdx_request.html" target="_top" title="user_vdx_request" alt="" coords="694,1901,911,1989">
+<area shape="rect" id="node53" href="tables/library_web_builder_quick_poll.html" target="_top" title="library_web_builder_quick_poll" alt="" coords="641,7273,964,7361">
+<area shape="rect" id="node54" href="tables/development_task_ticket_link.html" target="_top" title="development_task_ticket_link" alt="" coords="645,321,961,409">
+<area shape="rect" id="node55" href="tables/two_factor_auth_codes.html" target="_top" title="two_factor_auth_codes" alt="" coords="672,2007,933,2095">
+<area shape="rect" id="node56" href="tables/staff_members.html" target="_top" title="staff_members" alt="" coords="703,7379,902,7467">
+<area shape="rect" id="node58" href="tables/event_event_field.html" target="_top" title="event_event_field" alt="" coords="693,11381,912,11469">
+<area shape="rect" id="node59" href="tables/user_work_review.html" target="_top" title="user_work_review" alt="" coords="691,2112,914,2200">
+<area shape="rect" id="node60" href="tables/component_ticket_link.html" target="_top" title="component_ticket_link" alt="" coords="673,427,933,515">
+<area shape="rect" id="node61" href="tables/grouped_work_record_item_url.html" target="_top" title="grouped_work_record_item_url" alt="" coords="640,11908,965,11996">
+<area shape="rect" id="node85" href="tables/scope.html" target="_top" title="scope" alt="" coords="312,11908,437,11996">
+<area shape="rect" id="node62" href="tables/obituary.html" target="_top" title="obituary" alt="" coords="729,216,877,304">
+<area shape="rect" id="node63" href="tables/library_cloud_library_scope.html" target="_top" title="library_cloud_library_scope" alt="" coords="655,11171,950,11259">
+<area shape="rect" id="node64" href="tables/library_website_indexing.html" target="_top" title="library_website_indexing" alt="" coords="664,7484,941,7572">
+<area shape="rect" id="node65" href="tables/event_instance.html" target="_top" title="event_instance" alt="" coords="703,11487,903,11575">
+<area shape="rect" id="node66" href="tables/library_ill_item_type.html" target="_top" title="library_ill_item_type" alt="" coords="683,7589,923,7677">
+<area shape="rect" id="node67" href="tables/library_records_to_include.html" target="_top" title="library_records_to_include" alt="" coords="659,7695,947,7783">
+<area shape="rect" id="node68" href="tables/roles.html" target="_top" title="roles" alt="" coords="315,6009,434,6097">
+<area shape="rect" id="node69" href="tables/usage_by_user_agent.html" target="_top" title="usage_by_user_agent" alt="" coords="680,2217,925,2305">
+<area shape="rect" id="node70" href="tables/system_message_library.html" target="_top" title="system_message_library" alt="" coords="667,7800,939,7888">
+<area shape="rect" id="node71" href="tables/ce_user_campaign_data.html" target="_top" title="ce_user_campaign_data" alt="" coords="669,2323,936,2411">
+<area shape="rect" id="node72" href="tables/library_web_builder_resource.html" target="_top" title="library_web_builder_resource" alt="" coords="646,7905,959,7993">
+<area shape="rect" id="node73" href="tables/ce_campaign_milestone_progress_entries.html" target="_top" title="ce_campaign_milestone_progress_entries" alt="" coords="599,2428,1006,2516">
+<area shape="rect" id="node74" href="tables/browse_category_group_users.html" target="_top" title="browse_category_group_users" alt="" coords="644,2533,961,2621">
+<area shape="rect" id="node75" href="tables/library_web_builder_grapes_page.html" target="_top" title="library_web_builder_grapes_page" alt="" coords="632,8011,973,8099">
+<area shape="rect" id="node76" href="tables/user_year_in_review.html" target="_top" title="user_year_in_review" alt="" coords="683,2639,922,2727">
+<area shape="rect" id="node77" href="tables/user_sideload_usage.html" target="_top" title="user_sideload_usage" alt="" coords="682,2744,923,2832">
+<area shape="rect" id="node78" href="tables/library_web_builder_custom_web__954891da.html" target="_top" title="library_web_builder_custom_web_resource_page" alt="" coords="571,8116,1035,8204">
+<area shape="rect" id="node79" href="tables/ce_user_campaign.html" target="_top" title="ce_user_campaign" alt="" coords="691,2849,914,2937">
+<area shape="rect" id="node80" href="tables/user_ebscohost_usage.html" target="_top" title="user_ebscohost_usage" alt="" coords="675,2955,930,3043">
+<area shape="rect" id="node81" href="tables/library_search_source.html" target="_top" title="library_search_source" alt="" coords="677,8221,929,8309">
+<area shape="rect" id="node82" href="tables/donations_earmark.html" target="_top" title="donations_earmark" alt="" coords="257,5904,492,5992">
+<area shape="rect" id="node83" href="tables/user_messages.html" target="_top" title="user_messages" alt="" coords="703,3060,902,3148">
+<area shape="rect" id="node84" href="tables/placard_library.html" target="_top" title="placard_library" alt="" coords="703,8327,902,8415">
+<area shape="rect" id="node86" href="tables/user_administration_locations.html" target="_top" title="user_administration_locations" alt="" coords="643,3165,963,3253">
+<area shape="rect" id="node87" href="tables/user_payments.html" target="_top" title="user_payments" alt="" coords="703,3271,903,3359">
+<area shape="rect" id="node88" href="tables/ce_campaign_library_access.html" target="_top" title="ce_campaign_library_access" alt="" coords="653,8432,952,8520">
+<area shape="rect" id="node89" href="tables/materials_request_status.html" target="_top" title="materials_request_status" alt="" coords="663,8537,943,8625">
+<area shape="rect" id="node90" href="tables/location_overdrive_scope.html" target="_top" title="location_overdrive_scope" alt="" coords="663,12013,943,12101">
+<area shape="rect" id="node91" href="tables/hoopla_settings.html" target="_top" title="hoopla_settings" alt="" coords="701,8643,905,8731">
+<area shape="rect" id="node92" href="tables/library_sideload_scopes.html" target="_top" title="library_sideload_scopes" alt="" coords="669,11065,936,11153">
+<area shape="rect" id="node93" href="tables/host_information.html" target="_top" title="host_information" alt="" coords="694,8748,911,8836">
+<area shape="rect" id="node94" href="tables/event_library_map_values.html" target="_top" title="event_library_map_values" alt="" coords="660,8853,945,8941">
+<area shape="rect" id="node95" href="tables/library_web_builder_custom_form.html" target="_top" title="library_web_builder_custom_form" alt="" coords="629,8959,977,9047">
+<area shape="rect" id="node96" href="tables/location_cloud_library_scope.html" target="_top" title="location_cloud_library_scope" alt="" coords="649,12119,956,12207">
+<area shape="rect" id="node97" href="tables/user_ils_usage.html" target="_top" title="user_ils_usage" alt="" coords="707,3376,899,3464">
+<area shape="rect" id="node98" href="tables/ce_campaign_milestone_users_progress.html" target="_top" title="ce_campaign_milestone_users_progress" alt="" coords="606,3481,999,3569">
+<area shape="rect" id="node99" href="tables/ce_user_completed_milestones.html" target="_top" title="ce_user_completed_milestones" alt="" coords="641,3587,965,3675">
+<area shape="rect" id="node100" href="tables/hold_request_confirmation.html" target="_top" title="hold_request_confirmation" alt="" coords="655,3692,950,3780">
+<area shape="rect" id="node101" href="tables/materials_request_usage.html" target="_top" title="materials_request_usage" alt="" coords="664,9064,941,9152">
+<area shape="rect" id="node102" href="tables/greenhouse_cache.html" target="_top" title="greenhouse_cache" alt="" coords="689,9169,916,9257">
+<area shape="rect" id="node103" href="tables/user_open_archives_usage.html" target="_top" title="user_open_archives_usage" alt="" coords="659,3797,947,3885">
+<area shape="rect" id="node104" href="tables/library_themes.html" target="_top" title="library_themes" alt="" coords="703,9275,902,9363">
+<area shape="rect" id="node105" href="tables/user_overdrive_usage.html" target="_top" title="user_overdrive_usage" alt="" coords="677,3903,928,3991">
+<area shape="rect" id="node106" href="tables/library_overdrive_scope.html" target="_top" title="library_overdrive_scope" alt="" coords="669,11276,937,11364">
+<area shape="rect" id="node108" href="tables/library_overdrive_settings.html" target="_top" title="library_overdrive_settings" alt="" coords="660,9380,945,9468">
+<area shape="rect" id="node109" href="tables/location_sideload_scopes.html" target="_top" title="location_sideload_scopes" alt="" coords="663,11803,942,11891">
+<area shape="rect" id="node110" href="tables/event_type_library.html" target="_top" title="event_type_library" alt="" coords="689,10749,916,10837">
+<area shape="rect" id="node111" href="tables/user_notification_tokens.html" target="_top" title="user_notification_tokens" alt="" coords="665,4008,941,4096">
+<area shape="rect" id="node112" href="tables/role_permissions.html" target="_top" title="role_permissions" alt="" coords="695,6009,910,6097">
+<area shape="rect" id="node113" href="tables/sublocation_ptype.html" target="_top" title="sublocation_ptype" alt="" coords="262,11171,487,11259">
+<area shape="rect" id="node114" href="tables/browse_category.html" target="_top" title="browse_category" alt="" coords="696,6220,909,6308">
+<area shape="rect" id="node115" href="tables/aspen_lida_quick_searches.html" target="_top" title="aspen_lida_quick_searches" alt="" coords="657,9485,948,9573">
+<area shape="rect" id="node116" href="tables/library_combined_results_section.html" target="_top" title="library_combined_results_section" alt="" coords="631,9591,975,9679">
+<area shape="rect" id="node117" href="tables/grouped_work_record_items.html" target="_top" title="grouped_work_record_items" alt="" coords="223,11276,527,11364">
+<area shape="rect" id="node118" href="tables/series_member.html" target="_top" title="series_member" alt="" coords="703,5,903,93">
+<area shape="rect" id="node127" href="tables/series.html" target="_top" title="series" alt="" coords="311,49,438,137">
+<area shape="rect" id="node119" href="tables/materials_request_formats.html" target="_top" title="materials_request_formats" alt="" coords="655,9696,950,9784">
+<area shape="rect" id="node120" href="tables/event_type_location.html" target="_top" title="event_type_location" alt="" coords="683,11592,922,11680">
+<area shape="rect" id="node121" href="tables/library_email_template.html" target="_top" title="library_email_template" alt="" coords="671,9801,935,9889">
+<area shape="rect" id="node122" href="tables/user_checkout.html" target="_top" title="user_checkout" alt="" coords="705,4113,900,4201">
+<area shape="rect" id="node123" href="tables/user_summon_usage.html" target="_top" title="user_summon_usage" alt="" coords="681,4219,925,4307">
+<area shape="rect" id="node124" href="tables/library_web_builder_portal_page.html" target="_top" title="library_web_builder_portal_page" alt="" coords="635,9907,971,9995">
+<area shape="rect" id="node125" href="tables/holiday.html" target="_top" title="holiday" alt="" coords="733,10012,872,10100">
+<area shape="rect" id="node126" href="tables/user_rbdigital_usage.html" target="_top" title="user_rbdigital_usage" alt="" coords="681,4324,924,4412">
+<area shape="rect" id="node129" href="tables/user_roles.html" target="_top" title="user_roles" alt="" coords="723,5904,883,5992">
+<area shape="rect" id="node130" href="tables/web_builder_quick_poll_submission.html" target="_top" title="web_builder_quick_poll_submission" alt="" coords="623,6325,983,6413">
+<area shape="rect" id="node131" href="tables/library_links.html" target="_top" title="library_links" alt="" coords="714,10117,891,10205">
+<area shape="rect" id="node132" href="tables/library_web_builder_basic_page.html" target="_top" title="library_web_builder_basic_page" alt="" coords="639,10223,967,10311">
+<area shape="rect" id="node133" href="tables/user_account_summary.html" target="_top" title="user_account_summary" alt="" coords="669,4429,937,4517">
+<area shape="rect" id="node134" href="tables/pin_reset_token.html" target="_top" title="pin_reset_token" alt="" coords="700,4535,905,4623">
+</map>
+                                        <a name='diagram'><img id="largeimpliedDegreeImg" src="diagrams/summary/relationships.implied.large.png" usemap="#largeImpliedRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.2.4</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="bower/pdfmake/pdfmake.min.js"></script>
+        <script src="bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="bower/codemirror/codemirror.js"></script>
+        <script src="bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="relationships.js"></script>
+        <script src="schemaSpy.js"></script>
+    </body>
+</html>
