@@ -66,6 +66,7 @@ ticket_queue_feed
 ticket_component_feed
 themes
 text_block_translation
+talpa_settings
 system_variables
 system_messages
 system_message_location

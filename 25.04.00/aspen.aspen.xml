@@ -8750,6 +8750,18 @@
             <column ascending="true" name="id"/>
          </index>
       </table>
+      <table catalog="aspen" name="talpa_settings" numRows="0" remarks="" type="TABLE">
+         <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="name" nullable="false" remarks="" size="50" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="''" digits="0" id="2" name="talpaApiToken" nullable="true" remarks="" size="50" type="VARCHAR" typeCode="12"/>
+         <primaryKey column="id" sequenceNumberInPK="1"/>
+         <index name="talpa_settings_s_pk" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+         <index name="PRIMARY" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+      </table>
       <table catalog="aspen" name="text_block_translation" numRows="0" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT UNSIGNED" typeCode="4"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="objectType" nullable="false" remarks="" size="50" type="VARCHAR" typeCode="12"/>

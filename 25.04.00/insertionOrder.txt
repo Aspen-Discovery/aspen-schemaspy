@@ -422,6 +422,7 @@ syndetics_settings
 system_message_location
 system_messages
 system_variables
+talpa_settings
 text_block_translation
 themes
 ticket_component_feed
