@@ -1252,6 +1252,7 @@
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="5" name="tableName" nullable="true" remarks="" size="100" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="0" digits="0" id="6" name="processed" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="7" name="object" nullable="true" remarks="" size="16777215" type="MEDIUMTEXT" typeCode="-1"/>
+         <column autoUpdated="false" defaultValue="current_timestamp()" digits="0" id="8" name="timestamp" nullable="false" remarks="" size="19" type="DATETIME" typeCode="93"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="ce_campaign_milestone_progress_entries_s_pk" unique="true">
             <column ascending="true" name="id"/>
