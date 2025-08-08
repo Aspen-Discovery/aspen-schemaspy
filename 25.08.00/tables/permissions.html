@@ -73,7 +73,7 @@
             <div class="content-wrapper">
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
-                    <h1>permissions</h1><p><span id="recordNumber">237</span> rows</p><br />
+                    <h1>permissions</h1><p><span id="recordNumber">246</span> rows</p><br />
                 </section>
                 <!-- Main content -->
                 <section class="content">
@@ -117,6 +117,11 @@
                                     <td>null</td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="permission_group_permissions.permissionId references permissions.id via fk_permission_group_permission"><a href='permission_group_permissions.html'>permission_group_permissions</a><span class='relatedKey'>.permissionId</span></td>
+                                                <td class="constraint detail">fk_permission_group_permission</td>
+                                                <td class="constraint detail"><span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
                                         </table>
                                     </td>
                                     <td>
@@ -276,13 +281,23 @@
                                 <h5>Close relationships within degrees of separation</h5>
                                 <ul class="nav nav-tabs pull-left ui-sortable-handle">
                                     <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
                                 </ul>
                                 <div class="tab-content no-padding">
                                     <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
-<area shape="rect" id="node1" href="permissions.html" target="_top" title="permissions" alt="" coords="5,5,319,251">
+<area shape="rect" id="node1" href="permission_group_permissions.html" target="_top" title="permission_group_permissions" alt="" coords="363,5,747,157">
+<area shape="rect" id="node2" href="permissions.html" target="_top" title="permissions" alt="" coords="5,61,319,307">
 </map>
                                         <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/permissions.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="permission_group_permissions.html" target="_top" title="permission_group_permissions" alt="" coords="363,15,747,167">
+<area shape="rect" id="node2" href="permission_groups.html" target="_top" title="permission_groups" alt="" coords="28,5,296,93">
+<area shape="rect" id="node3" href="permissions.html" target="_top" title="permissions" alt="" coords="5,111,319,356">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/permissions.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
                                     </div>
                                 </div>
                             </div>

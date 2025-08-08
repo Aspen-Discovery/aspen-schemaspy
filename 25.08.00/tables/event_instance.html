@@ -266,6 +266,28 @@
                                     </td>
                                     <td></td>
                                 </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="sublocationId">sublocationId</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>NULL</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="event_instance.sublocationId&#39;s name implies that it&#39;s a child of sublocation.id, but it doesn&#39;t reference that column."><a href='sublocation.html'>sublocation</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -332,28 +354,32 @@
                                 <div class="tab-content no-padding">
                                     <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
-<area shape="rect" id="node1" href="event_instance.html" target="_top" title="event_instance" alt="" coords="5,5,303,339">
+<area shape="rect" id="node1" href="event_instance.html" target="_top" title="event_instance" alt="" coords="5,5,303,368">
 </map>
                                         <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/event_instance.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
                                     </div>
                                     <div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
-<area shape="rect" id="node1" href="event_instance.html" target="_top" title="event_instance" alt="" coords="307,5,604,339">
-<area shape="rect" id="node2" href="event.html" target="_top" title="event" alt="" coords="5,37,263,184">
+<area shape="rect" id="node1" href="event.html" target="_top" title="event" alt="" coords="379,92,636,239">
+<area shape="rect" id="node2" href="sublocation.html" target="_top" title="sublocation" alt="" coords="5,183,335,300">
+<area shape="rect" id="node3" href="event_instance.html" target="_top" title="event_instance" alt="" coords="680,5,977,368">
 </map>
                                         <a name='diagram'><img id="oneimpliedDegreeImg" src="../diagrams/tables/event_instance.implied1degrees.png" usemap="#oneDegreeRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
                                     </div>
                                     <div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
-<area shape="rect" id="node1" href="event.html" target="_top" title="event" alt="" coords="247,248,504,395">
-<area shape="rect" id="node2" href="sublocation.html" target="_top" title="sublocation" alt="" coords="5,280,203,368">
-<area shape="rect" id="node3" href="event_event_field.html" target="_top" title="event_event_field" alt="" coords="571,5,825,93">
-<area shape="rect" id="node4" href="event_field_set_field.html" target="_top" title="event_field_set_field" alt="" coords="557,111,839,199">
-<area shape="rect" id="node5" href="event_instance.html" target="_top" title="event_instance" alt="" coords="549,216,847,549">
-<area shape="rect" id="node6" href="event_type.html" target="_top" title="event_type" alt="" coords="603,567,793,655">
-<area shape="rect" id="node7" href="event_type_library.html" target="_top" title="event_type_library" alt="" coords="566,672,830,760">
-<area shape="rect" id="node8" href="event_type_location.html" target="_top" title="event_type_location" alt="" coords="559,777,837,865">
-<area shape="rect" id="node9" href="library_events_setting.html" target="_top" title="library_events_setting" alt="" coords="548,883,848,971">
+<area shape="rect" id="node1" href="event.html" target="_top" title="event" alt="" coords="349,324,501,412">
+<area shape="rect" id="node2" href="sublocation.html" target="_top" title="sublocation" alt="" coords="5,741,203,829">
+<area shape="rect" id="node3" href="event_event_field.html" target="_top" title="event_event_field" alt="" coords="700,5,955,93">
+<area shape="rect" id="node4" href="event_field_set_field.html" target="_top" title="event_field_set_field" alt="" coords="686,111,969,199">
+<area shape="rect" id="node5" href="event_instance.html" target="_top" title="event_instance" alt="" coords="679,743,976,1105">
+<area shape="rect" id="node6" href="event_type.html" target="_top" title="event_type" alt="" coords="732,216,923,304">
+<area shape="rect" id="node7" href="event_type_library.html" target="_top" title="event_type_library" alt="" coords="695,321,959,409">
+<area shape="rect" id="node8" href="event_type_location.html" target="_top" title="event_type_location" alt="" coords="688,427,967,515">
+<area shape="rect" id="node9" href="grouped_work_record_items.html" target="_top" title="grouped_work_record_items" alt="" coords="247,775,604,863">
+<area shape="rect" id="node10" href="library_events_facet_setting.html" target="_top" title="library_events_facet_setting" alt="" coords="648,532,1007,620">
+<area shape="rect" id="node11" href="library_events_setting.html" target="_top" title="library_events_setting" alt="" coords="677,637,977,725">
+<area shape="rect" id="node12" href="sublocation_ptype.html" target="_top" title="sublocation_ptype" alt="" coords="295,880,556,968">
 </map>
                                         <a name='diagram'><img id="twoimpliedDegreeImg" src="../diagrams/tables/event_instance.implied2degrees.png" usemap="#twoDegreesRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
                                     </div>
