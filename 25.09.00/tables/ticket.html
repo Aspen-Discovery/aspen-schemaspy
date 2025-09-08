@@ -122,11 +122,6 @@
                                                 <td class="constraint detail">Implied Constraint</td>
                                                 <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
-                                            <tr>
-                                                <td title="development_task_ticket_link.ticketId&#39;s name implies that it&#39;s a child of ticket.id, but it doesn&#39;t reference that column."><a href='development_task_ticket_link.html'>development_task_ticket_link</a><span class='relatedKey'>.ticketId</span></td>
-                                                <td class="constraint detail">Implied Constraint</td>
-                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
-                                            </tr>
                                         </table>
                                     </td>
                                     <td>
@@ -339,23 +334,6 @@
                                     </td>
                                     <td></td>
                                 </tr>
-                                <tr>
-                                    <td><span id="developmentTaskId">developmentTaskId</span></td>
-                                    <td>INT</td>
-                                    <td>10</td>
-                                    <td title='nullable'>√</td>
-                                    <td title=''></td>
-                                    <td>NULL</td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td></td>
-                                </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -427,15 +405,14 @@
                                 <div class="tab-content no-padding">
                                     <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
-<area shape="rect" id="node1" href="ticket.html" target="_top" title="ticket" alt="" coords="5,5,429,485">
+<area shape="rect" id="node1" href="ticket.html" target="_top" title="ticket" alt="" coords="5,5,429,456">
 </map>
                                         <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/ticket.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
                                     </div>
                                     <div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
-<area shape="rect" id="node1" href="component_ticket_link.html" target="_top" title="component_ticket_link" alt="" coords="508,5,809,157">
-<area shape="rect" id="node2" href="ticket.html" target="_top" title="ticket" alt="" coords="5,116,429,596">
-<area shape="rect" id="node3" href="development_task_ticket_link.html" target="_top" title="development_task_ticket_link" alt="" coords="473,175,844,327">
+<area shape="rect" id="node1" href="component_ticket_link.html" target="_top" title="component_ticket_link" alt="" coords="473,5,775,157">
+<area shape="rect" id="node2" href="ticket.html" target="_top" title="ticket" alt="" coords="5,32,429,483">
 </map>
                                         <a name='diagram'><img id="oneimpliedDegreeImg" src="../diagrams/tables/ticket.implied1degrees.png" usemap="#oneDegreeRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
                                     </div>

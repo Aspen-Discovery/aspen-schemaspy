@@ -6,18 +6,17 @@ accelerated_reading_titles
 person
 roles
 sideloads
-ticket
 permission_groups
 permissions
 search
 series
+ticket
 library
 event
 accelerated_reading_isbn
 accelerated_reading_subject_to_title
 admin_sticky_filters
 aspen_lida_notifications_library
-aspen_lida_quick_searches
 browse_category_dismissal
 browse_category_group_users
 ce_campaign_extra_credit_activity_users_progress
@@ -29,9 +28,6 @@ ce_user_campaign_data
 ce_user_completed_milestones
 collection_spotlights
 component_ticket_link
-development_task_developer_link
-development_task_qa_link
-development_task_ticket_link
 donations_dedicate_type
 donations_earmark
 donations_value
@@ -84,7 +80,6 @@ overdrive_api_product_availability
 pin_reset_token
 placard_dismissal
 placard_library
-redwood_user_contribution
 role_permissions
 self_registration_sierra
 series_member
@@ -117,7 +112,6 @@ user_overdrive_usage
 user_page_defaults
 user_palace_project_usage
 user_payments
-user_rbdigital_usage
 user_reading_history_work
 user_sideload_usage
 user_summon_usage
@@ -147,7 +141,6 @@ aci_speedpay_settings
 administration_field_lock
 amazon_ses_settings
 api_usage
-archive_requests
 aspen_lida_branded_settings
 aspen_lida_build
 aspen_lida_general_settings
@@ -156,7 +149,6 @@ aspen_lida_notification_setting
 aspen_lida_notifications
 aspen_lida_notifications_location
 aspen_lida_notifications_ptype
-aspen_lida_quick_search_setting
 aspen_lida_self_check_barcode
 aspen_lida_self_check_settings
 aspen_release
@@ -198,7 +190,6 @@ ce_campaign_patron_type_access
 ce_extra_credit
 ce_milestone
 ce_reward
-claim_authorship_requests
 cloud_library_availability
 cloud_library_export_log
 cloud_library_record_usage
@@ -210,8 +201,6 @@ collection_spotlight_lists
 communico_events
 communico_settings
 companion_system
-component_development_epic_link
-component_development_task_link
 comprise_settings
 contentcafe_settings
 course_reserve
@@ -224,14 +213,7 @@ cron_process_log
 curbside_pickup_settings
 db_update
 deluxe_certified_payments_settings
-development_epic
-development_epic_partner_link
 development_priorities
-development_sprint
-development_task
-development_task_epic_link
-development_task_partner_link
-development_task_sprint_link
 donations_settings
 dpla_api_settings
 ebsco_eds_settings
@@ -387,13 +369,6 @@ propay_settings
 ptype
 ptype_restricted_locations
 quipu_ecard_setting
-rbdigital_availability
-rbdigital_magazine
-rbdigital_magazine_issue
-rbdigital_magazine_issue_availability
-rbdigital_magazine_usage
-rbdigital_record_usage
-rbdigital_title
 recaptcha_settings
 record_files
 record_identifiers_to_reload
@@ -404,6 +379,7 @@ request_tracker_connection
 rosen_levelup_settings
 search_stats_new
 search_update_log
+self_check_completion_message
 self_reg_form_values
 self_reg_municipality_values_sierra
 self_registration_form

@@ -10,14 +10,11 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
   "ce_user_campaign":"elipses":w -> "user":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "ce_user_campaign_data":"elipses":w -> "user":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "ce_user_completed_milestones":"elipses":w -> "user":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
-  "development_task_developer_link":"elipses":w -> "user":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
-  "development_task_qa_link":"elipses":w -> "user":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "ebsco_research_starter_dismissals":"elipses":w -> "user":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "hold_request_confirmation":"elipses":w -> "user":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "overdrive_account_cache":"elipses":w -> "user":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "pin_reset_token":"elipses":w -> "user":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "placard_dismissal":"elipses":w -> "user":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
-  "redwood_user_contribution":"elipses":w -> "user":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "system_message_dismissal":"elipses":w -> "user":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "two_factor_auth_codes":"elipses":w -> "user":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "usage_by_user_agent":"elipses":w -> "user":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
@@ -44,7 +41,6 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
   "user_page_defaults":"elipses":w -> "user":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "user_palace_project_usage":"elipses":w -> "user":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "user_payments":"elipses":w -> "user":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
-  "user_rbdigital_usage":"elipses":w -> "user":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "user_reading_history_work":"elipses":w -> "user":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "user_roles":"elipses":w -> "user":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "user_sideload_usage":"elipses":w -> "user":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
@@ -165,28 +161,6 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
     target="_top"
     tooltip="ce_user_completed_milestones"
   ];
-  "development_task_developer_link" [
-   label=<
-    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
-      <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="246" HEIGHT="16"><B>development_task_developer_link</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" CELLPADDING="0" BGCOLOR="#ffffff" COLSPAN="3" ><TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 1</TD><VR/><TD ALIGN="CENTER" BGCOLOR="#ffffff">0 rows</TD><VR/><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR></TABLE></TD></TR>
-    </TABLE>>
-    URL="development_task_developer_link.html"
-    target="_top"
-    tooltip="development_task_developer_link"
-  ];
-  "development_task_qa_link" [
-   label=<
-    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
-      <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="191" HEIGHT="16"><B>development_task_qa_link</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" CELLPADDING="0" BGCOLOR="#ffffff" COLSPAN="3" ><TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 1</TD><VR/><TD ALIGN="CENTER" BGCOLOR="#ffffff">0 rows</TD><VR/><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR></TABLE></TD></TR>
-    </TABLE>>
-    URL="development_task_qa_link.html"
-    target="_top"
-    tooltip="development_task_qa_link"
-  ];
   "ebsco_research_starter_dismissals" [
    label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
@@ -242,17 +216,6 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
     target="_top"
     tooltip="placard_dismissal"
   ];
-  "redwood_user_contribution" [
-   label=<
-    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
-      <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="199" HEIGHT="16"><B>redwood_user_contribution</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" CELLPADDING="0" BGCOLOR="#ffffff" COLSPAN="3" ><TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 1</TD><VR/><TD ALIGN="CENTER" BGCOLOR="#ffffff">0 rows</TD><VR/><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR></TABLE></TD></TR>
-    </TABLE>>
-    URL="redwood_user_contribution.html"
-    target="_top"
-    tooltip="redwood_user_contribution"
-  ];
   "system_message_dismissal" [
    label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
@@ -298,7 +261,7 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
       <TR><TD PORT="forceReadingHistoryLoad" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="275" HEIGHT="16">forceReadingHistoryLoad</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="readingHistoryImportStartedAt" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="275" HEIGHT="16">readingHistoryImportStartedAt</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" CELLPADDING="0" BGCOLOR="#ffffff" COLSPAN="3" ><TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">  </TD><VR/><TD ALIGN="CENTER" BGCOLOR="#ffffff">2 rows</TD><VR/><TD ALIGN="RIGHT" BGCOLOR="#ffffff">55 &gt;</TD></TR></TABLE></TD></TR>
+      <TR><TD ALIGN="LEFT" CELLPADDING="0" BGCOLOR="#ffffff" COLSPAN="3" ><TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">  </TD><VR/><TD ALIGN="CENTER" BGCOLOR="#ffffff">2 rows</TD><VR/><TD ALIGN="RIGHT" BGCOLOR="#ffffff">51 &gt;</TD></TR></TABLE></TD></TR>
     </TABLE>>
     URL="user.html"
     target="_top"
@@ -567,17 +530,6 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
     URL="user_payments.html"
     target="_top"
     tooltip="user_payments"
-  ];
-  "user_rbdigital_usage" [
-   label=<
-    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
-      <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="151" HEIGHT="16"><B>user_rbdigital_usage</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
-      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" CELLPADDING="0" BGCOLOR="#ffffff" COLSPAN="3" ><TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 1</TD><VR/><TD ALIGN="CENTER" BGCOLOR="#ffffff">0 rows</TD><VR/><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR></TABLE></TD></TR>
-    </TABLE>>
-    URL="user_rbdigital_usage.html"
-    target="_top"
-    tooltip="user_rbdigital_usage"
   ];
   "user_reading_history_work" [
    label=<

@@ -104,6 +104,7 @@ self_registration_form_carlx
 self_registration_form
 self_reg_municipality_values_sierra
 self_reg_form_values
+self_check_completion_message
 search_update_log
 search_stats_new
 rosen_levelup_settings
@@ -114,13 +115,6 @@ record_parents
 record_identifiers_to_reload
 record_files
 recaptcha_settings
-rbdigital_title
-rbdigital_record_usage
-rbdigital_magazine_usage
-rbdigital_magazine_issue_availability
-rbdigital_magazine_issue
-rbdigital_magazine
-rbdigital_availability
 quipu_ecard_setting
 ptype_restricted_locations
 ptype
@@ -276,14 +270,7 @@ ebsco_eds_usage
 ebsco_eds_settings
 dpla_api_settings
 donations_settings
-development_task_sprint_link
-development_task_partner_link
-development_task_epic_link
-development_task
-development_sprint
 development_priorities
-development_epic_partner_link
-development_epic
 deluxe_certified_payments_settings
 db_update
 curbside_pickup_settings
@@ -296,8 +283,6 @@ course_reserve_entry
 course_reserve
 contentcafe_settings
 comprise_settings
-component_development_task_link
-component_development_epic_link
 companion_system
 communico_settings
 communico_events
@@ -309,7 +294,6 @@ cloud_library_scopes
 cloud_library_record_usage
 cloud_library_export_log
 cloud_library_availability
-claim_authorship_requests
 ce_reward
 ce_milestone
 ce_extra_credit
@@ -351,7 +335,6 @@ aspen_site_checks
 aspen_release
 aspen_lida_self_check_settings
 aspen_lida_self_check_barcode
-aspen_lida_quick_search_setting
 aspen_lida_notifications_ptype
 aspen_lida_notifications_location
 aspen_lida_notifications
@@ -360,7 +343,6 @@ aspen_lida_location_settings
 aspen_lida_general_settings
 aspen_lida_build
 aspen_lida_branded_settings
-archive_requests
 api_usage
 amazon_ses_settings
 administration_field_lock
@@ -390,7 +372,6 @@ user_vdx_request
 user_summon_usage
 user_sideload_usage
 user_reading_history_work
-user_rbdigital_usage
 user_payments
 user_palace_project_usage
 user_page_defaults
@@ -423,7 +404,6 @@ staff_members
 series_member
 self_registration_sierra
 role_permissions
-redwood_user_contribution
 placard_library
 placard_dismissal
 pin_reset_token
@@ -476,9 +456,6 @@ ebsco_research_starter_dismissals
 donations_value
 donations_earmark
 donations_dedicate_type
-development_task_ticket_link
-development_task_qa_link
-development_task_developer_link
 component_ticket_link
 collection_spotlights
 ce_user_completed_milestones
@@ -490,18 +467,17 @@ ce_campaign_library_access
 ce_campaign_extra_credit_activity_users_progress
 browse_category_group_users
 browse_category_dismissal
-aspen_lida_quick_searches
 aspen_lida_notifications_library
 admin_sticky_filters
 accelerated_reading_subject_to_title
 accelerated_reading_isbn
 event
 library
+ticket
 series
 search
 permissions
 permission_groups
-ticket
 sideloads
 roles
 person

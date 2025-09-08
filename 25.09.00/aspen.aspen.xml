@@ -231,36 +231,6 @@
             <column ascending="true" name="method"/>
          </index>
       </table>
-      <table catalog="aspen" name="archive_requests" numRows="0" remarks="" type="TABLE">
-         <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="name" nullable="false" remarks="" size="100" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="2" name="address" nullable="true" remarks="" size="200" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="3" name="address2" nullable="true" remarks="" size="200" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="4" name="city" nullable="true" remarks="" size="200" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="5" name="state" nullable="true" remarks="" size="200" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="6" name="zip" nullable="true" remarks="" size="12" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="7" name="country" nullable="true" remarks="" size="50" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="8" name="phone" nullable="true" remarks="" size="20" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="9" name="alternatePhone" nullable="true" remarks="" size="20" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="10" name="email" nullable="true" remarks="" size="100" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="11" name="format" nullable="true" remarks="" size="2147483647" type="LONGTEXT" typeCode="-1"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="12" name="purpose" nullable="true" remarks="" size="2147483647" type="LONGTEXT" typeCode="-1"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="13" name="pid" nullable="true" remarks="" size="50" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="14" name="dateRequested" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <primaryKey column="id" sequenceNumberInPK="1"/>
-         <index name="archive_requests_s_pk" unique="true">
-            <column ascending="true" name="id"/>
-         </index>
-         <index name="name" unique="false">
-            <column ascending="true" name="name"/>
-         </index>
-         <index name="pid" unique="false">
-            <column ascending="true" name="pid"/>
-         </index>
-         <index name="PRIMARY" unique="true">
-            <column ascending="true" name="id"/>
-         </index>
-      </table>
       <table catalog="aspen" name="aspen_lida_branded_settings" numRows="0" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="1" name="slugName" nullable="true" remarks="" size="50" type="VARCHAR" typeCode="12"/>
@@ -433,37 +403,6 @@
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="2" name="patronTypeId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="aspen_lida_notifications_ptype_s_pk" unique="true">
-            <column ascending="true" name="id"/>
-         </index>
-         <index name="PRIMARY" unique="true">
-            <column ascending="true" name="id"/>
-         </index>
-      </table>
-      <table catalog="aspen" name="aspen_lida_quick_search_setting" numRows="0" remarks="" type="TABLE">
-         <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="name" nullable="false" remarks="" size="50" type="VARCHAR" typeCode="12"/>
-         <primaryKey column="id" sequenceNumberInPK="1"/>
-         <index name="aspen_lida_quick_search_setting_s_pk" unique="true">
-            <column ascending="true" name="id"/>
-         </index>
-         <index name="name" unique="true">
-            <column ascending="true" name="name"/>
-         </index>
-         <index name="PRIMARY" unique="true">
-            <column ascending="true" name="id"/>
-         </index>
-      </table>
-      <table catalog="aspen" name="aspen_lida_quick_searches" numRows="0" remarks="" type="TABLE">
-         <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="-1" digits="0" id="1" name="libraryId" nullable="true" remarks="" size="10" type="INT" typeCode="4">
-            <parent catalog="aspen" column="libraryId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="library"/>
-         </column>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="2" name="weight" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="searchTerm" nullable="false" remarks="" size="500" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="label" nullable="false" remarks="" size="50" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="-1" digits="0" id="5" name="quickSearchSettingId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <primaryKey column="id" sequenceNumberInPK="1"/>
-         <index name="aspen_lida_quick_searches_s_pk" unique="true">
             <column ascending="true" name="id"/>
          </index>
          <index name="PRIMARY" unique="true">
@@ -1077,7 +1016,7 @@
             <parent catalog="aspen" column="id" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="user"/>
          </column>
          <column autoUpdated="false" defaultValue="'everyone'" digits="0" id="3" name="sharing" nullable="true" remarks="" size="8" type="enum('private', 'location', 'library', 'everyone')" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="label" nullable="false" remarks="" size="50" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="label" nullable="false" remarks="" size="100" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="5" name="description" nullable="true" remarks="" size="2147483647" type="LONGTEXT" typeCode="-1"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="6" name="defaultFilter" nullable="true" remarks="" size="16777215" type="MEDIUMTEXT" typeCode="-1"/>
          <column autoUpdated="false" defaultValue="'relevance'" digits="0" id="7" name="defaultSort" nullable="true" remarks="" size="24" type="enum('relevance', 'popularity', 'newest_to_oldest', 'author', 'title', 'user_rating', 'holds', 'publication_year_desc', 'publication_year_asc', 'event_date', 'oldest_to_newest', 'newest_updated_to_oldest', 'oldest_updated_to_newest')" typeCode="12"/>
@@ -1479,28 +1418,6 @@
             <column ascending="true" name="id"/>
          </index>
       </table>
-      <table catalog="aspen" name="claim_authorship_requests" numRows="0" remarks="" type="TABLE">
-         <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="name" nullable="false" remarks="" size="100" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="2" name="phone" nullable="true" remarks="" size="20" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="3" name="email" nullable="true" remarks="" size="100" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="4" name="message" nullable="true" remarks="" size="2147483647" type="LONGTEXT" typeCode="-1"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="5" name="pid" nullable="true" remarks="" size="50" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="6" name="dateRequested" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <primaryKey column="id" sequenceNumberInPK="1"/>
-         <index name="claim_authorship_requests_s_pk" unique="true">
-            <column ascending="true" name="id"/>
-         </index>
-         <index name="name" unique="false">
-            <column ascending="true" name="name"/>
-         </index>
-         <index name="pid" unique="false">
-            <column ascending="true" name="pid"/>
-         </index>
-         <index name="PRIMARY" unique="true">
-            <column ascending="true" name="id"/>
-         </index>
-      </table>
       <table catalog="aspen" name="cloud_library_availability" numRows="0" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="cloudLibraryId" nullable="false" remarks="" size="25" type="VARCHAR" typeCode="12"/>
@@ -1774,43 +1691,6 @@
             <column ascending="true" name="id"/>
          </index>
       </table>
-      <table catalog="aspen" name="component_development_epic_link" numRows="0" remarks="" type="TABLE">
-         <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="1" name="componentId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="2" name="epicId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <primaryKey column="id" sequenceNumberInPK="1"/>
-         <index name="component_development_epic_link_s_pk" unique="true">
-            <column ascending="true" name="id"/>
-         </index>
-         <index name="componentId" unique="true">
-            <column ascending="true" name="componentId"/>
-            <column ascending="true" name="epicId"/>
-         </index>
-         <index name="PRIMARY" unique="true">
-            <column ascending="true" name="id"/>
-         </index>
-      </table>
-      <table catalog="aspen" name="component_development_task_link" numRows="0" remarks="" type="TABLE">
-         <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="1" name="componentId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="2" name="taskId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="3" name="weight" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
-         <primaryKey column="id" sequenceNumberInPK="1"/>
-         <index name="component_development_task_link_s_pk" unique="true">
-            <column ascending="true" name="id"/>
-         </index>
-         <index name="componentId" unique="true">
-            <column ascending="true" name="componentId"/>
-            <column ascending="true" name="taskId"/>
-         </index>
-         <index name="componentId_2" unique="false">
-            <column ascending="true" name="componentId"/>
-            <column ascending="true" name="weight"/>
-         </index>
-         <index name="PRIMARY" unique="true">
-            <column ascending="true" name="id"/>
-         </index>
-      </table>
       <table catalog="aspen" name="component_ticket_link" numRows="0" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="1" name="ticketId" nullable="true" remarks="" size="10" type="INT" typeCode="4">
@@ -2030,7 +1910,7 @@
             <column ascending="true" name="id"/>
          </index>
       </table>
-      <table catalog="aspen" name="db_update" numRows="2131" remarks="" type="TABLE">
+      <table catalog="aspen" name="db_update" numRows="2149" remarks="" type="TABLE">
          <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="update_key" nullable="false" remarks="" size="100" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="current_timestamp()" digits="0" id="1" name="date_run" nullable="false" remarks="" size="19" type="TIMESTAMP" typeCode="93"/>
          <primaryKey column="update_key" sequenceNumberInPK="1"/>
@@ -2057,43 +1937,6 @@
             <column ascending="true" name="id"/>
          </index>
       </table>
-      <table catalog="aspen" name="development_epic" numRows="0" remarks="" type="TABLE">
-         <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="name" nullable="false" remarks="" size="255" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="2" name="description" nullable="true" remarks="" size="16777215" type="MEDIUMTEXT" typeCode="-1"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="3" name="linkToDesign" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="4" name="linkToRequirements" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="5" name="internalComments" nullable="true" remarks="" size="16777215" type="MEDIUMTEXT" typeCode="-1"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="6" name="dueDate" nullable="true" remarks="" size="10" type="CHAR" typeCode="1"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="7" name="dueDateComment" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="8" name="privateStatus" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <primaryKey column="id" sequenceNumberInPK="1"/>
-         <index name="development_epic_s_pk" unique="true">
-            <column ascending="true" name="id"/>
-         </index>
-         <index name="name" unique="true">
-            <column ascending="true" name="name"/>
-         </index>
-         <index name="PRIMARY" unique="true">
-            <column ascending="true" name="id"/>
-         </index>
-      </table>
-      <table catalog="aspen" name="development_epic_partner_link" numRows="0" remarks="" type="TABLE">
-         <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="1" name="partnerId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="2" name="epicId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <primaryKey column="id" sequenceNumberInPK="1"/>
-         <index name="development_epic_partner_link_s_pk" unique="true">
-            <column ascending="true" name="id"/>
-         </index>
-         <index name="partnerId" unique="true">
-            <column ascending="true" name="partnerId"/>
-            <column ascending="true" name="epicId"/>
-         </index>
-         <index name="PRIMARY" unique="true">
-            <column ascending="true" name="id"/>
-         </index>
-      </table>
       <table catalog="aspen" name="development_priorities" numRows="0" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="1" name="priority1" nullable="true" remarks="" size="50" type="VARCHAR" typeCode="12"/>
@@ -2105,161 +1948,6 @@
          </index>
          <index name="PRIMARY" unique="true">
             <column ascending="true" name="id"/>
-         </index>
-      </table>
-      <table catalog="aspen" name="development_sprint" numRows="0" remarks="" type="TABLE">
-         <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="name" nullable="false" remarks="" size="255" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="2" name="startDate" nullable="true" remarks="" size="10" type="DATE" typeCode="91"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="3" name="endDate" nullable="true" remarks="" size="10" type="DATE" typeCode="91"/>
-         <column autoUpdated="false" defaultValue="1" digits="0" id="4" name="active" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <primaryKey column="id" sequenceNumberInPK="1"/>
-         <index name="development_sprint_s_pk" unique="true">
-            <column ascending="true" name="id"/>
-         </index>
-         <index name="name" unique="true">
-            <column ascending="true" name="name"/>
-         </index>
-         <index name="PRIMARY" unique="true">
-            <column ascending="true" name="id"/>
-         </index>
-      </table>
-      <table catalog="aspen" name="development_task" numRows="0" remarks="" type="TABLE">
-         <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="1" name="taskType" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="name" nullable="false" remarks="" size="255" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="3" name="dueDate" nullable="true" remarks="" size="10" type="CHAR" typeCode="1"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="4" name="dueDateComment" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="5" name="description" nullable="true" remarks="" size="16777215" type="MEDIUMTEXT" typeCode="-1"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="6" name="releaseId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="7" name="status" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="8" name="storyPoints" nullable="true" remarks="" size="12" type="FLOAT" typeCode="7"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="9" name="devTestingNotes" nullable="true" remarks="" size="16777215" type="MEDIUMTEXT" typeCode="-1"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="10" name="qaFeedback" nullable="true" remarks="" size="16777215" type="MEDIUMTEXT" typeCode="-1"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="11" name="releaseNoteText" nullable="true" remarks="" size="65535" type="TEXT" typeCode="-1"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="12" name="newSettingsAdded" nullable="true" remarks="" size="65535" type="TEXT" typeCode="-1"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="13" name="suggestedForCommunityDev" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <primaryKey column="id" sequenceNumberInPK="1"/>
-         <index name="development_task_s_pk" unique="true">
-            <column ascending="true" name="id"/>
-         </index>
-         <index name="name" unique="true">
-            <column ascending="true" name="name"/>
-         </index>
-         <index name="PRIMARY" unique="true">
-            <column ascending="true" name="id"/>
-         </index>
-      </table>
-      <table catalog="aspen" name="development_task_developer_link" numRows="0" remarks="" type="TABLE">
-         <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="1" name="userId" nullable="true" remarks="" size="10" type="INT" typeCode="4">
-            <parent catalog="aspen" column="id" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="user"/>
-         </column>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="2" name="taskId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <primaryKey column="id" sequenceNumberInPK="1"/>
-         <index name="development_task_developer_link_s_pk" unique="true">
-            <column ascending="true" name="id"/>
-         </index>
-         <index name="PRIMARY" unique="true">
-            <column ascending="true" name="id"/>
-         </index>
-         <index name="userId" unique="true">
-            <column ascending="true" name="userId"/>
-            <column ascending="true" name="taskId"/>
-         </index>
-      </table>
-      <table catalog="aspen" name="development_task_epic_link" numRows="0" remarks="" type="TABLE">
-         <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="1" name="epicId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="2" name="taskId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="3" name="weight" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
-         <primaryKey column="id" sequenceNumberInPK="1"/>
-         <index name="development_task_epic_link_s_pk" unique="true">
-            <column ascending="true" name="id"/>
-         </index>
-         <index name="epicId" unique="true">
-            <column ascending="true" name="epicId"/>
-            <column ascending="true" name="taskId"/>
-         </index>
-         <index name="epicId_2" unique="false">
-            <column ascending="true" name="epicId"/>
-            <column ascending="true" name="weight"/>
-         </index>
-         <index name="PRIMARY" unique="true">
-            <column ascending="true" name="id"/>
-         </index>
-      </table>
-      <table catalog="aspen" name="development_task_partner_link" numRows="0" remarks="" type="TABLE">
-         <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="1" name="partnerId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="2" name="taskId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <primaryKey column="id" sequenceNumberInPK="1"/>
-         <index name="development_task_partner_link_s_pk" unique="true">
-            <column ascending="true" name="id"/>
-         </index>
-         <index name="partnerId" unique="true">
-            <column ascending="true" name="partnerId"/>
-            <column ascending="true" name="taskId"/>
-         </index>
-         <index name="PRIMARY" unique="true">
-            <column ascending="true" name="id"/>
-         </index>
-      </table>
-      <table catalog="aspen" name="development_task_qa_link" numRows="0" remarks="" type="TABLE">
-         <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="1" name="userId" nullable="true" remarks="" size="10" type="INT" typeCode="4">
-            <parent catalog="aspen" column="id" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="user"/>
-         </column>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="2" name="taskId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <primaryKey column="id" sequenceNumberInPK="1"/>
-         <index name="development_task_qa_link_s_pk" unique="true">
-            <column ascending="true" name="id"/>
-         </index>
-         <index name="PRIMARY" unique="true">
-            <column ascending="true" name="id"/>
-         </index>
-         <index name="userId" unique="true">
-            <column ascending="true" name="userId"/>
-            <column ascending="true" name="taskId"/>
-         </index>
-      </table>
-      <table catalog="aspen" name="development_task_sprint_link" numRows="0" remarks="" type="TABLE">
-         <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="1" name="sprintId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="2" name="taskId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="3" name="weight" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
-         <primaryKey column="id" sequenceNumberInPK="1"/>
-         <index name="development_task_sprint_link_s_pk" unique="true">
-            <column ascending="true" name="id"/>
-         </index>
-         <index name="PRIMARY" unique="true">
-            <column ascending="true" name="id"/>
-         </index>
-         <index name="sprintId" unique="true">
-            <column ascending="true" name="sprintId"/>
-            <column ascending="true" name="taskId"/>
-         </index>
-         <index name="sprintId_2" unique="false">
-            <column ascending="true" name="sprintId"/>
-            <column ascending="true" name="weight"/>
-         </index>
-      </table>
-      <table catalog="aspen" name="development_task_ticket_link" numRows="0" remarks="" type="TABLE">
-         <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="1" name="ticketId" nullable="true" remarks="" size="10" type="INT" typeCode="4">
-            <parent catalog="aspen" column="id" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="ticket"/>
-         </column>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="2" name="taskId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <primaryKey column="id" sequenceNumberInPK="1"/>
-         <index name="development_task_ticket_link_s_pk" unique="true">
-            <column ascending="true" name="id"/>
-         </index>
-         <index name="PRIMARY" unique="true">
-            <column ascending="true" name="id"/>
-         </index>
-         <index name="ticketId" unique="true">
-            <column ascending="true" name="ticketId"/>
-            <column ascending="true" name="taskId"/>
          </index>
       </table>
       <table catalog="aspen" name="donations" numRows="0" remarks="" type="TABLE">
@@ -2970,6 +2658,9 @@
          <column autoUpdated="false" defaultValue="-1" digits="0" id="5" name="owningLibrary" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="2" digits="0" id="6" name="sharing" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="-1" digits="0" id="7" name="sharedWithLibrary" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="8" name="deleted" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="9" name="dateDeleted" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="10" name="deletedBy" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="file_uploads_s_pk" unique="true">
             <column ascending="true" name="id"/>
@@ -3262,6 +2953,7 @@
          <column autoUpdated="false" defaultValue="1" digits="0" id="49" name="showItemNotes" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
          <column autoUpdated="false" defaultValue="1" digits="0" id="50" name="formatSortingGroupId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="0" digits="0" id="51" name="preferIlsDescription" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="52" name="formatDisplayStyle" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="grouped_work_display_settings_s_pk" unique="true">
             <column ascending="true" name="id"/>
@@ -4050,6 +3742,9 @@
          <column autoUpdated="false" defaultValue="-1" digits="0" id="12" name="owningLibrary" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="2" digits="0" id="13" name="sharing" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="-1" digits="0" id="14" name="sharedWithLibrary" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="15" name="deleted" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="16" name="dateDeleted" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="17" name="deletedBy" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="image_uploads_s_pk" unique="true">
             <column ascending="true" name="id"/>
@@ -4617,7 +4312,6 @@
       <table catalog="aspen" name="library" numRows="1" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="libraryId" nullable="false" remarks="A unique id to identify the library within the system" size="10" type="INT" typeCode="4">
             <child catalog="aspen" column="libraryId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="aspen_lida_notifications_library"/>
-            <child catalog="aspen" column="libraryId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="aspen_lida_quick_searches"/>
             <child catalog="aspen" column="libraryId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="browse_category"/>
             <child catalog="aspen" column="libraryId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="ce_campaign_library_access"/>
             <child catalog="aspen" column="libraryId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="collection_spotlights"/>
@@ -5011,11 +4705,18 @@
          <index name="library_s_pk" unique="true">
             <column ascending="true" name="libraryId"/>
          </index>
+         <index name="isDefault" unique="false">
+            <column ascending="true" name="isDefault"/>
+         </index>
          <index name="PRIMARY" unique="true">
             <column ascending="true" name="libraryId"/>
          </index>
          <index name="subdomain" unique="true">
             <column ascending="true" name="subdomain"/>
+         </index>
+         <index name="subdomainUrl" unique="false">
+            <column ascending="true" name="subdomain"/>
+            <column ascending="true" name="baseUrl"/>
          </index>
       </table>
       <table catalog="aspen" name="library_cloud_library_scope" numRows="0" remarks="" type="TABLE">
@@ -5392,6 +5093,7 @@
             <parent catalog="aspen" column="libraryId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="library"/>
          </column>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="formId" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="''" digits="0" id="3" name="emailResultsTo" nullable="true" remarks="" size="100" type="VARCHAR" typeCode="12"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="library_web_builder_custom_form_s_pk" unique="true">
             <column ascending="true" name="id"/>
@@ -5657,7 +5359,7 @@
       <table catalog="aspen" name="location" numRows="1" remarks="Stores information about the various locations that are part" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="locationId" nullable="false" remarks="A unique Id for the branch or location within vuFind" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="1" name="code" nullable="true" remarks="" size="75" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="displayName" nullable="false" remarks="The full name of the location for display to the user" size="60" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="displayName" nullable="false" remarks="" size="100" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="libraryId" nullable="false" remarks="A link to the library which the location belongs to" size="10" type="INT" typeCode="4">
             <parent catalog="aspen" column="libraryId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="library"/>
          </column>
@@ -6372,7 +6074,7 @@
             <column ascending="true" name="scope"/>
          </index>
       </table>
-      <table catalog="aspen" name="modules" numRows="31" remarks="" type="TABLE">
+      <table catalog="aspen" name="modules" numRows="30" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="name" nullable="false" remarks="" size="50" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="0" digits="0" id="2" name="enabled" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
@@ -7527,6 +7229,9 @@
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="11" name="sourceId" nullable="true" remarks="" size="30" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="12" name="generatedFromSource" nullable="true" remarks="" size="30" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="0" digits="0" id="13" name="isCustomized" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="14" name="deleted" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="15" name="dateDeleted" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="16" name="deletedBy" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="placards_s_pk" unique="true">
             <column ascending="true" name="id"/>
@@ -7632,177 +7337,6 @@
             <column ascending="true" name="id"/>
          </index>
       </table>
-      <table catalog="aspen" name="rbdigital_availability" numRows="0" remarks="" type="TABLE">
-         <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="rbdigitalId" nullable="false" remarks="" size="25" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="1" digits="0" id="2" name="isAvailable" nullable="false" remarks="" size="3" type="TINYINT" typeCode="-6"/>
-         <column autoUpdated="false" defaultValue="1" digits="0" id="3" name="isOwned" nullable="false" remarks="" size="3" type="TINYINT" typeCode="-6"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="4" name="name" nullable="true" remarks="" size="50" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="5" name="rawChecksum" nullable="true" remarks="" size="19" type="BIGINT" typeCode="-5"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="6" name="rawResponse" nullable="true" remarks="" size="2147483647" type="LONGTEXT" typeCode="-1"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="lastChange" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="8" name="settingId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <primaryKey column="id" sequenceNumberInPK="1"/>
-         <index name="rbdigital_availability_s_pk" unique="true">
-            <column ascending="true" name="id"/>
-         </index>
-         <index name="lastChange" unique="false">
-            <column ascending="true" name="lastChange"/>
-         </index>
-         <index name="PRIMARY" unique="true">
-            <column ascending="true" name="id"/>
-         </index>
-         <index name="rbdigitalId" unique="true">
-            <column ascending="true" name="rbdigitalId"/>
-            <column ascending="true" name="settingId"/>
-         </index>
-      </table>
-      <table catalog="aspen" name="rbdigital_magazine" numRows="0" remarks="" type="TABLE">
-         <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="magazineId" nullable="false" remarks="" size="25" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="issueId" nullable="false" remarks="" size="25" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="3" name="title" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="4" name="publisher" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="5" name="mediaType" nullable="true" remarks="" size="50" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="6" name="language" nullable="true" remarks="" size="50" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="7" name="rawChecksum" nullable="true" remarks="" size="19" type="BIGINT" typeCode="-5"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="8" name="rawResponse" nullable="true" remarks="" size="2147483647" type="LONGTEXT" typeCode="-1"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="9" name="dateFirstDetected" nullable="true" remarks="" size="19" type="BIGINT" typeCode="-5"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="10" name="lastChange" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="11" name="deleted" nullable="false" remarks="" size="3" type="TINYINT" typeCode="-6"/>
-         <primaryKey column="id" sequenceNumberInPK="1"/>
-         <index name="rbdigital_magazine_s_pk" unique="true">
-            <column ascending="true" name="id"/>
-         </index>
-         <index name="lastChange" unique="false">
-            <column ascending="true" name="lastChange"/>
-         </index>
-         <index name="magazineId" unique="true">
-            <column ascending="true" name="magazineId"/>
-            <column ascending="true" name="issueId"/>
-         </index>
-         <index name="PRIMARY" unique="true">
-            <column ascending="true" name="id"/>
-         </index>
-      </table>
-      <table catalog="aspen" name="rbdigital_magazine_issue" numRows="0" remarks="" type="TABLE">
-         <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="magazineId" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="issueId" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="3" name="imageUrl" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="4" name="publishedOn" nullable="true" remarks="" size="10" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="5" name="coverDate" nullable="true" remarks="" size="10" type="VARCHAR" typeCode="12"/>
-         <primaryKey column="id" sequenceNumberInPK="1"/>
-         <index name="rbdigital_magazine_issue_s_pk" unique="true">
-            <column ascending="true" name="id"/>
-         </index>
-         <index name="magazineId" unique="true">
-            <column ascending="true" name="magazineId"/>
-            <column ascending="true" name="issueId"/>
-         </index>
-         <index name="PRIMARY" unique="true">
-            <column ascending="true" name="id"/>
-         </index>
-      </table>
-      <table catalog="aspen" name="rbdigital_magazine_issue_availability" numRows="0" remarks="" type="TABLE">
-         <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="issueId" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="settingId" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="3" name="isAvailable" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="4" name="isOwned" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="5" name="stateId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <primaryKey column="id" sequenceNumberInPK="1"/>
-         <index name="rbdigital_magazine_issue_availability_s_pk" unique="true">
-            <column ascending="true" name="id"/>
-         </index>
-         <index name="issueId" unique="true">
-            <column ascending="true" name="issueId"/>
-            <column ascending="true" name="settingId"/>
-         </index>
-         <index name="PRIMARY" unique="true">
-            <column ascending="true" name="id"/>
-         </index>
-      </table>
-      <table catalog="aspen" name="rbdigital_magazine_usage" numRows="0" remarks="" type="TABLE">
-         <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="1" name="magazineId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="year" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="month" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="timesCheckedOut" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="5" name="issueId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="6" name="instance" nullable="true" remarks="" size="100" type="VARCHAR" typeCode="12"/>
-         <primaryKey column="id" sequenceNumberInPK="1"/>
-         <index name="rbdigital_magazine_usage_s_pk" unique="true">
-            <column ascending="true" name="id"/>
-         </index>
-         <index name="instance" unique="true">
-            <column ascending="true" name="instance"/>
-            <column ascending="true" name="magazineId"/>
-            <column ascending="true" name="year"/>
-            <column ascending="true" name="month"/>
-         </index>
-         <index name="PRIMARY" unique="true">
-            <column ascending="true" name="id"/>
-         </index>
-         <index name="year" unique="false">
-            <column ascending="true" name="year"/>
-            <column ascending="true" name="month"/>
-         </index>
-      </table>
-      <table catalog="aspen" name="rbdigital_record_usage" numRows="0" remarks="" type="TABLE">
-         <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="1" name="rbdigitalId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="year" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="month" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="timesHeld" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="timesCheckedOut" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="6" name="instance" nullable="true" remarks="" size="100" type="VARCHAR" typeCode="12"/>
-         <primaryKey column="id" sequenceNumberInPK="1"/>
-         <index name="rbdigital_record_usage_s_pk" unique="true">
-            <column ascending="true" name="id"/>
-         </index>
-         <index name="instance" unique="true">
-            <column ascending="true" name="instance"/>
-            <column ascending="true" name="rbdigitalId"/>
-            <column ascending="true" name="year"/>
-            <column ascending="true" name="month"/>
-         </index>
-         <index name="PRIMARY" unique="true">
-            <column ascending="true" name="id"/>
-         </index>
-         <index name="year" unique="false">
-            <column ascending="true" name="year"/>
-            <column ascending="true" name="month"/>
-         </index>
-      </table>
-      <table catalog="aspen" name="rbdigital_title" numRows="0" remarks="" type="TABLE">
-         <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="rbdigitalId" nullable="false" remarks="" size="25" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="2" name="title" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="3" name="primaryAuthor" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="4" name="mediaType" nullable="true" remarks="" size="50" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="5" name="isFiction" nullable="false" remarks="" size="3" type="TINYINT" typeCode="-6"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="6" name="audience" nullable="true" remarks="" size="50" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="7" name="language" nullable="true" remarks="" size="50" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="8" name="rawChecksum" nullable="false" remarks="" size="19" type="BIGINT" typeCode="-5"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="9" name="rawResponse" nullable="true" remarks="" size="2147483647" type="LONGTEXT" typeCode="-1"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="10" name="lastChange" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="11" name="dateFirstDetected" nullable="true" remarks="" size="19" type="BIGINT" typeCode="-5"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="12" name="deleted" nullable="false" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <primaryKey column="id" sequenceNumberInPK="1"/>
-         <index name="rbdigital_title_s_pk" unique="true">
-            <column ascending="true" name="id"/>
-         </index>
-         <index name="lastChange" unique="false">
-            <column ascending="true" name="lastChange"/>
-         </index>
-         <index name="PRIMARY" unique="true">
-            <column ascending="true" name="id"/>
-         </index>
-         <index name="rbdigitalId" unique="true">
-            <column ascending="true" name="rbdigitalId"/>
-         </index>
-      </table>
       <table catalog="aspen" name="recaptcha_settings" numRows="0" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="publicKey" nullable="false" remarks="" size="50" type="VARCHAR" typeCode="12"/>
@@ -7876,35 +7410,6 @@
             <column ascending="true" name="id"/>
          </index>
       </table>
-      <table catalog="aspen" name="redwood_user_contribution" numRows="0" remarks="" type="TABLE">
-         <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="userId" nullable="false" remarks="" size="10" type="INT" typeCode="4">
-            <parent catalog="aspen" column="id" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="user"/>
-         </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="title" nullable="false" remarks="" size="255" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="3" name="creator" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="4" name="dateCreated" nullable="true" remarks="" size="10" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="5" name="description" nullable="true" remarks="" size="2147483647" type="LONGTEXT" typeCode="-1"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="6" name="suggestedSubjects" nullable="true" remarks="" size="2147483647" type="LONGTEXT" typeCode="-1"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="7" name="howAcquired" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="8" name="filePath" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="9" name="status" nullable="true" remarks="" size="9" type="enum('submitted', 'accepted', 'rejected')" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="10" name="license" nullable="true" remarks="" size="6" type="enum('none', 'CC0', 'cc', 'public')" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="11" name="allowRemixing" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="12" name="prohibitCommercialUse" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="13" name="requireShareAlike" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="14" name="dateContributed" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <primaryKey column="id" sequenceNumberInPK="1"/>
-         <index name="redwood_user_contribution_s_pk" unique="true">
-            <column ascending="true" name="id"/>
-         </index>
-         <index name="PRIMARY" unique="true">
-            <column ascending="true" name="id"/>
-         </index>
-         <index name="userId" unique="false">
-            <column ascending="true" name="userId"/>
-         </index>
-      </table>
       <table catalog="aspen" name="reindex_log" numRows="0" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="The id of reindex log" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="startTime" nullable="false" remarks="The timestamp when the reindex started" size="10" type="INT" typeCode="4"/>
@@ -7952,7 +7457,7 @@
             <column ascending="true" name="id"/>
          </index>
       </table>
-      <table catalog="aspen" name="role_permissions" numRows="297" remarks="" type="TABLE">
+      <table catalog="aspen" name="role_permissions" numRows="298" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="roleId" nullable="false" remarks="" size="10" type="INT" typeCode="4">
             <parent catalog="aspen" column="roleId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="roles"/>
@@ -8057,6 +7562,11 @@
          <index name="PRIMARY" unique="true">
             <column ascending="true" name="id"/>
          </index>
+         <index name="searchLookup" unique="false">
+            <column ascending="true" name="searchUrl"/>
+            <column ascending="true" name="session_id"/>
+            <column ascending="true" name="user_id"/>
+         </index>
          <index name="session_id" unique="false">
             <column ascending="true" name="session_id"/>
          </index>
@@ -8097,6 +7607,19 @@
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="7" name="notes" nullable="true" remarks="" size="65535" type="TEXT" typeCode="-1"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="search_update_log_s_pk" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+         <index name="PRIMARY" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+      </table>
+      <table catalog="aspen" name="self_check_completion_message" numRows="0" remarks="" type="TABLE">
+         <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="1" name="formats" nullable="true" remarks="" size="500" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="2" name="owningLocations" nullable="true" remarks="" size="500" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="3" name="checkoutLocations" nullable="true" remarks="" size="500" type="VARCHAR" typeCode="12"/>
+         <primaryKey column="id" sequenceNumberInPK="1"/>
+         <index name="self_check_completion_message_s_pk" unique="true">
             <column ascending="true" name="id"/>
          </index>
          <index name="PRIMARY" unique="true">
@@ -8218,6 +7741,7 @@
          <column autoUpdated="false" defaultValue="0" digits="0" id="19" name="selfRegUseAgency" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
          <column autoUpdated="false" defaultValue="0" digits="0" id="20" name="selfRegUsePatronIdBarcode" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
          <column autoUpdated="false" defaultValue="''" digits="0" id="21" name="selfRegNoticePrefOptions" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="22" name="addSelfRegNote" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="self_registration_form_sierra_s_pk" unique="true">
             <column ascending="true" name="id"/>
@@ -9187,6 +8711,8 @@
          <column autoUpdated="false" defaultValue="'https://github.com/Aspen-Discovery/aspen-lida'" digits="0" id="35" name="lidaGitHubRepository" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="1" digits="0" id="36" name="numBoundlessSettingsToProcessInParallel" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="0" digits="0" id="37" name="disable_user_agent_logging" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="38" name="logFrequentCrons" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="39" name="removeTheWordSeriesFromEndOfSeries" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="system_variables_s_pk" unique="true">
             <column ascending="true" name="id"/>
@@ -9523,6 +9049,10 @@
          <index name="themes_s_pk" unique="true">
             <column ascending="true" name="id"/>
          </index>
+         <index name="nameById" unique="false">
+            <column ascending="true" name="id"/>
+            <column ascending="true" name="displayName"/>
+         </index>
          <index name="PRIMARY" unique="true">
             <column ascending="true" name="id"/>
          </index>
@@ -9533,7 +9063,6 @@
       <table catalog="aspen" name="ticket" numRows="0" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4">
             <child catalog="aspen" column="ticketId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="component_ticket_link"/>
-            <child catalog="aspen" column="ticketId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="development_task_ticket_link"/>
          </column>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="ticketId" nullable="false" remarks="" size="20" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="2" name="displayUrl" nullable="true" remarks="" size="500" type="VARCHAR" typeCode="12"/>
@@ -9547,7 +9076,6 @@
          <column autoUpdated="false" defaultValue="0" digits="0" id="10" name="partnerPriority" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="11" name="partnerPriorityChangeDate" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="12" name="dateClosed" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="13" name="developmentTaskId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="ticket_s_pk" unique="true">
             <column ascending="true" name="id"/>
@@ -9964,14 +9492,11 @@
             <child catalog="aspen" column="userId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="ce_user_campaign"/>
             <child catalog="aspen" column="userId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="ce_user_campaign_data"/>
             <child catalog="aspen" column="userId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="ce_user_completed_milestones"/>
-            <child catalog="aspen" column="userId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="development_task_developer_link"/>
-            <child catalog="aspen" column="userId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="development_task_qa_link"/>
             <child catalog="aspen" column="userId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="ebsco_research_starter_dismissals"/>
             <child catalog="aspen" column="userId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="hold_request_confirmation"/>
             <child catalog="aspen" column="userId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="overdrive_account_cache"/>
             <child catalog="aspen" column="userId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="pin_reset_token"/>
             <child catalog="aspen" column="userId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="placard_dismissal"/>
-            <child catalog="aspen" column="userId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="redwood_user_contribution"/>
             <child catalog="aspen" column="userId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="system_message_dismissal"/>
             <child catalog="aspen" column="userId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="two_factor_auth_codes"/>
             <child catalog="aspen" column="userAgentId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="usage_by_user_agent"/>
@@ -9998,7 +9523,6 @@
             <child catalog="aspen" column="userId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="user_page_defaults"/>
             <child catalog="aspen" column="userId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="user_palace_project_usage"/>
             <child catalog="aspen" column="userId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="user_payments"/>
-            <child catalog="aspen" column="userId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="user_rbdigital_usage"/>
             <child catalog="aspen" column="userId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="user_reading_history_work"/>
             <child catalog="aspen" column="userId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="user_roles"/>
             <child catalog="aspen" column="userId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="user_sideload_usage"/>
@@ -10612,6 +10136,9 @@
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="10" name="importedFrom" nullable="true" remarks="" size="20" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="11" name="nytListModified" nullable="true" remarks="" size="20" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="1" digits="0" id="12" name="displayListAuthor" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="13" name="dateDeleted" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="14" name="deletedBy" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="15" name="deleteFromIndex" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="user_list_s_pk" unique="true">
             <column ascending="true" name="id"/>
@@ -10636,6 +10163,9 @@
          <column autoUpdated="false" defaultValue="'grouped_work'" digits="0" id="6" name="source" nullable="false" remarks="" size="20" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="7" name="importedFrom" nullable="true" remarks="" size="20" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="''" digits="0" id="8" name="title" nullable="true" remarks="" size="50" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="9" name="deleted" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="10" name="dateDeleted" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="11" name="deletedBy" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="user_list_entry_s_pk" unique="true">
             <column ascending="true" name="id"/>
@@ -10901,33 +10431,6 @@
             <column ascending="true" name="completed"/>
          </index>
       </table>
-      <table catalog="aspen" name="user_rbdigital_usage" numRows="0" remarks="" type="TABLE">
-         <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="userId" nullable="false" remarks="" size="10" type="INT" typeCode="4">
-            <parent catalog="aspen" column="id" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="user"/>
-         </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="year" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="month" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="4" name="usageCount" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="5" name="instance" nullable="true" remarks="" size="100" type="VARCHAR" typeCode="12"/>
-         <primaryKey column="id" sequenceNumberInPK="1"/>
-         <index name="user_rbdigital_usage_s_pk" unique="true">
-            <column ascending="true" name="id"/>
-         </index>
-         <index name="instance" unique="true">
-            <column ascending="true" name="instance"/>
-            <column ascending="true" name="userId"/>
-            <column ascending="true" name="year"/>
-            <column ascending="true" name="month"/>
-         </index>
-         <index name="PRIMARY" unique="true">
-            <column ascending="true" name="id"/>
-         </index>
-         <index name="year" unique="false">
-            <column ascending="true" name="year"/>
-            <column ascending="true" name="month"/>
-         </index>
-      </table>
       <table catalog="aspen" name="user_reading_history_work" numRows="0" remarks="The reading history for patrons" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="userId" nullable="false" remarks="The id of the user who checked out the item" size="10" type="INT" typeCode="4">
@@ -11106,6 +10609,7 @@
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="4" name="review" nullable="true" remarks="" size="2147483647" type="LONGTEXT" typeCode="-1"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="5" name="dateRated" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="6" name="importedFrom" nullable="true" remarks="" size="20" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="''" digits="0" id="7" name="title" nullable="true" remarks="" size="512" type="VARCHAR" typeCode="12"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="user_work_review_s_pk" unique="true">
             <column ascending="true" name="id"/>
@@ -11157,7 +10661,7 @@
             <column ascending="true" name="id"/>
          </index>
       </table>
-      <table catalog="aspen" name="variables" numRows="18" remarks="" type="TABLE">
+      <table catalog="aspen" name="variables" numRows="17" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="name" nullable="false" remarks="" size="128" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="2" name="value" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
@@ -11241,6 +10745,9 @@
          <column autoUpdated="false" defaultValue="0" digits="0" id="5" name="lastUpdate" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="0" digits="0" id="6" name="requireLogin" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
          <column autoUpdated="false" defaultValue="0" digits="0" id="7" name="requireLoginUnlessInLibrary" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="8" name="deleted" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="9" name="dateDeleted" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="10" name="deletedBy" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="web_builder_basic_page_s_pk" unique="true">
             <column ascending="true" name="id"/>
@@ -11339,6 +10846,9 @@
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="5" name="introText" nullable="true" remarks="" size="2147483647" type="LONGTEXT" typeCode="-1"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="6" name="submissionResultText" nullable="true" remarks="" size="2147483647" type="LONGTEXT" typeCode="-1"/>
          <column autoUpdated="false" defaultValue="0" digits="0" id="7" name="includeIntroductoryTextInEmail" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="8" name="deleted" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="9" name="dateDeleted" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="10" name="deletedBy" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="web_builder_custom_form_s_pk" unique="true">
             <column ascending="true" name="id"/>
@@ -11435,6 +10945,9 @@
          <column autoUpdated="false" defaultValue="0" digits="0" id="3" name="requireLogin" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
          <column autoUpdated="false" defaultValue="0" digits="0" id="4" name="requireLoginUnlessInLibrary" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
          <column autoUpdated="false" defaultValue="0" digits="0" id="5" name="lastUpdate" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="6" name="deleted" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="7" name="dateDeleted" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="8" name="deletedBy" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="web_builder_custom_web_resource_page_s_pk" unique="true">
             <column ascending="true" name="id"/>
@@ -11523,6 +11036,9 @@
          <column autoUpdated="false" defaultValue="0" digits="0" id="3" name="lastUpdate" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="0" digits="0" id="4" name="requireLogin" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
          <column autoUpdated="false" defaultValue="0" digits="0" id="5" name="requireLoginUnlessInLibrary" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="6" name="deleted" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="7" name="dateDeleted" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="8" name="deletedBy" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="web_builder_portal_page_s_pk" unique="true">
             <column ascending="true" name="id"/>
@@ -11688,6 +11204,9 @@
          <column autoUpdated="false" defaultValue="0" digits="0" id="10" name="openInNewTab" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
          <column autoUpdated="false" defaultValue="0" digits="0" id="11" name="requireLoginUnlessInLibrary" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
          <column autoUpdated="false" defaultValue="0" digits="0" id="12" name="generatePlacard" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="13" name="deleted" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="14" name="dateDeleted" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="15" name="deletedBy" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="web_builder_resource_s_pk" unique="true">
             <column ascending="true" name="id"/>
