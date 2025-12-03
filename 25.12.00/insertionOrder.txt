@@ -234,6 +234,7 @@ events_indexing_settings
 events_spotlights
 events_usage
 external_request_log
+external_request_settings
 failed_logins_by_ip_address
 file_uploads
 format_map_values

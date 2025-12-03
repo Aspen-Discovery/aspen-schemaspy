@@ -250,6 +250,7 @@ google_api_settings
 format_map_values
 file_uploads
 failed_logins_by_ip_address
+external_request_settings
 external_request_log
 events_usage
 events_spotlights
