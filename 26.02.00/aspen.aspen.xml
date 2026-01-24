@@ -4714,6 +4714,7 @@
          <column autoUpdated="false" defaultValue="0" digits="0" id="335" name="displayDigitalRewardOnlyWhenAwarded" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
          <column autoUpdated="false" defaultValue="''" digits="0" id="336" name="digitalRewardPlaceholderImage" nullable="true" remarks="" size="100" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="0" digits="0" id="337" name="highlightCommunityEngagementOpenToEnroll" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="338" name="offerImmediateHoldFreeze" nullable="false" remarks="" size="3" type="TINYINT" typeCode="-6"/>
          <primaryKey column="libraryId" sequenceNumberInPK="1"/>
          <index name="library_s_pk" unique="true">
             <column ascending="true" name="libraryId"/>
@@ -9626,6 +9627,7 @@
          <column autoUpdated="false" defaultValue="0" digits="0" id="77" name="forceReadingHistoryLoad" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="78" name="readingHistoryImportStartedAt" nullable="true" remarks="" size="19" type="DATETIME" typeCode="93"/>
          <column autoUpdated="false" defaultValue="''" digits="0" id="79" name="userPreferredName" nullable="false" remarks="" size="256" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="80" name="promptToFreezeHoldsImmediately" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="user_s_pk" unique="true">
             <column ascending="true" name="id"/>
