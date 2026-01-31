@@ -8719,14 +8719,15 @@
          <column autoUpdated="false" defaultValue="1" digits="0" id="29" name="enableNovelistSeriesIntegration" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
          <column autoUpdated="false" defaultValue="0" digits="0" id="30" name="enableGrapesEditor" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
          <column autoUpdated="false" defaultValue="1000" digits="0" id="31" name="deletionCommitInterval" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="32" name="waitAfterDeleteCommit" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="33" name="disableIpSpammyControl" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="34" name="useOriginalCoverUrls" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="'https://github.com/Aspen-Discovery/aspen-lida'" digits="0" id="35" name="lidaGitHubRepository" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="1" digits="0" id="36" name="numBoundlessSettingsToProcessInParallel" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="37" name="disable_user_agent_logging" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="0" digits="0" id="38" name="logFrequentCrons" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="1" digits="0" id="39" name="removeTheWordSeriesFromEndOfSeries" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
+         <column autoUpdated="false" defaultValue="10000" digits="0" id="32" name="indexCommitInterval" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="33" name="waitAfterDeleteCommit" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="34" name="disableIpSpammyControl" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="35" name="useOriginalCoverUrls" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="'https://github.com/Aspen-Discovery/aspen-lida'" digits="0" id="36" name="lidaGitHubRepository" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="37" name="numBoundlessSettingsToProcessInParallel" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="38" name="disable_user_agent_logging" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="39" name="logFrequentCrons" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="40" name="removeTheWordSeriesFromEndOfSeries" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="system_variables_s_pk" unique="true">
             <column ascending="true" name="id"/>
