@@ -4452,7 +4452,7 @@
          <column autoUpdated="false" defaultValue="1" digits="0" id="75" name="showExpirationWarnings" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="76" name="econtentLocationsToInclude" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="1" digits="0" id="77" name="showLibraryHoursNoticeOnAccountPages" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="1" digits="0" id="78" name="showShareOnExternalSites" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="78" name="showShareOnX" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
          <column autoUpdated="false" defaultValue="''" digits="0" id="79" name="barcodePrefix" nullable="true" remarks="" size="15" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="0" digits="0" id="80" name="minBarcodeLength" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="0" digits="0" id="81" name="maxBarcodeLength" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
@@ -4715,6 +4715,9 @@
          <column autoUpdated="false" defaultValue="''" digits="0" id="336" name="digitalRewardPlaceholderImage" nullable="true" remarks="" size="100" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="0" digits="0" id="337" name="highlightCommunityEngagementOpenToEnroll" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
          <column autoUpdated="false" defaultValue="0" digits="0" id="338" name="offerImmediateHoldFreeze" nullable="false" remarks="" size="3" type="TINYINT" typeCode="-6"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="339" name="showShareOnFacebook" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="340" name="showShareOnPinterest" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="341" name="showShareOnLink" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
          <primaryKey column="libraryId" sequenceNumberInPK="1"/>
          <index name="library_s_pk" unique="true">
             <column ascending="true" name="libraryId"/>
@@ -5400,7 +5403,7 @@
          <column autoUpdated="false" defaultValue="1" digits="0" id="24" name="repeatInOnlineCollection" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="25" name="econtentLocationsToInclude" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="1" digits="0" id="26" name="showInLocationsAndHoursList" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="1" digits="0" id="27" name="showShareOnExternalSites" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="27" name="showShareOnX" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
          <column autoUpdated="false" defaultValue="1" digits="0" id="28" name="showEmailThis" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="1" digits="0" id="29" name="showFavorites" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="30" name="address" nullable="true" remarks="" size="2147483647" type="LONGTEXT" typeCode="-1"/>
@@ -5464,6 +5467,9 @@
          <column autoUpdated="false" defaultValue="-1" digits="0" id="88" name="localIllFormId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="-1" digits="0" id="89" name="heyCentricSettingId" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="0" digits="0" id="90" name="allowUpdatingContactInfoFromILS" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="91" name="showShareOnFacebook" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="92" name="showShareOnPinterest" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="93" name="showShareOnLink" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
          <primaryKey column="locationId" sequenceNumberInPK="1"/>
          <index name="location_s_pk" unique="true">
             <column ascending="true" name="locationId"/>

@@ -586,9 +586,9 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td><span id="showShareOnExternalSites">showShareOnExternalSites</span></td>
-                                    <td>INT</td>
-                                    <td>10</td>
+                                    <td><span id="showShareOnX">showShareOnX</span></td>
+                                    <td>TINYINT</td>
+                                    <td>3</td>
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
                                     <td>1</td>
@@ -1673,6 +1673,57 @@
                                     </td>
                                     <td></td>
                                 </tr>
+                                <tr>
+                                    <td><span id="showShareOnFacebook">showShareOnFacebook</span></td>
+                                    <td>TINYINT</td>
+                                    <td>3</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>1</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="showShareOnPinterest">showShareOnPinterest</span></td>
+                                    <td>TINYINT</td>
+                                    <td>3</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>1</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="showShareOnLink">showShareOnLink</span></td>
+                                    <td>TINYINT</td>
+                                    <td>3</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>1</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -1775,13 +1826,13 @@
                                 <div class="tab-content no-padding">
                                     <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
-<area shape="rect" id="node1" href="location.html" target="_top" title="location" alt="" coords="5,5,643,2744">
+<area shape="rect" id="node1" href="location.html" target="_top" title="location" alt="" coords="5,5,643,2832">
 </map>
                                         <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/location.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
                                     </div>
                                     <div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
-<area shape="rect" id="node1" href="location.html" target="_top" title="location" alt="" coords="609,5,1247,2744">
+<area shape="rect" id="node1" href="location.html" target="_top" title="location" alt="" coords="609,5,1247,2832">
 <area shape="rect" id="node2" href="library.html" target="_top" title="library" alt="" coords="5,96,565,331">
 </map>
                                         <a name='diagram'><img id="oneimpliedDegreeImg" src="../diagrams/tables/location.implied1degrees.png" usemap="#oneDegreeRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
@@ -1824,22 +1875,22 @@
 <area shape="rect" id="node34" href="library_web_builder_resource.html" target="_top" title="library_web_builder_resource" alt="" coords="967,3271,1337,3359">
 <area shape="rect" id="node35" href="library_website_indexing.html" target="_top" title="library_website_indexing" alt="" coords="989,3376,1315,3464">
 <area shape="rect" id="node36" href="library_year_in_review.html" target="_top" title="library_year_in_review" alt="" coords="1002,3481,1302,3569">
-<area shape="rect" id="node37" href="location.html" target="_top" title="location" alt="" coords="833,3587,1471,6325">
-<area shape="rect" id="node38" href="materials_request.html" target="_top" title="materials_request" alt="" coords="1022,6343,1282,6431">
-<area shape="rect" id="node39" href="materials_request_fields_to_display.html" target="_top" title="materials_request_fields_to_display" alt="" coords="937,6448,1367,6536">
-<area shape="rect" id="node40" href="materials_request_form_fields.html" target="_top" title="materials_request_form_fields" alt="" coords="963,6553,1341,6641">
-<area shape="rect" id="node41" href="materials_request_format_mapping.html" target="_top" title="materials_request_format_mapping" alt="" coords="938,6659,1366,6747">
-<area shape="rect" id="node42" href="materials_request_formats.html" target="_top" title="materials_request_formats" alt="" coords="979,6764,1325,6852">
-<area shape="rect" id="node43" href="materials_request_status.html" target="_top" title="materials_request_status" alt="" coords="987,6869,1317,6957">
-<area shape="rect" id="node44" href="materials_request_usage.html" target="_top" title="materials_request_usage" alt="" coords="989,6975,1315,7063">
-<area shape="rect" id="node45" href="overdrive_api_product_availability.html" target="_top" title="overdrive_api_product_availability" alt="" coords="943,7080,1361,7168">
-<area shape="rect" id="node46" href="placard_library.html" target="_top" title="placard_library" alt="" coords="1037,7185,1267,7273">
-<area shape="rect" id="node47" href="self_registration_sierra.html" target="_top" title="self_registration_sierra" alt="" coords="997,7291,1307,7379">
-<area shape="rect" id="node48" href="staff_members.html" target="_top" title="staff_members" alt="" coords="1038,7396,1266,7484">
-<area shape="rect" id="node49" href="system_message_library.html" target="_top" title="system_message_library" alt="" coords="991,7501,1313,7589">
-<area shape="rect" id="node50" href="web_builder_custom_from_submission.html" target="_top" title="web_builder_custom_from_submission" alt="" coords="925,7607,1379,7695">
-<area shape="rect" id="node51" href="web_builder_quick_poll_submission.html" target="_top" title="web_builder_quick_poll_submission" alt="" coords="939,7712,1365,7800">
-<area shape="rect" id="node52" href="web_builder_resource_access_library.html" target="_top" title="web_builder_resource_access_library" alt="" coords="931,7817,1373,7905">
+<area shape="rect" id="node37" href="location.html" target="_top" title="location" alt="" coords="833,3587,1471,6413">
+<area shape="rect" id="node38" href="materials_request.html" target="_top" title="materials_request" alt="" coords="1022,6431,1282,6519">
+<area shape="rect" id="node39" href="materials_request_fields_to_display.html" target="_top" title="materials_request_fields_to_display" alt="" coords="937,6536,1367,6624">
+<area shape="rect" id="node40" href="materials_request_form_fields.html" target="_top" title="materials_request_form_fields" alt="" coords="963,6641,1341,6729">
+<area shape="rect" id="node41" href="materials_request_format_mapping.html" target="_top" title="materials_request_format_mapping" alt="" coords="938,6747,1366,6835">
+<area shape="rect" id="node42" href="materials_request_formats.html" target="_top" title="materials_request_formats" alt="" coords="979,6852,1325,6940">
+<area shape="rect" id="node43" href="materials_request_status.html" target="_top" title="materials_request_status" alt="" coords="987,6957,1317,7045">
+<area shape="rect" id="node44" href="materials_request_usage.html" target="_top" title="materials_request_usage" alt="" coords="989,7063,1315,7151">
+<area shape="rect" id="node45" href="overdrive_api_product_availability.html" target="_top" title="overdrive_api_product_availability" alt="" coords="943,7168,1361,7256">
+<area shape="rect" id="node46" href="placard_library.html" target="_top" title="placard_library" alt="" coords="1037,7273,1267,7361">
+<area shape="rect" id="node47" href="self_registration_sierra.html" target="_top" title="self_registration_sierra" alt="" coords="997,7379,1307,7467">
+<area shape="rect" id="node48" href="staff_members.html" target="_top" title="staff_members" alt="" coords="1038,7484,1266,7572">
+<area shape="rect" id="node49" href="system_message_library.html" target="_top" title="system_message_library" alt="" coords="991,7589,1313,7677">
+<area shape="rect" id="node50" href="web_builder_custom_from_submission.html" target="_top" title="web_builder_custom_from_submission" alt="" coords="925,7695,1379,7783">
+<area shape="rect" id="node51" href="web_builder_quick_poll_submission.html" target="_top" title="web_builder_quick_poll_submission" alt="" coords="939,7800,1365,7888">
+<area shape="rect" id="node52" href="web_builder_resource_access_library.html" target="_top" title="web_builder_resource_access_library" alt="" coords="931,7905,1373,7993">
 </map>
                                         <a name='diagram'><img id="twoimpliedDegreeImg" src="../diagrams/tables/location.implied2degrees.png" usemap="#twoDegreesRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
                                     </div>
